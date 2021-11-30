@@ -1,7 +1,11 @@
 const initialState = {
-    exercises: [{ type: 'legs', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-                { type: 'chest', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] }
-                ]
+    exercises: [{ type: 'Legs', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'Chest', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'Arm', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'Back', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'Shoulder', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'ABS', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] }
+    ]
     // filterBy: {},
 }
 export function exerciseReducer(state = initialState, action) {

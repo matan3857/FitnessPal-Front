@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { TypeExercise } from '../cmps/TypeExercise';
+import { WorkoutTypes } from '../cmps/WorkoutTypes';
 
 export class _BuildWorkout extends Component {
     state = {
@@ -12,7 +12,11 @@ export class _BuildWorkout extends Component {
         return (
             <>
                 <h1>Hello BuildWorkout</h1>
-                <TypeExercise/>
+                <section className="workout-types-container">
+                    
+
+                <WorkoutTypes/>
+                </section>
                 {/* <article className="page-preview">
                     <Link to={`/BuildWorkout/chest`}>
                         <div

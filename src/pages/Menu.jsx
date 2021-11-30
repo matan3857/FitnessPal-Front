@@ -12,11 +12,11 @@ export class Menu extends Component {
 
   componentDidMount = () => {
     const pages = [{ title: 'התוכניות שלי', linkTo: 'trainingMine' },
-      { title: 'התפריטים שלי', linkTo: 'nutritionMine' },
-      { title: 'בניית תוכנית אימונים', linkTo: 'BuildWorkout' },
-      { title: 'בניית תפריט תזונה', linkTo: 'buildNutrition' },
-      { title: 'מעקב משקל', linkTo: 'weight' },
-      { title: 'מידע ומאמרים', linkTo: 'info' }]
+    { title: 'התפריטים שלי', linkTo: 'nutritionMine' },
+    { title: 'בניית תוכנית אימונים', linkTo: 'BuildWorkout' },
+    { title: 'בניית תפריט תזונה', linkTo: 'buildNutrition' },
+    { title: 'מעקב משקל', linkTo: 'weight' },
+    { title: 'מידע ומאמרים', linkTo: 'info' }]
     this.setState(prevState => ({ ...prevState, pages }))
   }
 

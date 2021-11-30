@@ -1,0 +1,13 @@
+.exercise-type {
+    display: flex;
+    justify-content: center;
+    flex: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 20px;
+    img {
+        height: 120px;
+        width: 150px;
+    }
+}
