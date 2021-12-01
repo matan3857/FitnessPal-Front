@@ -11,10 +11,7 @@ export class _BuildWorkout extends Component {
         console.log('exercise:', this.props.exercises)
         return (
             <>
-                <h1>Hello BuildWorkout</h1>
                 <section className="workout-types-container">
-                    
-
                 <WorkoutTypes/>
                 </section>
                 {/* <article className="page-preview">

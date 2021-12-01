@@ -6,8 +6,10 @@ export function WorkoutTypePreview(props) {
 
     const { exerciseType } = props
     return (
-        <div className="exercise-type">
-            <img src={require(`../assets/img/${exerciseType}.png`).default} />
-        </div>
+        <Link to={`/BuildWorkout/${exerciseType}`} className="exercise-type">
+            <div className="exercise-type">
+                <img src={require(`../assets/img/${exerciseType}.png`).default} />
+            </div>
+        </Link>
     )
 }

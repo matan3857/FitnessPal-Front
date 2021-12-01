@@ -1,10 +1,13 @@
 const initialState = {
-    exercises: [{ type: 'Legs', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'Chest', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'Arm', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'Back', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'Shoulder', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'ABS', ex: [{ id: '123', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] }
+    exercises: [{ type: 'Legs', ex: [{ id: '100', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'Chest', ex: [{ id: '200', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'Arm', ex: [{ id: '300', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    {
+        type: 'Back', ex: [{ id: '400', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' },
+        { id: '401', title: 'ex2', desc: 'bla bla bla', img1: 'dsada', img2: 'dsada' }]
+    },
+    { type: 'Shoulder', ex: [{ id: '500', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    { type: 'ABS', ex: [{ id: '600', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] }
     ]
     // filterBy: {},
 }

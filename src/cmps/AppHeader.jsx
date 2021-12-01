@@ -13,7 +13,6 @@ function _AppHeader(props) {
       <div className="header-btn-container flex">
         <Link to="/" className="header-btn">
           {/* <HomeOutlinedIcon /> */}
-          <div>Home</div>
         </Link>
         
       </div>
