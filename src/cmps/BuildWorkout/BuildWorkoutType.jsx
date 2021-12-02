@@ -9,23 +9,17 @@ export class _BuildWorkoutType extends Component {
     exercisesToShow = () => {
         const { exerciseType } = this.props.match.params
         let currExercises = this.props.exercises.filter(exercise => exercise.type === exerciseType)
-        // console.log('currExercises',currExercises)
         return currExercises[0].ex
     }
 
 
     render() {
         const { exerciseType } = this.props.match.params
-        // console.log('exercises',this.props.exercises)
-        // console.log('exerciseType',exerciseType)
-        // var currExercises = this.props.exercises.filter(exercise => exercise.type === exerciseType)
-        // console.log('try',currExercises[0].ex)
         return (
             <div>
                 <button>Back</button>
                 WorkoutType
                 <Exercises currExercises={this.exercisesToShow()} />
-
             </div>
         )
     }

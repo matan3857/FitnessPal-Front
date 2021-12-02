@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { WorkoutTypes } from '../cmps/WorkoutTypes';
 
 export class _BuildWorkout extends Component {
-    state = {
-    }
 
     render() {
         console.log('exercise:', this.props.exercises)
