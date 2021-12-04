@@ -16,6 +16,7 @@ export class CurrWorkoutBuild extends Component {
                         exercise={exercise}
                         onRemoveExercise={onRemoveExercise}
                         onChangeExercisePos={onChangeExercisePos}
+                        idx={idx}
                         key={idx}
                     />
                 ))}

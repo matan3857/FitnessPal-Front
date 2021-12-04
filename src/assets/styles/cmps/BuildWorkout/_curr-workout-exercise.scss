@@ -14,11 +14,13 @@
     .curr-workout-content {
         width: 200px;
         justify-content: space-around;
-        .content-title {
-        }
+      
         h2 {
             color: #03a3d7;
             font-weight: 500;
         }
+    }
+    .curr-workout-btns{
+        justify-content: space-around;
     }
 }

@@ -13,11 +13,19 @@ export class _BuildWorkout extends Component {
     }
 
     onRemoveExercise = (exId) => {
+        const { currWorkout } = this.state
+        let newCurrWorkout = currWorkout.filter(exercise => exercise.id !== exId)
+        this.setState(prevState => ({ ...prevState, currWorkout: newCurrWorkout }))
         console.log('Remove', exId)
     }
 
-    onChangeExercisePos = (exId, direction) => {
-        console.log('Move', direction, exId)
+    onChangeExercisePos = (exercise, direction, fromIndex) => {
+        const { currWorkout } = this.state
+        let toIdx = fromIndex + direction
+        toIdx = toIdx > currWorkout.length - 1 ? currWorkout.length - 1 : toIdx < 0 ? 0 : toIdx
+        currWorkout.splice(fromIndex, 1);
+        currWorkout.splice(toIdx, 0, exercise)
+        this.setState(prevState => ({ ...prevState, currWorkout }))
     }
 
     render() {
@@ -31,6 +39,7 @@ export class _BuildWorkout extends Component {
                 <div className="curr-workout-container">
                     <h2>Your current Workout:</h2>
                     <CurrWorkoutBuild currWorkout={currWorkout} onRemoveExercise={this.onRemoveExercise} onChangeExercisePos={this.onChangeExercisePos} />
+                    <button>Save New Workout!</button>
                 </div>
             </section>
         )

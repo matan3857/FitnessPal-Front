@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function CurrWorkoutExercise(props) {
 
-    const { exercise, onRemoveExercise, onChangeExercisePos } = props
+    const { exercise, onRemoveExercise, onChangeExercisePos, idx } = props
     if (!exercise) return <div>Loading...</div>
     return (
         <div className="curr-workout-exercise flex space-between">
@@ -17,10 +17,10 @@ export function CurrWorkoutExercise(props) {
                 <h3><span className="content-title">Sets: </span>{exercise.sets}</h3>
                 <h3><span className="content-title">Reps: </span>{exercise.reps}</h3>
             </div>
-            <div className="curr-workout-btns">
+            <div className="curr-workout-btns flex column">
+                <button onClick={() => { onChangeExercisePos(exercise, -1, idx) }}>Up</button>
+                <button onClick={() => { onChangeExercisePos(exercise, 1, idx) }}>Down</button>
                 <button onClick={() => { onRemoveExercise(exercise.id) }}>Remove</button>
-                <button onClick={() => { onChangeExercisePos(exercise.id,1) }}>Up</button>
-                <button onClick={() => { onChangeExercisePos(exercise.id,0) }}>Down</button>
             </div>
 
         </div>
