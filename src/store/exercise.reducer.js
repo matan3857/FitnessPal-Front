@@ -12,8 +12,8 @@ const initialState = {
         { id: '406', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
         { id: '407', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' }]
     },
-    { type: 'Shoulder', ex: [ { id: '500', title: 'Bent-Over', desc: 'bla bla bla', img1: 'bent-over1', img2: 'bent-over2' },] },
-    { type: 'ABS', ex: [ { id: '600', title: 'Bent-Over', desc: 'bla bla bla', img1: 'bent-over1', img2: 'bent-over2' },] }
+    { type: 'Shoulder', ex: [ { id: '500', title: 'Overhead-Press', desc: 'bla bla bla', img1: 'overhead-press1', img2: 'overhead-press2' },] },
+    { type: 'ABS', ex: [ { id: '600', title: 'Plank', desc: 'bla bla bla', img1: 'plank', img2: 'plank' },] }
     ]
     // filterBy: {},
 }
