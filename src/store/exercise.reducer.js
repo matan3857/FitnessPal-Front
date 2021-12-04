@@ -1,19 +1,19 @@
 const initialState = {
-    exercises: [{ type: 'Legs', ex: [ { id: '100', title: 'Squat', desc: 'bla bla bla', img1: 'squat1', img2: 'squat2' },] },
-    { type: 'Chest', ex: [ { id: '200', title: 'Bench-Press', desc: 'bla bla bla', img1: 'bench-press1', img2: 'bench-press2' },] },
-    { type: 'Arm', ex: [ { id: '300', title: 'Bar-Curls', desc: 'bla bla bla', img1: 'bar-curls1', img2: 'bar-curls1' },] },
+    exercises: [{ type: 'Legs', ex: [ { id: '100', title: 'Squat', type: 'Legs', desc: 'bla bla bla', img1: 'squat1', img2: 'squat2' },] },
+    { type: 'Chest', ex: [ { id: '200', title: 'Bench-Press', type: 'Chest', desc: 'bla bla bla', img1: 'bench-press1', img2: 'bench-press2' },] },
+    { type: 'Arm', ex: [ { id: '300', title: 'Bar-Curls', type: 'Arm', desc: 'bla bla bla', img1: 'bar-curls1', img2: 'bar-curls1' },] },
     {
-        type: 'Back', ex: [{ id: '400', title: 'Bent-Over', desc: 'bla bla', img1: 'bent-over1', img2: 'bent-over2' },
-        { id: '401', title: 'Bent-Over', desc: 'bla bla bla', img1: 'bent-over1', img2: 'bent-over2' },
-        { id: '402', title: 'Bent-Over', desc: 'bladsadsa', img1: 'bent-over1', img2: 'bent-over2' },
-        { id: '403', title: 'Bent-Over', desc: 'bla bdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
-        { id: '404', title: 'Bent-Over', desc: 'bla b das dasd asd as asdada dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
-        { id: '405', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
-        { id: '406', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
-        { id: '407', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' }]
+        type: 'Back', ex: [{ id: '400', title: 'Bent-Over', type: 'Back', desc: 'bla bla', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '401', title: 'Bent-Over', type: 'Back', desc: 'bla bla bla', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '402', title: 'Bent-Over', type: 'Back', desc: 'bladsadsa', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '403', title: 'Bent-Over', type: 'Back', desc: 'bla bdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '404', title: 'Bent-Over', type: 'Back', desc: 'bla b das dasd asd as asdada dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '405', title: 'Bent-Over', type: 'Back', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '406', title: 'Bent-Over', type: 'Back', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '407', title: 'Bent-Over', type: 'Back', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' }]
     },
-    { type: 'Shoulder', ex: [ { id: '500', title: 'Overhead-Press', desc: 'bla bla bla', img1: 'overhead-press1', img2: 'overhead-press2' },] },
-    { type: 'ABS', ex: [ { id: '600', title: 'Plank', desc: 'bla bla bla', img1: 'plank', img2: 'plank' },] }
+    { type: 'Shoulder', ex: [ { id: '500', title: 'Overhead-Press', type: 'Shoulder', desc: 'bla bla bla', img1: 'overhead-press1', img2: 'overhead-press2' },] },
+    { type: 'ABS', ex: [ { id: '600', title: 'Plank', type: 'ABS', desc: 'bla bla bla', img1: 'plank', img2: 'plank' },] }
     ]
     // filterBy: {},
 }

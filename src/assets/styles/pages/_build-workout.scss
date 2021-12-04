@@ -1,7 +1,11 @@
-.workout-types-container{
-    margin-top: 61px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.build-workout-container{
+    .workout-types-container{
+        margin-top: 61px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    .curr-workout-container{
+    }
 }

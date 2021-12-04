@@ -1,0 +1,24 @@
+.curr-workout-exercise {
+    background-color: #ecece9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 7px;
+    .curr-workout-img {
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 7px;
+        }
+    }
+    .curr-workout-content {
+        width: 200px;
+        justify-content: space-around;
+        .content-title {
+        }
+        h2 {
+            color: #03a3d7;
+            font-weight: 500;
+        }
+    }
+}
