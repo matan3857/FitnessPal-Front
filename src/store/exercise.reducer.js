@@ -1,13 +1,19 @@
 const initialState = {
-    exercises: [{ type: 'Legs', ex: [{ id: '100', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'Chest', ex: [{ id: '200', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'Arm', ex: [{ id: '300', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
+    exercises: [{ type: 'Legs', ex: [ { id: '100', title: 'Squat', desc: 'bla bla bla', img1: 'squat1', img2: 'squat2' },] },
+    { type: 'Chest', ex: [ { id: '200', title: 'Bench-Press', desc: 'bla bla bla', img1: 'bench-press1', img2: 'bench-press2' },] },
+    { type: 'Arm', ex: [ { id: '300', title: 'Bar-Curls', desc: 'bla bla bla', img1: 'bar-curls1', img2: 'bar-curls1' },] },
     {
-        type: 'Back', ex: [{ id: '400', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' },
-        { id: '401', title: 'ex2', desc: 'bla bla bla', img1: 'dsada', img2: 'dsada' }]
+        type: 'Back', ex: [{ id: '400', title: 'Bent-Over', desc: 'bla bla', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '401', title: 'Bent-Over', desc: 'bla bla bla', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '402', title: 'Bent-Over', desc: 'bladsadsa', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '403', title: 'Bent-Over', desc: 'bla bdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '404', title: 'Bent-Over', desc: 'bla b das dasd asd as asdada dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '405', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '406', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' },
+        { id: '407', title: 'Bent-Over', desc: 'bla bla bla dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas dadad asdadasddaasdasd  dad asd  da das dasd  das dasdas', img1: 'bent-over1', img2: 'bent-over2' }]
     },
-    { type: 'Shoulder', ex: [{ id: '500', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] },
-    { type: 'ABS', ex: [{ id: '600', title: 'ex1', desc: 'bla bla', img1: 'dsada', img2: 'dsada' }] }
+    { type: 'Shoulder', ex: [ { id: '500', title: 'Bent-Over', desc: 'bla bla bla', img1: 'bent-over1', img2: 'bent-over2' },] },
+    { type: 'ABS', ex: [ { id: '600', title: 'Bent-Over', desc: 'bla bla bla', img1: 'bent-over1', img2: 'bent-over2' },] }
     ]
     // filterBy: {},
 }

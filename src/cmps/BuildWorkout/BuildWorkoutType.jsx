@@ -16,10 +16,10 @@ export class _BuildWorkoutType extends Component {
     render() {
         const { exerciseType } = this.props.match.params
         return (
-            <div>
+            <div className="build-workout-container">
                 <button>Back</button>
                 WorkoutType
-                <Exercises currExercises={this.exercisesToShow()} />
+                <Exercises currExercises={this.exercisesToShow()} exerciseType={exerciseType}/>
             </div>
         )
     }
