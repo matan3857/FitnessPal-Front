@@ -16,9 +16,7 @@ export class _BuildWorkoutType extends Component {
         const { exerciseType, onAddExerciseToWorkout } = this.props
         return (
             <div className="build-workout-container">
-                <button onClick={() => this.props.onBackToAll()}>Back</button>
-
-                WorkoutType
+                <button onClick={() => this.props.onBackToAll()} className="back-to-exercises-btn">Back</button>
                 <Exercises currExercises={this.exercisesToShow()} exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} />
             </div>
         )
