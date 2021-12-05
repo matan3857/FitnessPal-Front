@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-// import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import React from "react";
 
 export function WorkoutTypePreview(props) {
-
-    const { exerciseType } = props
-    return (
-        <Link to={`/BuildWorkout/${exerciseType}`} className="exercise-type">
-            <div className="exercise-type">
-                <img src={require(`../assets/img/${exerciseType}.png`).default} />
+    const { exerciseType, onToggleShowExercise } = props
+        return (
+            <div className="exercise-type" onClick={() => onToggleShowExercise(exerciseType)}>
+                <div className="exercise-type">
+                    <img src={require(`../assets/img/${exerciseType}.png`).default} />
+                </div>
             </div>
-        </Link>
-    )
+        )
 }

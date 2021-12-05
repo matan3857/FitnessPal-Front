@@ -1,9 +1,33 @@
-.build-workout-container{
+.build-workout-container {
     text-align: center;
-    .workout-types-container{
+    .workout-types-container {
         margin-top: 61px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .curr-workout-container {
+        margin: 20px 0px 20px;
+        h1{
+            font-size: 2rem;
+            color: rgb(42, 41, 41);
+            font-weight: 600;
+        }
+        .save-workout-btn {
+            margin-top: 10px;
+            border: 0;
+            width: 35%;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #00a7d6;
+            color: whitesmoke;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .save-workout-btn:hover {
+            width: 45%;
+            background-color: #4fc9eb;
+        }
     }
 }

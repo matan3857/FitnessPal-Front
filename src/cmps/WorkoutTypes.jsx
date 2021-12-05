@@ -7,13 +7,14 @@ export class _WorkoutTypes extends Component {
     }
 
     render() {
-        console.log('exercise:', this.props.exercises)
+        const { onToggleShowExercise } = this.props
         return (
             <>{
                 this.props.exercises.map((exercise, idx) => (
                     <WorkoutTypePreview
-                        exerciseType={exercise.type}
                         key={idx}
+                        exerciseType={exercise.type}
+                        onToggleShowExercise={onToggleShowExercise}
                     />
                 ))}
             </>

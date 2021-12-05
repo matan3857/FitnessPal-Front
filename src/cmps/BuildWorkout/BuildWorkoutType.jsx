@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import { Exercises } from "./Exercises";
 
 export class _BuildWorkoutType extends Component {
     state = {
     }
     exercisesToShow = () => {
-        const { exerciseType } = this.props.match.params
+        const { exerciseType } = this.props
         let currExercises = this.props.exercises.filter(exercise => exercise.type === exerciseType)
         return currExercises[0].ex
     }
 
 
     render() {
-        const { exerciseType } = this.props.match.params
+        const { exerciseType, onAddExerciseToWorkout } = this.props
         return (
             <div className="build-workout-container">
-                <button>Back</button>
+                <button onClick={() => this.props.onBackToAll()}>Back</button>
+
                 WorkoutType
-                <Exercises currExercises={this.exercisesToShow()} exerciseType={exerciseType}/>
+                <Exercises currExercises={this.exercisesToShow()} exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} />
             </div>
         )
     }
