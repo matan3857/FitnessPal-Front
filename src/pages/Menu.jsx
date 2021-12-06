@@ -7,7 +7,7 @@ import logo from '../assets/img/logo.jpg';
 export class Menu extends Component {
 
   state = {
-    pages: null
+    pages: null,
   }
 
   componentDidMount = () => {
