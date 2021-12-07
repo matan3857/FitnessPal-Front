@@ -29,7 +29,6 @@ export class _BuildWorkout extends Component {
         exercise['reps'] = '10'
         exercise['sets'] = '3'
         currWorkout.push(exercise)
-        console.log('currWorkout', currWorkout)
         this.setState(prevState => ({ ...prevState, currWorkout }))
     }
 
@@ -61,7 +60,6 @@ export class _BuildWorkout extends Component {
 
     render() {
         const { currWorkout, exerciseType, showExercise, modalOpen } = this.state
-        console.log('exercise:', this.props.exercises)
         return (
             <section className="build-workout-container">
                 {showExercise && <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={this.onAddExerciseToWorkout} onBackToAll={this.onBackToAll} />}

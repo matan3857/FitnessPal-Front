@@ -7,18 +7,18 @@
 }
 
 html {
-    font-family: sans-serif,Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue;
+    font-family: sans-serif, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue;
     line-height: 1.6;
 }
 
 body {
     color: #172b4d;
-    font-family: sans-serif,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
-        sans-serif;
+    font-family: sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans,
+        Helvetica Neue, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    margin:0;
+    margin: 0;
 }
 
 h1,
@@ -30,7 +30,6 @@ h6 {
     margin: 0 0 0.6em;
     line-height: 1;
     font-weight: 400;
-    color: $clr7;
 }
 
 img {
@@ -45,14 +44,31 @@ p {
 a {
     text-decoration: none;
 }
-a:hover {
-    text-decoration: underline;
-}
 
-button{
+button {
     cursor: pointer;
 }
 
-.white{
+.white {
     background-color: white !important;
+}
+
+.light-left {
+    background: #ece9e6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #ffffff,
+        #ece9e6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.light-right {
+    background: #ece9e6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #ffffff,
+        #ece9e6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { onLogin, onSignup } from "../store/user.actions";
-// import DashboardIcon from "@mui/icons-material/Dashboard";
-import logo from '../assets/img/logo.jpg';
 
 function _Homepage(props) {
 
@@ -26,11 +24,7 @@ function _Homepage(props) {
 
 
   return (
-    <div className="login-signup  flex column align-center">
-      <div className="logo flex ">
-        <img src={logo} className="logo logo-icon" />
-        <h1>Fitness Pal</h1>
-      </div>
+    <div className="login-signup  flex column align-center margin-top">
       <div className="login-container flex column">
         {isLogin ? <p>Log in to Fitness Pal</p> : <p>Sign up</p>}
         <form className="flex column" onSubmit={onSubmit}>

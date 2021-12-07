@@ -1,27 +1,27 @@
 .page-preview {
-  position: relative;
   .page-content {
+    text-align: -webkit-center;
     cursor: pointer;
     height: 100%;
     border-radius: 3px;
     transition: filter 0.2s;
     filter: brightness(1);
-    background-size: cover !important;
-    background-position:center !important;
+    background: #ff8008; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc837, #ff8008); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc837, #ff8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
     &:hover {
       filter: brightness(0.8);
+
     }
   }
   p {
-    position: absolute;
+    padding-top: 1rem;
     color: #172b4d;
-    // font-size: 1rem;
-    // color: white;
+    font-size: 1rem;
     font-weight: 600;
     margin-top: 10px;
     margin-inline-start: 10px;
     max-width: 30ch;
-    top: 0;
-    right: 50%;
   }
 }

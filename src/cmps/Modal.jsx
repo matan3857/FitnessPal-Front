@@ -5,10 +5,10 @@ export function Modal({ setOpenModal, onAddWorkout }) {
     const [workoutTitle, setWorkoutTitle] = useState('');
 
     return (
-        <div className="modalBackground">
-            <div className="modalContainer">
-                <div className="titleCloseBtn">
-                    <button onClick={() => { setOpenModal(false) }}>X</button>
+        <div className="modal-background">
+            <div className="modal-container">
+                <div className="title-close-btn">
+                    <button className="close-btn" onClick={() => { setOpenModal(false) }}>X</button>
                 </div>
                 <div className="modal-title">
                     <h1>Name of Workout</h1>

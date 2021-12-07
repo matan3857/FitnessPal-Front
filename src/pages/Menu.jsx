@@ -11,12 +11,12 @@ export class Menu extends Component {
   }
 
   componentDidMount = () => {
-    const pages = [{ title: 'התוכניות שלי', linkTo: 'trainingMine' },
-    { title: 'התפריטים שלי', linkTo: 'nutritionMine' },
-    { title: 'בניית תוכנית אימונים', linkTo: 'BuildWorkout' },
-    { title: 'בניית תפריט תזונה', linkTo: 'buildNutrition' },
-    { title: 'מעקב משקל', linkTo: 'weight' },
-    { title: 'מידע ומאמרים', linkTo: 'info' }]
+    const pages = [{ title: 'My Workouts', linkTo: 'trainingMine' },
+    { title: 'My diet menus', linkTo: 'nutritionMine' },
+    { title: 'Building a training program', linkTo: 'BuildWorkout' },
+    { title: 'Building a nutrition menu', linkTo: 'buildNutrition' },
+    { title: 'Weight tracking', linkTo: 'weight' },
+    { title: 'More information and articles', linkTo: 'info' }]
     this.setState(prevState => ({ ...prevState, pages }))
   }
 
@@ -26,11 +26,7 @@ export class Menu extends Component {
 
     return (
       <>
-        <div className="logo flex justify-center">
-          <img src={logo} className="logo logo-icon" />
-          <h1>Fitness Pal</h1>
-        </div>
-        <div className="flex column align-center">
+        <div className="flex column align-center margin-top">
           {pages.length ? (
             <PageList
               pages={pages}

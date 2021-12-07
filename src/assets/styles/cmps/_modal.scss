@@ -1,17 +1,17 @@
-.modalBackground {
+.modal-background {
     z-index: 2;
     width: 100vw;
     height: 100vh;
     background-color: rgba(78, 76, 76, 0.279);
     position: fixed;
-    top:0;
+    top: 0;
     // position: absolute;
     display: flex;
     justify-content: center;
     // align-items: center;
-    .modalContainer {
+    .modal-container {
         position: relative;
-        top:15%;
+        top: 15%;
         width: 450px;
         height: 320px;
         border-radius: 12px;
@@ -20,14 +20,11 @@
         display: flex;
         flex-direction: column;
         padding: 25px;
-        .titleCloseBtn {
+        .title-close-btn {
             display: flex;
             justify-content: flex-end;
-            button {
-                background-color: transparent;
-                border: none;
-                font-size: 25px;
-                cursor: pointer;
+            button{
+                font-size: 1.4rem !important;
             }
         }
         .modal-title {
@@ -45,19 +42,18 @@
             align-items: center;
             font-size: 1.2rem;
             text-align: center;
-            form{
+            form {
                 width: 100%;
-                input{
+                input {
                     padding: 15px;
                     width: 100%;
                     border-radius: 14px;
                     border: none;
                 }
-                input:focus{
+                input:focus {
                     border: 0.2px solid gray;
                 }
             }
-           
         }
         .modal-footer {
             flex: 20%;

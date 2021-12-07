@@ -15,7 +15,7 @@ export function CurrWorkoutExercise(props) {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
-                    className={`curr-workout-exercise flex space-between ${index % 2 ? 'white' : ''}`}
+                    className={`curr-workout-exercise flex space-between ${index % 2 ? 'light-left' : 'light-right'}`}
                 >
                     <div className="curr-workout-img">
                         <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} />
@@ -27,11 +27,10 @@ export function CurrWorkoutExercise(props) {
                         <h3><span className="content-title">Reps: </span>{exercise.reps}</h3>
                     </div>
                     <div className="curr-workout-btn flex column">
-                        <button onClick={() => { onRemoveExercise(exercise.id) }}>X</button>
+                        <button className="close-btn" onClick={() => { onRemoveExercise(exercise.id) }}>X</button>
                     </div>
                 </div>
             )}
-
         </Draggable>
     )
 }
