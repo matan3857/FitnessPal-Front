@@ -6,7 +6,7 @@ import { Draggable } from "react-beautiful-dnd";
 
 export function CurrWorkoutExercise(props) {
 
-    const { exercise, onRemoveExercise, onChangeExercisePos, index } = props
+    const { exercise, onRemoveExercise, index } = props
     if (!exercise) return <div>Loading...</div>
     return (
         <Draggable key={exercise.id} draggableId={exercise.id} index={index}>
@@ -26,10 +26,8 @@ export function CurrWorkoutExercise(props) {
                         <h3><span className="content-title">Sets: </span>{exercise.sets}</h3>
                         <h3><span className="content-title">Reps: </span>{exercise.reps}</h3>
                     </div>
-                    <div className="curr-workout-btns flex column">
-                        <button onClick={() => { onChangeExercisePos(exercise, -1, index) }}>Up</button>
-                        <button onClick={() => { onChangeExercisePos(exercise, 1, index) }}>Down</button>
-                        <button onClick={() => { onRemoveExercise(exercise.id) }}>Remove</button>
+                    <div className="curr-workout-btn flex column">
+                        <button onClick={() => { onRemoveExercise(exercise.id) }}>X</button>
                     </div>
                 </div>
             )}

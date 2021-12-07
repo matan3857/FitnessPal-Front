@@ -24,15 +24,6 @@ export class _BuildWorkout extends Component {
         this.setState(prevState => ({ ...prevState, currWorkout: newCurrWorkout }))
     }
 
-    onChangeExercisePos = (exercise, direction, fromIndex) => {
-        const { currWorkout } = this.state
-        let toIdx = fromIndex + direction
-        toIdx = toIdx > currWorkout.length - 1 ? currWorkout.length - 1 : toIdx < 0 ? 0 : toIdx
-        currWorkout.splice(fromIndex, 1)
-        currWorkout.splice(toIdx, 0, exercise)
-        this.setState(prevState => ({ ...prevState, currWorkout }))
-    }
-
     onAddExerciseToWorkout = (exercise) => {
         const { currWorkout } = this.state
         exercise['reps'] = '10'
@@ -82,7 +73,7 @@ export class _BuildWorkout extends Component {
                 <div className="curr-workout-container">
                     <h1>Your current Workout:</h1>
                     <DragDropContext onDragEnd={this.onDragEnd}>
-                        <CurrWorkoutBuild currWorkout={currWorkout} onRemoveExercise={this.onRemoveExercise} onChangeExercisePos={this.onChangeExercisePos} />
+                        <CurrWorkoutBuild currWorkout={currWorkout} onRemoveExercise={this.onRemoveExercise} />
                     </DragDropContext>
                     <button className="openModalBtn save-workout-btn" onClick={() => { this.setModalOpen(true) }}>Save New Workout!</button>
                     {modalOpen && <Modal setOpenModal={this.setModalOpen} onAddWorkout={this.onAddWorkout} />}

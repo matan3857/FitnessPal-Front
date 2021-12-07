@@ -10,7 +10,7 @@ export class CurrWorkoutBuild extends Component {
     }
 
     render() {
-        const { currWorkout, onRemoveExercise, onChangeExercisePos } = this.props
+        const { currWorkout, onRemoveExercise } = this.props
         if (!currWorkout.length) return <div>Loading...</div>
         return (
             <Droppable
@@ -28,29 +28,14 @@ export class CurrWorkoutBuild extends Component {
                                 <CurrWorkoutExercise
                                     exercise={exercise}
                                     onRemoveExercise={onRemoveExercise}
-                                    onChangeExercisePos={onChangeExercisePos}
                                     index={index}
                                     id={exercise.id}
                                 />
                             </div>
                         ))}
                         {provided.placeholder}
-                        {/* <GroupDetails isAddNew={true} /> */}
                     </div>
                 )}
-
-
-                {/* <div className="curr-workout">
-                    {currWorkout.map((exercise, idx) => (
-                        <CurrWorkoutExercise
-                            exercise={exercise}
-                            onRemoveExercise={onRemoveExercise}
-                            onChangeExercisePos={onChangeExercisePos}
-                            idx={idx}
-                            key={idx}
-                        />
-                    ))}
-                </div> */}
             </Droppable>
         )
     }
