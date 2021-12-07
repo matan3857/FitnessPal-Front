@@ -20,6 +20,7 @@ export function Modal({ setOpenModal, onAddWorkout }) {
                             value={workoutTitle}
                             onChange={(ev) => setWorkoutTitle(ev.target.value)}
                             placeholder="Enter Workout Name.."
+                            autoFocus
                         />
                     </form>
                 </div>

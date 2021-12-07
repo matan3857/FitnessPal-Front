@@ -72,3 +72,21 @@ button {
         #ece9e6
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+//Scroll-Bar
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background: inherit;
+  }
+  body::-webkit-scrollbar-track:vertical {
+    border-right: 8px solid rgba(0, 0, 0, 0.089);
+  }
+  body::-webkit-scrollbar-track {
+    border-radius: 20px;
+
+  }
+  body::-webkit-scrollbar-thumb:vertical {
+    border-right: 8px solid #9d9ea0;
+    border-radius: 20px;
+  }

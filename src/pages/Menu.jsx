@@ -26,7 +26,7 @@ export class Menu extends Component {
 
     return (
       <>
-        <div className="flex column align-center margin-top">
+        <div className="flex column align-center margin-top menu">
           {pages.length ? (
             <PageList
               pages={pages}
