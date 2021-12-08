@@ -2,13 +2,7 @@ import { userService } from '../services/user.service.js'
 
 
 const initialState = {
-    loggedinUser: {
-        // "_id": 'u101',
-        // "fullname": 'Nir',
-        // "imgUrl": 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-        // "workoutList": [],
-        // 'isAdmin': true
-    }
+    loggedinUser: userService.getLoggedinUser(),
 }
 export function userReducer(state = initialState, action) {
     var newState = state;

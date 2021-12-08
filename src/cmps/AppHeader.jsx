@@ -9,6 +9,7 @@ import { onLogout } from "../store/user.actions";
 
 function _AppHeader({ user, onLogout, history }) {
 
+  console.log('user',user)
 
   return (
     <>

@@ -11,6 +11,7 @@ function _Homepage(props) {
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
+
     if (username.trim() && password.trim()) {
       if (username !== 'admin' || password !== '123') return //Temporary
       if (!isLogin) {
