@@ -2,19 +2,19 @@ import { userService } from '../services/user.service.js'
 
 
 const initialState = {
-    user: {
-        "_id": 'u101',
-        "fullname": 'Nir',
-        "imgUrl": 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-        "workoutList": [],
-        'isAdmin': true
+    loggedinUser: {
+        // "_id": 'u101',
+        // "fullname": 'Nir',
+        // "imgUrl": 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
+        // "workoutList": [],
+        // 'isAdmin': true
     }
 }
 export function userReducer(state = initialState, action) {
     var newState = state;
     switch (action.type) {
         case 'SET_USER':
-            newState = { ...state, user: action.user }
+            newState = { ...state, loggedinUser: action.user }
             break;
         default:
     }

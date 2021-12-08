@@ -1,24 +1,24 @@
 
-// export const storageService = {
-//     query,
-//     get,
-//     post,
-//     put,
-//     remove,
-//     postMany
-// }
+export const storageService = {
+    query,
+    // get,
+    // post,
+    // put,
+    // remove,
+    // postMany
+}
 
-// function query(entityType, delay = 1200) {
-//     var entities = JSON.parse(localStorage.getItem(entityType)) || []
+function query(entityType, delay = 1200) {
+    var entities = JSON.parse(localStorage.getItem(entityType)) || []
 
-//     return new Promise((resolve, reject) => {
-//         // setTimeout(() => {
-//             // reject('OOOOPs')
-//             resolve(entities)
-//         // }, delay)
-//     })
-//     // return Promise.resolve(entities)
-// }
+    return new Promise((resolve, reject) => {
+        // setTimeout(() => {
+            // reject('OOOOPs')
+            resolve(entities)
+        // }, delay)
+    })
+    // return Promise.resolve(entities)
+}
 
 
 // function get(entityType, entityId) {
@@ -59,14 +59,14 @@
 //     localStorage.setItem(entityType, JSON.stringify(entities))
 // }
 
-// function _makeId(length = 5) {
-//     var text = ''
-//     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-//     for (var i = 0; i < length; i++) {
-//         text += possible.charAt(Math.floor(Math.random() * possible.length))
-//     }
-//     return text
-// }
+function _makeId(length = 5) {
+    var text = ''
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    for (var i = 0; i < length; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length))
+    }
+    return text
+}
 
 // function postMany(entityType, newEntities) {
 //     return query(entityType)

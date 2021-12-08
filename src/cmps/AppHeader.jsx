@@ -2,21 +2,23 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import logo from '../assets/img/logo.jpg';
+import logout from '../assets/img/logout.png';
 
-function _AppHeader({ user }) {
+import { onLogout } from "../store/user.actions";
 
-  console.log('user', user._id)
+
+function _AppHeader({ user, onLogout, history }) {
+
 
   return (
     <>
-      <header className={`main-header flex align-center ${!user._id ? 'justify-center' : ''} `}>
+      <header className={`main-header flex align-center ${!user || !user._id ? 'justify-center' : ''} `}>
 
-        {user._id && <div className="header-btn-container flex">
+        {user && user._id && <div className="header-btn-container flex">
           <div className="header-btn pointer">
             <span className="home">Menu</span>
           </div>
         </div>}
-
 
         <Link to="/menu">
           <div className="logo flex justify-center">
@@ -25,7 +27,12 @@ function _AppHeader({ user }) {
           </div>
         </Link>
 
-        {user._id && <div className="pointer">Logout</div>}
+        {user && user._id && <div onClick={() => { onLogout(); history.push("/"); }} className="logout-container pointer flex align-center">
+          <p className="logout">
+            Logout
+          </p>
+          <img src={logout} className="logout-icon" />
+        </div>}
 
       </header>
     </>
@@ -34,10 +41,11 @@ function _AppHeader({ user }) {
 
 function mapStateToProps(state) {
   return {
-    user: state.userModule.user,
+    user: state.userModule.loggedinUser,
   };
 }
 const mapDispatchToProps = {
+  onLogout
 }
 
 export const AppHeader = withRouter(connect(mapStateToProps, mapDispatchToProps)(_AppHeader));

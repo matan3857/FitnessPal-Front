@@ -22,7 +22,7 @@ export function _ExercisesPreview(props) {
 
 function mapStateToProps(state) {
   return {
-    user: state.userModule.user
+    user: state.userModule.loggedinUser
   };
 }
 

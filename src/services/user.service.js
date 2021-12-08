@@ -1,34 +1,37 @@
-// import { storageService } from './async-storage.service'
+import { storageService } from './async-storage.service'
 // // import { httpService } from './http.service'
 // // import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service'
-// const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
-// const DB_KEY = 'user'
+const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+const DB_KEY = 'user'
 // var gWatchedUser = null;
 
-// export const userService = {
-//     login,
-//     logout,
-//     signup,
-//     getLoggedinUser,
-//     getUsers,
-//     getById,
-//     remove,
-//     update,
-//     changeScore
-// }
+export const userService = {
+    login,
+    logout,
+    // signup,
+    getLoggedinUser,
+    // getUsers,
+    // getById,
+    // remove,
+    // update,
+    // changeScore
+}
 
 // window.userService = userService
 
-// const gUsers = [
-//     {
-//     "_id": 'u101',
-//     "fullname": 'Nir',
-// },
-//     {
-//     "_id": 'u102',
-//     "fullname": 'Matan',
-// }
-// ]
+const gUsers = [
+    {
+        '_id': 'u101',
+        'fullname': 'admin',
+        'username': 'admin',
+        'password': '123',
+        'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
+        'workoutList': [],
+        'nutritionMenus': [],
+        'isAdmin': true
+    },
+]
+localStorage.setItem(DB_KEY, JSON.stringify(gUsers))
 
 // async function getUsers() {
 //     const users = localStorage.getItem(DB_KEY) 
@@ -57,26 +60,26 @@
 //     return user;
 // }
 
-// async function login(userCred) {
-//     const users = await storageService.query(DB_KEY)
-//     const user = users.find(user => user.username === userCred.username)
-//     return _saveLocalUser(user)
+async function login(userCred) {
+    const users = await storageService.query(DB_KEY)
+    const user = users.find(user => user.username === userCred.username)
+    return _saveLocalUser(user)
 
-//     // const user = await httpService.post('auth/login', userCred)
-//     // socketService.emit('set-user-socket', user._id);
-//     // if (user) return _saveLocalUser(user)
-// }
+    // const user = await httpService.post('auth/login', userCred)
+    // socketService.emit('set-user-socket', user._id);
+    // if (user) return _saveLocalUser(user)
+}
 // async function signup(userCred) {
 //     const user = await storageService.post(DB_KEY, userCred)
 //     // const user = await httpService.post('auth/signup', userCred)
 //     // socketService.emit('set-user-socket', user._id);
 //     return _saveLocalUser(user)
 // }
-// async function logout() {
-//     sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
-//     // socketService.emit('unset-user-socket');
-//     // return await httpService.post('auth/logout')
-// }
+async function logout() {
+    sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
+    // socketService.emit('unset-user-socket');
+    // return await httpService.post('auth/logout')
+}
 
 // async function changeScore(by) {
 //     const user = getLoggedinUser()
@@ -87,14 +90,14 @@
 // }
 
 
-// function _saveLocalUser(user) {
-//     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
-//     return user
-// }
+function _saveLocalUser(user) {
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+    return user
+}
 
-// function getLoggedinUser() {
-//     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
-// }
+function getLoggedinUser() {
+    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
+}
 
 
 // // (async ()=>{

@@ -12,12 +12,14 @@ function _Homepage(props) {
   const onSubmit = async (ev) => {
     ev.preventDefault();
     if (username.trim() && password.trim()) {
-      if (username === 'admin' && password === '123') props.history.push("/menu");
-      // if (fullname) {
-      // await props.onSignup({ username, password, fullname, imgUrl: "" });
-      // } else {
-      // props.onLogin({ username, password });
-      // }
+      if (username !== 'admin' || password !== '123') return //Temporary
+      if (!isLogin) {
+        props.onSignup({ username, password, fullname, imgUrl: "" });
+        props.history.push("/menu");
+      } else {
+        props.onLogin({ username, password });
+        props.history.push("/menu");
+      }
     }
     // props.history.push("/menu");
   };
@@ -31,7 +33,7 @@ function _Homepage(props) {
           <input
             type="txt"
             value={username}
-            onChange={(ev) =>  setUsername(ev.target.value)}
+            onChange={(ev) => setUsername(ev.target.value)}
             placeholder="Enter Username"
           />
           {!isLogin && (
