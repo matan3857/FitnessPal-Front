@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 // import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Draggable } from "react-beautiful-dnd";
+import { LoaderSpinner } from '../LoaderSpinner'
 
 
 export function CurrWorkoutExercise(props) {
 
     const { exercise, onRemoveExercise, index } = props
-    if (!exercise) return <div>Loading...</div>
+    if (!exercise) return <LoaderSpinner />
     return (
         <Draggable key={exercise.id} draggableId={exercise.id} index={index}>
             {(provided) => (

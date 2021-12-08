@@ -3,13 +3,10 @@ import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import logo from '../assets/img/logo.jpg';
 import logout from '../assets/img/logout.png';
-
 import { onLogout } from "../store/user.actions";
 
 
 function _AppHeader({ user, onLogout, history }) {
-
-  console.log('user',user)
 
   return (
     <>

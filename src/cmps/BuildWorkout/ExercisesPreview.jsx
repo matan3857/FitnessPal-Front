@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from "react-redux";
+import { LoaderSpinner } from '../LoaderSpinner'
 
 export function _ExercisesPreview(props) {
   const { exercise, exerciseType, onAddExerciseToWorkout, user } = props
-  if (!exercise) return <div>Loading...</div>
+  if (!exercise) return <LoaderSpinner />
   return (
     <div className="exercise-preview">
       <h1>{exercise.title}</h1>

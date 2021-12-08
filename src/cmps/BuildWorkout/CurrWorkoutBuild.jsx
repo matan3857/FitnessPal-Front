@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { CurrWorkoutExercise } from './CurrWorkoutExercise';
 
 import { Droppable } from "react-beautiful-dnd";
+import { LoaderSpinner } from '../LoaderSpinner'
+
 
 
 export class CurrWorkoutBuild extends Component {
@@ -11,7 +13,7 @@ export class CurrWorkoutBuild extends Component {
 
     render() {
         const { currWorkout, onRemoveExercise } = this.props
-        if (!currWorkout.length) return <div>Loading...</div>
+        if (!currWorkout.length) return <LoaderSpinner />
         return (
             <Droppable
                 droppableId={"all-groups"}

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import { LoaderSpinner } from "../cmps/LoaderSpinner";
 import { PageList } from "../cmps/PageList";
-import logo from '../assets/img/logo.jpg';
+import { LoaderSpinner } from '../cmps/LoaderSpinner'
 
 export class Menu extends Component {
 
@@ -22,7 +22,7 @@ export class Menu extends Component {
 
   render() {
     const { pages } = this.state
-    if (!pages || !pages.length) return <div>Loading...</div>
+    if (!pages || !pages.length) return <LoaderSpinner />
 
     return (
       <>
@@ -32,8 +32,7 @@ export class Menu extends Component {
               pages={pages}
             />
           ) : (
-            // <LoaderSpinner />
-            <p>Loading...</p>
+            <LoaderSpinner />
           )}
         </div>
       </>
