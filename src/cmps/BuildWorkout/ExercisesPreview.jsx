@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { LoaderSpinner } from '../LoaderSpinner'
 
 export function _ExercisesPreview(props) {
-  const { exercise, exerciseType, onAddExerciseToWorkout, user } = props
+  const { exercise, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails, user } = props
   if (!exercise) return <LoaderSpinner />
   return (
     <div className="exercise-preview">
@@ -13,7 +13,7 @@ export function _ExercisesPreview(props) {
 
       <div className="exercise-btns flex column">
         <button className="exercise-btn" onClick={() => { onAddExerciseToWorkout(exercise) }}>Add to Workout list</button>
-        <button className="exercise-btn">More Details...</button>
+        <button className="exercise-btn" onClick={() => { onShowExerciseDetails(exercise) }}>More Details...</button>
         {user.isAdmin && <button className="exercise-btn">Edit</button>}
       </div>
     </div>

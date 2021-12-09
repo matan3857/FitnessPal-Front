@@ -1,9 +1,16 @@
 .build-workout-container {
     text-align: center;
-    margin-top: 70px;
+    text-align: -webkit-center;
+    margin-top: 35px;
+    .help-build {
+        color: $clr8;
+        padding-top: 50px;
+    }
+    .help-build:hover {
+        text-decoration: underline;
+    }
     .back-to-exercises-btn {
-        width: 100px;
-        margin: 7px;
+        margin-bottom: 34px;
         background-color: #fafbfc;
         border: 0.5px solid rgba(27, 31, 35, 0.15);
         border-radius: 6px;
@@ -19,10 +26,13 @@
         transition-duration: 0.3s;
     }
     .workout-types-container {
-        margin-top: 61px;
+        margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        // @include for-mobile-layout {
+        //     flex-direction: column;
+        // }
     }
     .curr-workout-container {
         margin: 20px 0px 20px;

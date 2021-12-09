@@ -5,6 +5,8 @@ import { CurrWorkoutBuild } from '../cmps/BuildWorkout/CurrWorkoutBuild';
 import { BuildWorkoutType } from '../cmps/BuildWorkout/BuildWorkoutType';
 import { Modal } from "../cmps/Modal";
 import { DragDropContext } from "react-beautiful-dnd";
+import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
+import { Link } from "react-router-dom";
 
 
 export class _BuildWorkout extends Component {
@@ -15,7 +17,9 @@ export class _BuildWorkout extends Component {
         { id: '400', title: 'Bent-Over', type: 'Back', desc: 'bla bla', img1: 'bent-over1', img2: 'bent-over2', reps: '10', sets: '3' }],
         showExercise: false,
         exerciseType: '',
-        modalOpen: false
+        modalOpen: false,
+        isExerciseDetails: false,
+        currExercise: null
     }
 
     onRemoveExercise = (exId) => {
@@ -37,7 +41,7 @@ export class _BuildWorkout extends Component {
     }
 
     onBackToAll = () => {
-        this.setState(prevState => ({ ...prevState, showExercise: false }))
+        this.setState(prevState => ({ ...prevState, showExercise: false, isExerciseDetails: false }))
     }
 
     setModalOpen = () => {
@@ -46,6 +50,11 @@ export class _BuildWorkout extends Component {
     }
     onAddWorkout = () => {
         console.log('add workout')
+    }
+
+    onShowExerciseDetails = (exercise) => {
+        this.setState(prevState => ({ ...prevState, isExerciseDetails: true, currExercise: exercise }))
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     onDragEnd = (result) => {
@@ -59,10 +68,12 @@ export class _BuildWorkout extends Component {
     };
 
     render() {
-        const { currWorkout, exerciseType, showExercise, modalOpen } = this.state
+        const { currWorkout, exerciseType, showExercise, modalOpen, isExerciseDetails, currExercise } = this.state
         return (
             <section className="build-workout-container">
-                {showExercise && <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={this.onAddExerciseToWorkout} onBackToAll={this.onBackToAll} />}
+                <Link to="/menu"><h1 className="help-build pointer">Dont know how to build? click here!</h1></Link>
+                {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={this.onAddExerciseToWorkout}/>}
+                {showExercise && <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={this.onAddExerciseToWorkout} onBackToAll={this.onBackToAll} onShowExerciseDetails={this.onShowExerciseDetails} />}
                 {!showExercise &&
                     <div className="workout-types-container">
                         <WorkoutTypes onToggleShowExercise={this.onToggleShowExercise} />

@@ -2,7 +2,7 @@ import React from "react";
 import { ExercisesPreview } from "./ExercisesPreview";
 
 export function Exercises(props) {
-    const { currExercises, exerciseType, onAddExerciseToWorkout } = props;
+    const { currExercises, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails } = props;
     return (
         <div className="exercise-list flex">
             {currExercises &&
@@ -12,6 +12,7 @@ export function Exercises(props) {
                         exerciseType={exerciseType}
                         key={idx}
                         onAddExerciseToWorkout={onAddExerciseToWorkout}
+                        onShowExerciseDetails={onShowExerciseDetails}
                     />
                 ))}
         </div>

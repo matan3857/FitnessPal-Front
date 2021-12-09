@@ -13,11 +13,11 @@ export class _BuildWorkoutType extends Component {
 
 
     render() {
-        const { exerciseType, onAddExerciseToWorkout } = this.props
+        const { exerciseType, onAddExerciseToWorkout, onShowExerciseDetails } = this.props
         return (
             <div className="build-workout-container">
-                <button onClick={() => this.props.onBackToAll()} className="back-to-exercises-btn">Back</button>
-                <Exercises currExercises={this.exercisesToShow()} exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} />
+                <button onClick={() => this.props.onBackToAll()} className="back-to-exercises-btn">Back To Muscle Types</button>
+                <Exercises currExercises={this.exercisesToShow()} exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onShowExerciseDetails={onShowExerciseDetails} />
             </div>
         )
     }
