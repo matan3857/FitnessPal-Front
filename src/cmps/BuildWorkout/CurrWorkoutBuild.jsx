@@ -1,44 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { CurrWorkoutExercise } from './CurrWorkoutExercise';
-
 import { Droppable } from "react-beautiful-dnd";
-import { LoaderSpinner } from '../LoaderSpinner'
 
+export function CurrWorkoutBuild(props) {
 
+    const { currWorkout, onRemoveExercise } = props
 
-export class CurrWorkoutBuild extends Component {
-
-    state = {
-    }
-
-    render() {
-        const { currWorkout, onRemoveExercise } = this.props
-        if (!currWorkout.length) return <LoaderSpinner />
-        return (
-            <Droppable
-                droppableId={"all-groups"}
-                type="group"
-            >
-                {(provided) => (
-                    <div
-                        className="curr-workout"
-                        {...provided.droppableProps}
-                        ref={provided.innerRef}
-                    >
-                        {currWorkout.map((exercise, index) => (
-                            <div key={index}> {/*Change Here to ID*/}
-                                <CurrWorkoutExercise
-                                    exercise={exercise}
-                                    onRemoveExercise={onRemoveExercise}
-                                    index={index}
-                                    id={exercise.id}
-                                />
-                            </div>
-                        ))}
-                        {provided.placeholder}
-                    </div>
-                )}
-            </Droppable>
-        )
-    }
+    if (!currWorkout.length) return <div><h2>Your training program is currently empty..</h2></div>
+    return (
+        <Droppable
+            droppableId={"all-groups"}
+            type="group"
+        >
+            {(provided) => (
+                <div
+                    className="curr-workout"
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                >
+                    {currWorkout.map((exercise, index) => (
+                        <div key={index}> {/*Change Here to ID*/}
+                            <CurrWorkoutExercise
+                                exercise={exercise}
+                                onRemoveExercise={onRemoveExercise}
+                                index={index}
+                                id={exercise.id}
+                            />
+                        </div>
+                    ))}
+                    {provided.placeholder}
+                </div>
+            )}
+        </Droppable>
+    )
 }

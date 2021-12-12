@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from "react-redux";
 import { Exercises } from "./Exercises";
 
-export class _BuildWorkoutType extends Component {
-    state = {
-    }
-    exercisesToShow = () => {
-        const { exerciseType } = this.props
-        let currExercises = this.props.exercises.filter(exercise => exercise.type === exerciseType)
+export function _BuildWorkoutType(props) {
+    
+    const { exerciseType, onAddExerciseToWorkout, onShowExerciseDetails, exercises } = props
+
+    const exercisesToShow = () => {
+        let currExercises = exercises.filter(exercise => exercise.type === exerciseType)
         return currExercises[0].ex
     }
 
-
-    render() {
-        const { exerciseType, onAddExerciseToWorkout, onShowExerciseDetails } = this.props
-        return (
-            <div className="build-workout-container">
-                <button onClick={() => this.props.onBackToAll()} className="back-to-exercises-btn">Back To Muscle Types</button>
-                <Exercises currExercises={this.exercisesToShow()} exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onShowExerciseDetails={onShowExerciseDetails} />
-            </div>
-        )
-    }
+    return (
+        <div className="build-workout-container">
+            <button onClick={() => props.onBackToAll()} className="back-to-exercises-btn">Back To Muscle Types</button>
+            <Exercises currExercises={exercisesToShow()} exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onShowExerciseDetails={onShowExerciseDetails} />
+        </div>
+    )
 }
-
 
 function mapStateToProps(state) {
     return {

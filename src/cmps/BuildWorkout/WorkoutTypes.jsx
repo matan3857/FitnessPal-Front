@@ -2,24 +2,21 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { WorkoutTypePreview } from './WorkoutTypePreview';
 
-export class _WorkoutTypes extends Component {
-    state = {
-    }
+export function _WorkoutTypes(props) {
 
-    render() {
-        const { onToggleShowExercise } = this.props
-        return (
-            <>{
-                this.props.exercises.map((exercise, idx) => (
-                    <WorkoutTypePreview
-                        key={idx}
-                        exerciseType={exercise.type}
-                        onToggleShowExercise={onToggleShowExercise}
-                    />
-                ))}
-            </>
-        )
-    }
+    const { onToggleShowExercise, exercises } = props
+
+    return (
+        <>{
+            exercises.map((exercise, idx) => (
+                <WorkoutTypePreview
+                    key={idx}
+                    exerciseType={exercise.type}
+                    onToggleShowExercise={onToggleShowExercise}
+                />
+            ))}
+        </>
+    )
 }
 
 function mapStateToProps(state) {
