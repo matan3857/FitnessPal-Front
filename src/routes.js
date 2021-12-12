@@ -1,6 +1,7 @@
 import { Homepage } from './pages/Homepage'
 import { Menu } from './pages/Menu'
 import { BuildWorkout } from './pages/BuildWorkout'
+import { Info } from './pages/Info'
 
 
 const routes = [
@@ -11,9 +12,15 @@ const routes = [
         isExact: true
     },
     {
-        path: '/BuildWorkout',
+        path: '/buildWorkout',
         component: BuildWorkout,
-        label: 'BuildWorkout',
+        label: 'buildWorkout',
+        isExact: true
+    },
+    {
+        path: '/info',
+        component: Info,
+        label: 'info',
         isExact: true
     },
     {

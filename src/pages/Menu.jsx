@@ -13,10 +13,10 @@ export class Menu extends Component {
   componentDidMount = () => {
     const pages = [{ title: 'My Workouts', linkTo: 'trainingMine' },
     { title: 'My diet menus', linkTo: 'nutritionMine' },
-    { title: 'Building a training program', linkTo: 'BuildWorkout' },
+    { title: 'Building a training program', linkTo: 'buildWorkout' },
     { title: 'Building a nutrition menu', linkTo: 'buildNutrition' },
     { title: 'Weight tracking', linkTo: 'weight' },
-    { title: 'More information and articles', linkTo: 'info' }]
+    { title: 'Build Workout guide', linkTo: 'info' }]
     this.setState(prevState => ({ ...prevState, pages }))
   }
 

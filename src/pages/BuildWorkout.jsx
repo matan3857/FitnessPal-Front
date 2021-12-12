@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { connect } from "react-redux";
 import { WorkoutTypes } from '../cmps/BuildWorkout/WorkoutTypes';
 import { CurrWorkoutBuild } from '../cmps/BuildWorkout/CurrWorkoutBuild';
@@ -9,93 +9,85 @@ import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { Link } from "react-router-dom";
 
 
-export class _BuildWorkout extends Component {
+export function _BuildWorkout (props) {
+    const [currWorkout, setCurrWorkout] = useState([]);
+    const [showExercise, setShowExercise] = useState(false);
+    const [exerciseType, setExerciseType] = useState('');
+    const [modalOpen, setModalOpen] = useState(false);
+    const [isExerciseDetails, setIsExerciseDetails] = useState(false);
+    const [currExercise, setCurrExercise] = useState(null);
+    const [isEditWorkout, setIsEditWorkout] = useState(false);
 
-    state = {
-        currWorkout: [{ id: '100', title: 'Squat', type: 'Legs', desc: 'bla bla bla', img1: 'squat1', img2: 'squat2', reps: '10', sets: '3' },
-        { id: '200', title: 'Bench-Press', type: 'Chest', desc: 'bla bla bla', img1: 'bench-press1', img2: 'bench-press2', reps: '10', sets: '3' },
-        { id: '400', title: 'Bent-Over', type: 'Back', desc: 'bla bla', img1: 'bent-over1', img2: 'bent-over2', reps: '10', sets: '3' }],
-        showExercise: false,
-        exerciseType: '',
-        modalOpen: false,
-        isExerciseDetails: false,
-        currExercise: null,
-        isEditWorkout: false
-    }
-
-    onRemoveExercise = (exId) => {
-        const { currWorkout } = this.state
+    const onRemoveExercise = (exId) => {
         let newCurrWorkout = currWorkout.filter(exercise => exercise.id !== exId)
-        this.setState(prevState => ({ ...prevState, currWorkout: newCurrWorkout }))
+        setCurrWorkout(newCurrWorkout)
     }
 
-    onAddExerciseToWorkout = (exercise) => {
-        const { currWorkout } = this.state
+    const onAddExerciseToWorkout = (exercise) => {
         exercise['reps'] = '10'
         exercise['sets'] = '3'
         currWorkout.push(exercise)
-        this.setState(prevState => ({ ...prevState, currWorkout }))
+        setCurrWorkout([...currWorkout])
     }
 
-    onToggleShowExercise = (exerciseType) => {
-        this.setState(prevState => ({ ...prevState, showExercise: !this.state.showExercise, exerciseType }))
+    const onToggleShowExercise = (exerciseType) => {
+        setShowExercise(!showExercise)
+        setExerciseType(exerciseType)
     }
 
-    onBackToAll = () => {
-        this.setState(prevState => ({ ...prevState, showExercise: false, isExerciseDetails: false }))
+    const onBackToAll = () => {
+        setShowExercise(false)
+        setIsExerciseDetails(false)
     }
 
-    setModalOpen = () => {
-        this.setState(prevState => ({ ...prevState, modalOpen: !this.state.modalOpen }))
-
+    const setModalIsOpen = () => {
+        setModalOpen(!modalOpen)
     }
-    onAddWorkout = () => {
+    const onAddWorkout = () => {
         console.log('add workout')
     }
 
-    onShowExerciseDetails = (exercise, isEditWorkout = false) => {
-        this.setState(prevState => ({ ...prevState, isExerciseDetails: true, currExercise: exercise, isEditWorkout }))
+    const onShowExerciseDetails = (exercise, isEditWorkout = false) => {
+        setIsExerciseDetails(true)
+        setCurrExercise(exercise)
+        setIsEditWorkout(isEditWorkout)
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    onHideDetails = () => {
-        this.setState(prevState => ({ ...prevState, isExerciseDetails: false }))
+    const onHideDetails = () => {
+        setIsExerciseDetails(false)
     }
 
-    onDragEnd = (result) => {
+    const onDragEnd = (result) => {
         const { destination, source } = result;
         if (!destination) return;
-        const { currWorkout } = this.state
         const items = Array.from(currWorkout);
         const [reorderedItem] = items.splice(source.index, 1);
         items.splice(result.destination.index, 0, reorderedItem);
-        this.setState(prevState => ({ ...prevState, currWorkout: items }))
-    };
+        setCurrWorkout(items)
+    }
 
-    render() {
-        const { currWorkout, exerciseType, showExercise, modalOpen, isExerciseDetails, currExercise, isEditWorkout } = this.state
         return (
             <section className="build-workout-container">
-                <Link to="/menu"><h1 className="help-build pointer">Dont know how to build? click here!</h1></Link>
-                {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={this.onAddExerciseToWorkout} onBackToAll={this.onBackToAll} onHideDetails={this.onHideDetails} isEditWorkout={isEditWorkout}/>}
-                {showExercise && <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={this.onAddExerciseToWorkout} onBackToAll={this.onBackToAll} onShowExerciseDetails={this.onShowExerciseDetails} />}
+                <Link to="/info"><h1 className="help-build pointer">Dont know how to build? click here!</h1></Link>
+                {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onHideDetails={onHideDetails} isEditWorkout={isEditWorkout}/>}
+                {showExercise && <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onShowExerciseDetails={onShowExerciseDetails} />}
                 {!showExercise &&
                     <div className="workout-types-container">
-                        <WorkoutTypes onToggleShowExercise={this.onToggleShowExercise} />
+                        <WorkoutTypes onToggleShowExercise={onToggleShowExercise} />
                     </div>
                 }
                 <div className="curr-workout-container">
                     <h1>Your current Workout:</h1>
-                    <DragDropContext onDragEnd={this.onDragEnd}>
-                        <CurrWorkoutBuild currWorkout={currWorkout} onRemoveExercise={this.onRemoveExercise} />
+                    <DragDropContext onDragEnd={onDragEnd}>
+                        <CurrWorkoutBuild currWorkout={currWorkout} onRemoveExercise={onRemoveExercise} />
                     </DragDropContext>
-                    <button className="openModalBtn save-workout-btn" onClick={() => { this.setModalOpen(true) }}>Save New Workout!</button>
-                    {modalOpen && <Modal setOpenModal={this.setModalOpen} onAddWorkout={this.onAddWorkout} />}
+                    <button className="openModalBtn save-workout-btn" onClick={() => { setModalOpen(true) }}>Save New Workout!</button>
+                    {modalOpen && <Modal setOpenModal={setModalOpen} onAddWorkout={onAddWorkout} />}
                 </div>
             </section>
         )
     }
-}
 
 function mapStateToProps(state) {
     return {

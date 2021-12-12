@@ -1,19 +1,13 @@
+import React from 'react';
+import { Link } from "react-router-dom";
 
-// Check
+export function Info(props) {
 
-//This is to var / object
-// function mapStateToProps(state) {
-//     return {
-//       filterBy: state.boardModule.filterBy,
-//     };
-//   }
-
-//This is to functions
-//   const mapDispatchToProps = {
-  
-//   };
-  
-//   export const Info = connect(
-//     mapStateToProps,
-//     mapDispatchToProps
-//   )(_Info);
+    return (
+        <div className="info-container margin-top">
+            <Link to="/buildWorkout"><button className="back-to-exercises-btn">Lets build your workout!</button></Link>
+            <h1>Welcome to Building workout guide</h1>
+           
+        </div>
+    )
+}
