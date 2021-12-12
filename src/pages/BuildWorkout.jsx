@@ -19,7 +19,8 @@ export class _BuildWorkout extends Component {
         exerciseType: '',
         modalOpen: false,
         isExerciseDetails: false,
-        currExercise: null
+        currExercise: null,
+        isEditWorkout: false
     }
 
     onRemoveExercise = (exId) => {
@@ -52,9 +53,13 @@ export class _BuildWorkout extends Component {
         console.log('add workout')
     }
 
-    onShowExerciseDetails = (exercise) => {
-        this.setState(prevState => ({ ...prevState, isExerciseDetails: true, currExercise: exercise }))
+    onShowExerciseDetails = (exercise, isEditWorkout = false) => {
+        this.setState(prevState => ({ ...prevState, isExerciseDetails: true, currExercise: exercise, isEditWorkout }))
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    onHideDetails = () => {
+        this.setState(prevState => ({ ...prevState, isExerciseDetails: false }))
     }
 
     onDragEnd = (result) => {
@@ -68,11 +73,11 @@ export class _BuildWorkout extends Component {
     };
 
     render() {
-        const { currWorkout, exerciseType, showExercise, modalOpen, isExerciseDetails, currExercise } = this.state
+        const { currWorkout, exerciseType, showExercise, modalOpen, isExerciseDetails, currExercise, isEditWorkout } = this.state
         return (
             <section className="build-workout-container">
                 <Link to="/menu"><h1 className="help-build pointer">Dont know how to build? click here!</h1></Link>
-                {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={this.onAddExerciseToWorkout}/>}
+                {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={this.onAddExerciseToWorkout} onBackToAll={this.onBackToAll} onHideDetails={this.onHideDetails} isEditWorkout={isEditWorkout}/>}
                 {showExercise && <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={this.onAddExerciseToWorkout} onBackToAll={this.onBackToAll} onShowExerciseDetails={this.onShowExerciseDetails} />}
                 {!showExercise &&
                     <div className="workout-types-container">

@@ -1,4 +1,4 @@
-// import { boardService } from '../services/board.service';
+import { exerciseService } from '../services/exercise.service';
 
 // export const loadBoards = () => {
 //     return async (dispatch) => {
@@ -36,22 +36,23 @@
 //     }
 // }
 
-// export const saveBoard = (board) => {
-//     return async (dispatch) => {
-//         try {
-//             const newBoard = await boardService.save(board)
-//             dispatch({
-//                 type: "SAVE_BOARD",
-//                 board: newBoard,
-//             });
+export const saveExercise = (exercises, exercise) => {
+    return async (dispatch) => {
+        try {
+            // const updatedExercises = await exerciseService.save(exercises, exercise)
+            const updatedExercises = exercises
+            dispatch({
+                type: "SAVE_EXERCISE",
+                exercises: updatedExercises,
+            });
 
-//         }
-//         catch (err) {
-//             console.log('cant save board', err)
-//             // throw Error(err)
-//         }
-//     }
-// }
+        }
+        catch (err) {
+            console.log('cant save exercise', err)
+            // throw Error(err)
+        }
+    }
+}
 
 // export const addBoard = (title = "new board", bgClr = "black", bgImg) => {
 //     return async (dispatch) => {

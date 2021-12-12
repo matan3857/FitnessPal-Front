@@ -14,7 +14,7 @@ export function _ExercisesPreview(props) {
       <div className="exercise-btns flex column">
         <button className="exercise-btn" onClick={() => { onAddExerciseToWorkout(exercise) }}>Add to Workout list</button>
         <button className="exercise-btn" onClick={() => { onShowExerciseDetails(exercise) }}>More Details...</button>
-        {user.isAdmin && <button className="exercise-btn">Edit</button>}
+        {user.isAdmin && <button onClick={() => { onShowExerciseDetails(exercise , true) }} className="exercise-btn">Edit</button>}
       </div>
     </div>
   )

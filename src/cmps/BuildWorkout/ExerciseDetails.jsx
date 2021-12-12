@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { saveExercise } from "../../store/exercise.actions";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
 
-export function ExerciseDetails({ exercise, onAddExerciseToWorkout }) {
+export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorkout, onBackToAll, onHideDetails, saveExercise, exercises }) {
 
     // const [imgToShow, setImgToShow] = useState(exercise.img1);
 
@@ -22,19 +25,59 @@ export function ExerciseDetails({ exercise, onAddExerciseToWorkout }) {
     //     return () => clearInterval(interval);
     // }, []);
 
-    console.log('curr exercise:', exercise)
+
+    const [desc, setDescription] = useState(exercise.desc);
+
+    const onSubmit = async (ev) => {
+        ev.preventDefault();
+        exercise.desc = desc
+        saveExercise(exercises, exercise)
+        onBackToAll()
+    };
+
     return (
         <div className='exercise-details flex column align-center'>
+            <div className="title-close-btn close-details flex">
+                <button className="close-btn" onClick={() => onHideDetails()}>X</button>
+            </div>
             <h1>{exercise.title}</h1>
-            <p>{exercise.desc}</p>
+            {isEditWorkout &&
+                <form className="flex column edit-exercise" onSubmit={onSubmit}>
+                    <textarea
+                        type="txt"
+                        value={desc}
+                        onChange={(ev) => setDescription(ev.target.value)}
+                        onBlur={(ev) => { setDescription(ev.target.value) }}
+                        placeholder="Enter Description"
+                    />
+                </form>
+            }
+            {!isEditWorkout &&
+                <p>{exercise.desc}</p>
+            }
             <div className='imgs-container flex'>
                 <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} />
                 <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} />
             </div>
             <div className='exercise-btns flex column'>
-                <button className='add-exercise-btn' onClick={() => { onAddExerciseToWorkout(exercise) }}>Add to Workout list</button>
-                {/* {user.isAdmin && <button className='exercise-btn'>Edit</button>} */}
+                {!isEditWorkout &&
+                    <button className='exercise-details-btn add-exercise-btn' onClick={() => { onAddExerciseToWorkout(exercise) }}>Add to Workout list</button>
+                }
+                {isEditWorkout &&
+                    <button className='exercise-details-btn update-exercise-btn' onClick={onSubmit}>Save Exercise!</button>
+                }
             </div>
         </div>
     );
 }
+
+function mapStateToProps(state) {
+    return {
+        exercises: state.exerciseModule.exercises,
+    };
+}
+const mapDispatchToProps = {
+    saveExercise
+}
+
+export const ExerciseDetails = withRouter(connect(mapStateToProps, mapDispatchToProps)(_ExerciseDetails));
