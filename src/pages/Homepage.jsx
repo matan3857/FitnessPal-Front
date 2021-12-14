@@ -13,7 +13,8 @@ function _Homepage(props) {
     ev.preventDefault();
 
     if (username.trim() && password.trim()) {
-      if (username !== 'admin' || password !== '123') return //Temporary
+      if (username !== 'admin' && username !== 'user') return
+      if (password !== '123') return //Temporary
       if (!isLogin) {
         props.onSignup({ username, password, fullname, imgUrl: "" });
         props.history.push("/menu");
