@@ -11,7 +11,7 @@ export class Menu extends Component {
   }
 
   componentDidMount = () => {
-    const pages = [{ title: 'My Workouts', linkTo: 'trainingMine' },
+    const pages = [{ title: 'My Workouts', linkTo: 'myWorkouts' },
     { title: 'My diet menus', linkTo: 'nutritionMine' },
     { title: 'Building a training program', linkTo: 'buildWorkout' },
     { title: 'Building a nutrition menu', linkTo: 'buildNutrition' },

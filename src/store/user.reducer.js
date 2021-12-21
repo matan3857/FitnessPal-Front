@@ -12,6 +12,12 @@ export function userReducer(state = initialState, action) {
             break;
         default:
     }
+    switch (action.type) {
+        case 'UPDATE_USER':
+            newState = { ...state, loggedinUser: action.user }
+            break;
+        default:
+    }
     // For debug:
     // window.userState = newState;
     // console.log('State:', newState);

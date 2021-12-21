@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function Modal({ setOpenModal, onAddWorkout }) {
+export function ModalWorkoutName({ setOpenModal, onAddWorkout, saveNewWorkout }) {
 
     const [workoutTitle, setWorkoutTitle] = useState('');
 
@@ -26,7 +26,7 @@ export function Modal({ setOpenModal, onAddWorkout }) {
                 </div>
                 <div className="modal-footer">
                     <button onClick={() => { setOpenModal(false) }} className=" modal-btns cancel-btn">Cancel</button>
-                    <button onClick={() => { console.log('Hello') }} className=" modal-btns continue-btn">OK</button>
+                    <button onClick={() => { saveNewWorkout(workoutTitle) }} className=" modal-btns continue-btn">OK</button>
                 </div>
             </div>
         </div>

@@ -26,7 +26,7 @@ const gUsers = [
         'username': 'admin',
         'password': '123',
         'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-        'workoutList': [],
+        'workouts': [],
         'nutritionMenus': [],
         'isAdmin': true
     },
@@ -36,7 +36,7 @@ const gUsers = [
         'username': 'user',
         'password': '123',
         'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-        'workoutList': [],
+        'workouts': [],
         'nutritionMenus': [],
         'isAdmin': false
     },

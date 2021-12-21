@@ -2,6 +2,7 @@ import { Homepage } from './pages/Homepage'
 import { Menu } from './pages/Menu'
 import { BuildWorkout } from './pages/BuildWorkout'
 import { Info } from './pages/Info'
+import { MyWorkouts } from './pages/MyWorkouts'
 
 
 const routes = [
@@ -15,6 +16,12 @@ const routes = [
         path: '/buildWorkout',
         component: BuildWorkout,
         label: 'buildWorkout',
+        isExact: true
+    },
+    {
+        path: '/myWorkouts',
+        component: MyWorkouts,
+        label: 'myWorkouts',
         isExact: true
     },
     {
