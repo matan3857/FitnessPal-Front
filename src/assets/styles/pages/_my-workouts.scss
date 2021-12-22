@@ -29,12 +29,20 @@
     h3{
         font-size: 1.5rem;
     }
+    p{
+        color: aliceblue;
+    }
     .my-workouts-select{
         width: 50%;
     }
     .my-workout-header{
         padding: 7px;
         text-align: center;
+        .my-workout-btns{
+            button{
+                margin: 5px;
+            }
+        }
     }
     .exercise-list{
         .exercise-preview{

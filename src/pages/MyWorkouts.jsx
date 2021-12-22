@@ -36,10 +36,12 @@ export function _MyWorkouts({ user }) {
 
                     <div className='my-workout-header'>
                         <h1>{user.workouts[selectedOption.value].workoutTitle}</h1>
-                        <Link to={{ pathname: '/buildWorkout' , workoutToEdit : user.workouts[selectedOption.value].ex}} >
-                            <button className='light-btn'>Edit Workout</button>
-                        </Link>
-                        <button className='light-btn'>Delete Workout</button>
+                        <div className='my-workout-btns'>
+                            <Link to={{ pathname: '/buildWorkout', workoutToEdit: user.workouts[selectedOption.value].ex }} >
+                                <button className='light-btn'>Edit Workout</button>
+                            </Link>
+                            <button className='light-btn'>Delete Workout</button>
+                        </div>
                     </div>
                     <div className='exercise-list'>
                         {
