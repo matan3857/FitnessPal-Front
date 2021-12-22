@@ -10,8 +10,10 @@ import { updateUser } from "../store/user.actions";
 import { Link } from "react-router-dom";
 
 
-export function _BuildWorkout({ user, history }) {
-    const [currWorkout, setCurrWorkout] = useState([]);
+export function _BuildWorkout(props) {
+    const { user, history, location } = props
+    const { workoutToEdit } = location
+    const [currWorkout, setCurrWorkout] = useState(workoutToEdit ? workoutToEdit : []);
     const [showExercise, setShowExercise] = useState(false);
     const [exerciseType, setExerciseType] = useState('');
     const [modalOpen, setModalOpen] = useState(false);
@@ -44,9 +46,6 @@ export function _BuildWorkout({ user, history }) {
     const setModalIsOpen = () => {
         setModalOpen(!modalOpen)
     }
-    const onAddWorkout = () => {
-        console.log('add workout')
-    }
 
     const onShowExerciseDetails = (exercise, isEditWorkout = false) => {
         setIsExerciseDetails(true)
@@ -75,7 +74,7 @@ export function _BuildWorkout({ user, history }) {
         items.splice(result.destination.index, 0, reorderedItem);
         setCurrWorkout(items)
     }
-    
+
     return (
         <section className="build-workout-container">
             <Link to="/info"><h1 className="help-build pointer">Dont know how to build? click here!</h1></Link>
@@ -92,7 +91,7 @@ export function _BuildWorkout({ user, history }) {
                     <CurrWorkoutBuild currWorkout={currWorkout} onRemoveExercise={onRemoveExercise} />
                 </DragDropContext>
                 <button className="openModalBtn save-workout-btn" onClick={() => { setModalOpen(true) }}>Save New Workout!</button>
-                {modalOpen && <ModalWorkoutName setOpenModal={setModalOpen} onAddWorkout={onAddWorkout} saveNewWorkout={saveNewWorkout} />}
+                {modalOpen && <ModalWorkoutName setOpenModal={setModalOpen} saveNewWorkout={saveNewWorkout} />}
             </div>
         </section>
     )

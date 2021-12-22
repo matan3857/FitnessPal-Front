@@ -87,7 +87,7 @@
     color: gray;
 }
 
-.back-to-exercises-btn {
+.light-btn {
     margin-bottom: 34px;
     background-color: #fafbfc;
     border: 0.5px solid rgba(27, 31, 35, 0.15);
@@ -99,7 +99,7 @@
     padding: 6px 16px;
     transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 }
-.back-to-exercises-btn:hover {
+.light-btn:hover {
     background-color: #f3f4f6;
     transition-duration: 0.3s;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function ModalWorkoutName({ setOpenModal, onAddWorkout, saveNewWorkout }) {
+export function ModalWorkoutName({ setOpenModal, saveNewWorkout }) {
 
     const [workoutTitle, setWorkoutTitle] = useState('');
 
@@ -14,7 +14,7 @@ export function ModalWorkoutName({ setOpenModal, onAddWorkout, saveNewWorkout })
                     <h1>Name of Workout</h1>
                 </div>
                 <div className="modal-body">
-                    <form className="flex column" onSubmit={onAddWorkout}>
+                    <form className="flex column" onSubmit={() => { saveNewWorkout(workoutTitle) }}>
                         <input
                             type="txt"
                             value={workoutTitle}
