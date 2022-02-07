@@ -32,17 +32,15 @@ export function _BuildWorkout(props) {
     const onAddExerciseToWorkout = (exercise) => {
         setSetsRepsModal(true)
         setCurrExerciseToAdd(exercise)
-        // exercise['reps'] = '10'
-        // exercise['sets'] = '3'
-        // addExerciseToWorkout(exercise)
-        // currWorkout.push(exercise)
-        // setCurrWorkout([...currWorkout])
     }
+    
     const addExWithSetsReps = (sets, reps) => {
+        if(!sets || !reps) return 
         currExerciseToAdd['sets'] = sets 
         currExerciseToAdd['reps'] = reps 
         currWorkout.push(currExerciseToAdd)
         setCurrWorkout([...currWorkout])
+        setSetsRepsModal(false)
     }
 
     const onToggleShowExercise = (exerciseType) => {
@@ -53,10 +51,6 @@ export function _BuildWorkout(props) {
     const onBackToAll = () => {
         setShowExercise(false)
         setIsExerciseDetails(false)
-    }
-
-    const setModalIsOpen = () => {
-        setModalOpen(!modalOpen)
     }
 
     const onShowExerciseDetails = (exercise, isEditWorkout = false) => {
