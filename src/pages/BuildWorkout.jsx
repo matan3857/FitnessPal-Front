@@ -4,6 +4,7 @@ import { WorkoutTypes } from '../cmps/BuildWorkout/WorkoutTypes';
 import { CurrWorkoutBuild } from '../cmps/BuildWorkout/CurrWorkoutBuild';
 import { BuildWorkoutType } from '../cmps/BuildWorkout/BuildWorkoutType';
 import { ModalWorkoutName } from "../cmps/ModalWorkoutName";
+import { ModalSetRep } from "../cmps/ModalSetRep";
 import { DragDropContext } from "react-beautiful-dnd";
 import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { updateUser } from "../store/user.actions";
@@ -17,8 +18,10 @@ export function _BuildWorkout(props) {
     const [showExercise, setShowExercise] = useState(false);
     const [exerciseType, setExerciseType] = useState('');
     const [modalOpen, setModalOpen] = useState(false);
+    const [setsRepsModal, setSetsRepsModal] = useState(false);
     const [isExerciseDetails, setIsExerciseDetails] = useState(false);
     const [currExercise, setCurrExercise] = useState(null);
+    const [currExerciseToAdd, setCurrExerciseToAdd] = useState(null);
     const [isEditWorkout, setIsEditWorkout] = useState(false);
 
     const onRemoveExercise = (exId) => {
@@ -27,9 +30,18 @@ export function _BuildWorkout(props) {
     }
 
     const onAddExerciseToWorkout = (exercise) => {
-        exercise['reps'] = '10'
-        exercise['sets'] = '3'
-        currWorkout.push(exercise)
+        setSetsRepsModal(true)
+        setCurrExerciseToAdd(exercise)
+        // exercise['reps'] = '10'
+        // exercise['sets'] = '3'
+        // addExerciseToWorkout(exercise)
+        // currWorkout.push(exercise)
+        // setCurrWorkout([...currWorkout])
+    }
+    const addExWithSetsReps = (sets, reps) => {
+        currExerciseToAdd['sets'] = sets 
+        currExerciseToAdd['reps'] = reps 
+        currWorkout.push(currExerciseToAdd)
         setCurrWorkout([...currWorkout])
     }
 
@@ -92,6 +104,7 @@ export function _BuildWorkout(props) {
                 </DragDropContext>
                 <button className="openModalBtn save-workout-btn" onClick={() => { setModalOpen(true) }}>Save New Workout!</button>
                 {modalOpen && <ModalWorkoutName setOpenModal={setModalOpen} saveNewWorkout={saveNewWorkout} />}
+                {setsRepsModal && <ModalSetRep setOpenModal={setSetsRepsModal} addExWithSetsReps={addExWithSetsReps}/>}
             </div>
         </section>
     )
