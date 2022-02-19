@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-export function ModalSetRep({ setOpenModal, addExWithSetsReps }) {
-
-    const [sets, setExerciseSets] = useState('');
-    const [reps, setExerciseReps] = useState('');
+export function ModalMsg({ setOpenModal, msg, onAction }) {
 
     return (
         <div className="modal-background">
@@ -12,9 +9,9 @@ export function ModalSetRep({ setOpenModal, addExWithSetsReps }) {
                     <button className="close-btn" onClick={() => { setOpenModal(false) }}>X</button>
                 </div>
                 <div className="modal-title">
-                    <h1>Set number of sets and reps</h1>
+                    <h1>{msg}</h1>
                 </div>
-                <div className="modal-body">
+                {/* <div className="modal-body">
                     <form className="flex column" onSubmit={() => { addExWithSetsReps(sets , reps) }}>
                         <input
                             type="number"
@@ -32,10 +29,10 @@ export function ModalSetRep({ setOpenModal, addExWithSetsReps }) {
                             required
                         />
                     </form>
-                </div>
+                </div> */}
                 <div className="modal-footer">
                     <button onClick={() => { setOpenModal(false) }} className=" modal-btns cancel-btn">Cancel</button>
-                    <button onClick={() => { addExWithSetsReps(sets , reps) }} className=" modal-btns continue-btn">OK</button>
+                    <button onClick={() => { onAction() }} className=" modal-btns continue-btn">OK</button>
                 </div>
             </div>
         </div>

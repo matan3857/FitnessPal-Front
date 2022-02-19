@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
 // import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
+import { ModalMsg } from "../cmps/ModalMsg";
+
 import { updateUser } from "../store/user.actions";
 import { MyWorkoutPreview } from "../cmps/MyWorkouts/MyWorkoutPreview";
 import { Link } from "react-router-dom";
@@ -9,6 +11,7 @@ import hero from '../assets/img/hero-my-workouts.png';
 
 export function _MyWorkouts({ user }) {
     const [selectedOption, setSelectedOption] = useState(null);
+    const [modalRemove, setModalRemove] = useState(false);
     // const [isExerciseDetails, setIsExerciseDetails] = useState(false);
 
     console.log('user', user)
@@ -16,6 +19,10 @@ export function _MyWorkouts({ user }) {
     const options = user.workouts.map((workout, idx) => {
         return { value: idx, label: workout.workoutTitle }
     })
+
+    const onDeleteWorkout = () => {
+        console.log('Delete workout',selectedOption);
+    }
 
     return (
         <section className='my-workouts margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
@@ -33,14 +40,13 @@ export function _MyWorkouts({ user }) {
             {selectedOption &&
                 <>
                     {/* {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onHideDetails={onHideDetails} isEditWorkout={isEditWorkout} />} */}
-
                     <div className='my-workout-header'>
                         <h1>{user.workouts[selectedOption.value].workoutTitle}</h1>
                         <div className='my-workout-btns'>
                             <Link to={{ pathname: '/buildWorkout', workoutToEdit: user.workouts[selectedOption.value].ex }} >
                                 <button className='light-btn'>Edit Workout</button>
                             </Link>
-                            <button className='light-btn'>Delete Workout</button>
+                            <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Workout</button>
                         </div>
                     </div>
                     <div className='exercise-list'>
@@ -56,7 +62,7 @@ export function _MyWorkouts({ user }) {
                 </>
             }
 
-
+            {modalRemove && <ModalMsg setOpenModal={setModalRemove} msg={'Are you sure you want to delete this workout?'} onAction={onDeleteWorkout} />}
         </section >
     )
 }
