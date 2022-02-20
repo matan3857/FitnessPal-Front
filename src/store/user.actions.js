@@ -52,8 +52,10 @@ export function onLogin(credentials) {
                 type: 'SET_USER',
                 user
             })
-        } catch (err) {
-            // showErrorMsg('Cannot login')
+            return user
+        }
+        catch (err) {
+            // showErrorMsg('Wrong username or password')
             console.log('Cannot login', err)
         }
     }
