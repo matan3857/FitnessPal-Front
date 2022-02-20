@@ -9,22 +9,19 @@ function _Homepage(props) {
   const [fullname, setFullname] = useState("");
   const [isLogin, setIsLogin] = useState(true);
 
+
   const onSubmit = async (ev) => {
     ev.preventDefault();
-
     if (username.trim() && password.trim()) {
-      if (username !== 'admin' && username !== 'user') return
-      if (password !== '123') return //Temporary
-      if (!isLogin) {
-        props.onSignup({ username, password, fullname, imgUrl: "" });
-        props.history.push("/menu");
-      } else {
-        props.onLogin({ username, password });
-        props.history.push("/menu");
-      }
+        let res
+        if (!isLogin) {
+            res = props.onSignup({ username, password, fullname });
+        } else {
+            res = await props.onLogin({ username, password });
+        }
+        // if (res) props.history.push("/menu");
     }
-    // props.history.push("/menu");
-  };
+};
 
 
   return (

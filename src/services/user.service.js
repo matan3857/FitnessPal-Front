@@ -1,14 +1,19 @@
 import { storageService } from './async-storage.service'
-// // import { httpService } from './http.service'
+import { httpService } from './http.service'
+import Axios from 'axios';
 // // import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service'
-const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
 const DB_KEY = 'user'
 // var gWatchedUser = null;
+
+const axios = Axios.create({
+    withCredentials: true
+});
 
 export const userService = {
     login,
     logout,
-    // signup,
+    signup,
     getLoggedinUser,
     // getUsers,
     // getById,
@@ -19,29 +24,29 @@ export const userService = {
 
 // window.userService = userService
 
-const gUsers = [
-    {
-        '_id': 'u101',
-        'fullname': 'admin',
-        'username': 'admin',
-        'password': '123',
-        'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-        'workouts': [],
-        'nutritionMenus': [],
-        'isAdmin': true
-    },
-    {
-        '_id': 'u102',
-        'fullname': 'user',
-        'username': 'user',
-        'password': '123',
-        'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-        'workouts': [],
-        'nutritionMenus': [],
-        'isAdmin': false
-    },
-]
-localStorage.setItem(DB_KEY, JSON.stringify(gUsers))
+// const gUsers = [
+//     {
+//         '_id': 'u101',
+//         'fullname': 'admin',
+//         'username': 'admin',
+//         'password': '123',
+//         'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
+//         'workouts': [],
+//         'nutritionMenus': [],
+//         'isAdmin': true
+//     },
+//     {
+//         '_id': 'u102',
+//         'fullname': 'user',
+//         'username': 'user',
+//         'password': '123',
+//         'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
+//         'workouts': [],
+//         'nutritionMenus': [],
+//         'isAdmin': false
+//     },
+// ]
+// localStorage.setItem(DB_KEY, JSON.stringify(gUsers))
 
 // async function getUsers() {
 //     const users = localStorage.getItem(DB_KEY) 
@@ -79,16 +84,23 @@ async function login(userCred) {
     // socketService.emit('set-user-socket', user._id);
     // if (user) return _saveLocalUser(user)
 }
-// async function signup(userCred) {
-//     const user = await storageService.post(DB_KEY, userCred)
-//     // const user = await httpService.post('auth/signup', userCred)
-//     // socketService.emit('set-user-socket', user._id);
-//     return _saveLocalUser(user)
-// }
+
+async function signup(userCred) {
+    // const user = await storageService.post(DB_KEY, userCred)
+
+    // const user = await httpService.post('auth/signup', userCred)
+    // sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
+    // return user
+    
+    const res = await axios.post(`http://localhost:3030/api/auth/signup`, userCred)
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(res.data))
+    return res.data
+}
+
 async function logout() {
-    sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
-    // socketService.emit('unset-user-socket');
-    // return await httpService.post('auth/logout')
+    const res = await axios.post(`http://localhost:3030/api/auth/logout`)
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
+    return res.data
 }
 
 // async function changeScore(by) {
@@ -101,46 +113,10 @@ async function logout() {
 
 
 function _saveLocalUser(user) {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
     return user
 }
 
 function getLoggedinUser() {
-    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
+    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN) || 'null')
 }
-
-
-// // (async ()=>{
-// //     await userService.signup({fullname: 'Puki Norma', username: 'user1', password:'123',score: 10000, isAdmin: false})
-// //     await userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123', score: 10000, isAdmin: true})
-// //     await userService.signup({fullname: 'Muki G', username: 'muki', password:'123', score: 10000})
-// // })();
-
-
-
-// // This IIFE functions for Dev purposes 
-// // It allows testing of real time updates (such as sockets) by listening to storage events
-// // (async () => {
-// //     var user = getLoggedinUser()
-// //     // Dev Helper: Listens to when localStorage changes in OTHER browser
-
-// //     // Here we are listening to changes for the watched user (comming from other browsers)
-// //     window.addEventListener('storage', async () => {
-// //         if (!gWatchedUser) return;
-// //         const freshUsers = await storageService.query('user')
-// //         const watchedUser = freshUsers.find(u => u._id === gWatchedUser._id)
-// //         if (!watchedUser) return;
-// //         if (gWatchedUser.score !== watchedUser.score) {
-// //             console.log('Watched user score changed - localStorage updated from another browser')
-// //             socketService.emit(SOCKET_EVENT_USER_UPDATED, watchedUser)
-// //         }
-// //         gWatchedUser = watchedUser
-// //     })
-// // })();
-
-// // This is relevant when backend is connected
-// // (async () => {
-// //     var user = getLoggedinUser()
-// //     if (user) socketService.emit('set-user-socket', user._id)
-// // })();
-
