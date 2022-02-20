@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { connect } from "react-redux";
 import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { ModalMsg } from "../cmps/ModalMsg";
-import { updateUser } from "../store/user.actions";
+import { onUpdate } from "../store/user.actions";
 import { MyWorkoutPreview } from "../cmps/MyWorkouts/MyWorkoutPreview";
 import { Link } from "react-router-dom";
 import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
 
 function _MyWorkouts(props) {
-    const { user, history, updateUser } = props
+    const { user, history, onUpdate } = props
     const [selectedOption, setSelectedOption] = useState(null);
     const [modalRemove, setModalRemove] = useState(false);
     const [isExerciseDetails, setIsExerciseDetails] = useState(false);
@@ -23,7 +23,7 @@ function _MyWorkouts(props) {
 
     const onDeleteWorkout = () => {
         user.workouts.splice(selectedOption.value, 1)
-        updateUser(user)
+        onUpdate(user)
         setModalRemove(false)
         history.push("/menu")
     }
@@ -91,7 +91,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    updateUser
+    onUpdate
 }
 
 export const MyWorkouts = connect(mapStateToProps, mapDispatchToProps)(_MyWorkouts);

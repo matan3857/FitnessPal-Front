@@ -1,49 +1,6 @@
 import { userService } from '../services/user.service.js';
 // import { showErrorMsg } from '../services/event-bus.service.js'
 
-// export function loadUsers() {
-//     return async dispatch => {
-//         try {
-//             // dispatch({ type: 'LOADING_START' })
-//             const users = await userService.getUsers()
-//             dispatch({ type: 'SET_USERS', users })
-//         } catch (err) {
-//             console.log('UserActions: err in loadUsers', err)
-//         } finally {
-//             // dispatch({ type: 'LOADING_DONE' })
-//         }
-//     }
-// }
-
-// export function removeUser(userId) {
-//     return async dispatch => {
-//         try {
-//             await userService.remove(userId)
-//             dispatch({ type: 'REMOVE_USER', userId })
-//         } catch (err) {
-//             console.log('UserActions: err in removeUser', err)
-//         }
-//     }
-// }
-
-export const updateUser = (user) => {
-    return async (dispatch) => {
-        try {
-            // const updatedUser = await userService.update(user)
-            const updatedUser = user
-            dispatch({
-                type: "UPDATE_USER",
-                user: updatedUser,
-            });
-
-        }
-        catch (err) {
-            console.log('cant save exercise', err)
-            // throw Error(err)
-        }
-    }
-}
-
 export function onLogin(credentials) {
     return async (dispatch) => {
         try {
@@ -94,3 +51,46 @@ export function onLogout() {
         }
     }
 }
+
+export function onUpdate(credentials) {
+    return async (dispatch) => {
+        try {
+            const user = await userService.update(credentials)
+            dispatch({
+                type: 'SET_USER',
+                user
+            })
+            return user
+        }
+        catch (err) {
+            // showErrorMsg('Wrong password')
+            console.log('Cannot update user', err)
+        }
+    }
+}
+
+
+// export function loadUsers() {
+//     return async dispatch => {
+//         try {
+//             // dispatch({ type: 'LOADING_START' })
+//             const users = await userService.getUsers()
+//             dispatch({ type: 'SET_USERS', users })
+//         } catch (err) {
+//             console.log('UserActions: err in loadUsers', err)
+//         } finally {
+//             // dispatch({ type: 'LOADING_DONE' })
+//         }
+//     }
+// }
+
+// export function removeUser(userId) {
+//     return async dispatch => {
+//         try {
+//             await userService.remove(userId)
+//             dispatch({ type: 'REMOVE_USER', userId })
+//         } catch (err) {
+//             console.log('UserActions: err in removeUser', err)
+//         }
+//     }
+// }

@@ -1,4 +1,4 @@
-// import { httpService } from './http.service'
+import { httpService } from './http.service'
 import Axios from 'axios';
 const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
 
@@ -14,7 +14,7 @@ export const userService = {
     // getUsers,
     // getById,
     // remove,
-    // update,
+    update,
     // changeScore
 }
 
@@ -63,14 +63,6 @@ export const userService = {
 //     // return httpService.delete(`user/${userId}`)
 // }
 
-// async function update(user) {
-//     await storageService.put(DB_KEY, user)
-//     // user = await httpService.put(`user/${user._id}`, user)
-//     // Handle case in which admin updates other user's details
-//     if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
-//     return user;
-// }
-
 async function login(credentials) {
     try {
         const res = await axios.post('http://localhost:3030/api/auth/login', credentials)
@@ -105,6 +97,23 @@ async function logout() {
     const res = await axios.post(`http://localhost:3030/api/auth/logout`)
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
     return res.data
+}
+
+async function update(user) {
+    console.log('user to update in service',user)
+    try {
+        // const res = await axios.put(`http://localhost:3030/api/user/${user._id}`, user)
+        // const updatedUser = res.data
+        const updatedUser = await httpService.put('user', user)
+        if (updatedUser) {
+            sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(updatedUser))
+        }
+        return updatedUser
+    }
+    catch (err) {
+        console.log('server replied: cannot login', err)
+        throw err
+    }
 }
 
 // async function changeScore(by) {

@@ -7,7 +7,7 @@ import { ModalWorkoutName } from "../cmps/ModalWorkoutName";
 import { ModalSetRep } from "../cmps/ModalSetRep";
 import { DragDropContext } from "react-beautiful-dnd";
 import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
-import { updateUser } from "../store/user.actions";
+import { onUpdate } from "../store/user.actions";
 import { Link } from "react-router-dom";
 
 
@@ -33,11 +33,11 @@ export function _BuildWorkout(props) {
         setSetsRepsModal(true)
         setCurrExerciseToAdd(exercise)
     }
-    
+
     const addExWithSetsReps = (sets, reps) => {
-        if(!sets || !reps) return 
-        currExerciseToAdd['sets'] = sets 
-        currExerciseToAdd['reps'] = reps 
+        if (!sets || !reps) return
+        currExerciseToAdd['sets'] = sets
+        currExerciseToAdd['reps'] = reps
         currWorkout.push(currExerciseToAdd)
         setCurrWorkout([...currWorkout])
         setSetsRepsModal(false)
@@ -64,13 +64,12 @@ export function _BuildWorkout(props) {
         setIsExerciseDetails(false)
     }
 
-    const saveNewWorkout = (workoutTitle) => {
+    const saveNewWorkout = async (workoutTitle) => {
         if (!workoutTitle) return
         let workout = { workoutTitle, ex: currWorkout }
         user.workouts.push(workout)
-        updateUser(user)
-        history.push("/menu")
-
+        const res = await props.onUpdate(user)
+        if (res) history.push("/menu")
     }
 
     const onDragEnd = (result) => {
@@ -99,7 +98,7 @@ export function _BuildWorkout(props) {
                 </DragDropContext>
                 <button className="openModalBtn save-workout-btn" onClick={() => { setModalOpen(true) }}>Save New Workout!</button>
                 {modalOpen && <ModalWorkoutName setOpenModal={setModalOpen} saveNewWorkout={saveNewWorkout} />}
-                {setsRepsModal && <ModalSetRep setOpenModal={setSetsRepsModal} addExWithSetsReps={addExWithSetsReps}/>}
+                {setsRepsModal && <ModalSetRep setOpenModal={setSetsRepsModal} addExWithSetsReps={addExWithSetsReps} />}
             </div>
         </section>
     )
@@ -113,7 +112,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    updateUser
+    onUpdate
 }
 
 export const BuildWorkout = connect(mapStateToProps, mapDispatchToProps)(_BuildWorkout);
