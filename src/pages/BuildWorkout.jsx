@@ -70,6 +70,7 @@ export function _BuildWorkout(props) {
         user.workouts.push(workout)
         updateUser(user)
         history.push("/menu")
+
     }
 
     const onDragEnd = (result) => {

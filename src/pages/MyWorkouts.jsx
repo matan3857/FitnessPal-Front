@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
 
-function _MyWorkouts({ user }) {
+function _MyWorkouts(props) {
+    const { user, history, updateUser } = props
     const [selectedOption, setSelectedOption] = useState(null);
     const [modalRemove, setModalRemove] = useState(false);
     const [isExerciseDetails, setIsExerciseDetails] = useState(false);
@@ -21,7 +22,10 @@ function _MyWorkouts({ user }) {
     })
 
     const onDeleteWorkout = () => {
-        console.log('Delete workout', selectedOption);
+        user.workouts.splice(selectedOption.value, 1)
+        updateUser(user)
+        setModalRemove(false)
+        history.push("/menu")
     }
 
     const onShowExerciseDetails = (exercise) => {
@@ -52,13 +56,15 @@ function _MyWorkouts({ user }) {
                 <>
                     {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={null} onBackToAll={null} onHideDetails={onHideDetails} isEditWorkout={false} />}
                     <div className='my-workout-header'>
-                        <h1>{user.workouts[selectedOption.value].workoutTitle}</h1>
-                        <div className='my-workout-btns'>
-                            <Link to={{ pathname: '/buildWorkout', workoutToEdit: user.workouts[selectedOption.value].ex }} >
-                                <button className='light-btn'>Edit Workout</button>
-                            </Link>
-                            <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Workout</button>
-                        </div>
+                        <>
+                            <h1>{user.workouts[selectedOption.value].workoutTitle}</h1>
+                            <div className='my-workout-btns'>
+                                <Link to={{ pathname: '/buildWorkout', workoutToEdit: user.workouts[selectedOption.value].ex }} >
+                                    <button className='light-btn'>Edit Workout</button>
+                                </Link>
+                                <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Workout</button>
+                            </div>
+                        </>
                     </div>
                     <div className='exercise-list'>
                         {
@@ -89,5 +95,3 @@ const mapDispatchToProps = {
 }
 
 export const MyWorkouts = connect(mapStateToProps, mapDispatchToProps)(_MyWorkouts);
-
-{/* {`${workout.workoutTitle}`} */ }
