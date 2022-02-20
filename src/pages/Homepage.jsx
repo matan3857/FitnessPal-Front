@@ -3,12 +3,10 @@ import { connect } from "react-redux";
 import { onLogin, onSignup } from "../store/user.actions";
 
 function _Homepage(props) {
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const [isLogin, setIsLogin] = useState(true);
-
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
@@ -22,7 +20,6 @@ function _Homepage(props) {
         if (res) props.history.push("/menu");
     }
 };
-
 
   return (
     <div className="login-signup  flex column align-center margin-top">
@@ -60,7 +57,6 @@ function _Homepage(props) {
       </div>
     </div>
   );
-
 }
 
 const mapDispatchToProps = {

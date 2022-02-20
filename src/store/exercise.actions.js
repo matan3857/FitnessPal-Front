@@ -8,7 +8,6 @@ export const loadExercises = () => {
                 type: "SET_EXERCISES",
                 exercises,
             });
-            console.log('exercises returned',exercises)
         }
         catch (err) {
             console.log('can\'t set exercises', err)

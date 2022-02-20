@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux"
-import { LoaderSpinner } from '../cmps/LoaderSpinner'
+// import { LoaderSpinner } from '../cmps/LoaderSpinner'
 
 function _WeightTrack(props) {
     //   const [pages, setPages] = useState(null);

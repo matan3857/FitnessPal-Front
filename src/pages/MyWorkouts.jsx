@@ -15,8 +15,6 @@ function _MyWorkouts(props) {
     const [isExerciseDetails, setIsExerciseDetails] = useState(false);
     const [currExercise, setCurrExercise] = useState(null);
 
-    console.log('user', user)
-
     const options = user.workouts.map((workout, idx) => {
         return { value: idx, label: workout.workoutTitle }
     })
@@ -78,7 +76,6 @@ function _MyWorkouts(props) {
                     </div>
                 </>
             }
-
             {modalRemove && <ModalMsg setOpenModal={setModalRemove} msg={'Are you sure you want to delete this workout?'} onAction={onDeleteWorkout} />}
         </section >
     )
