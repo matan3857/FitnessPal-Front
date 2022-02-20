@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { WorkoutTypes } from '../cmps/BuildWorkout/WorkoutTypes';
 import { CurrWorkoutBuild } from '../cmps/BuildWorkout/CurrWorkoutBuild';
 import { BuildWorkoutType } from '../cmps/BuildWorkout/BuildWorkoutType';
@@ -8,10 +9,9 @@ import { ModalSetRep } from "../cmps/ModalSetRep";
 import { DragDropContext } from "react-beautiful-dnd";
 import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { onUpdate } from "../store/user.actions";
-import { Link } from "react-router-dom";
+import { loadExercises } from '../store/exercise.actions'
 
-
-export function _BuildWorkout(props) {
+function _BuildWorkout(props) {
     const { user, history, location } = props
     const { workoutToEdit } = location
     const [currWorkout, setCurrWorkout] = useState(workoutToEdit ? workoutToEdit : []);
@@ -23,6 +23,10 @@ export function _BuildWorkout(props) {
     const [currExercise, setCurrExercise] = useState(null);
     const [currExerciseToAdd, setCurrExerciseToAdd] = useState(null);
     const [isEditWorkout, setIsEditWorkout] = useState(false);
+
+    useEffect(() => {
+        if (!props.exercises.length) props.loadExercises()
+    }, []);
 
     const onRemoveExercise = (exId) => {
         let newCurrWorkout = currWorkout.filter(exercise => exercise.id !== exId)
@@ -112,7 +116,8 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    onUpdate
+    onUpdate,
+    loadExercises
 }
 
 export const BuildWorkout = connect(mapStateToProps, mapDispatchToProps)(_BuildWorkout);

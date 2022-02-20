@@ -6,6 +6,8 @@ export function _WorkoutTypes(props) {
 
     const { onToggleShowExercise, exercises } = props
 
+    console.log('exercises',exercises)
+
     return (
         <>{
             exercises.map((exercise, idx) => (

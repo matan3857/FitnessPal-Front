@@ -1,21 +1,21 @@
 import { exerciseService } from '../services/exercise.service';
+import { utilService } from '../services/util.service';
 
-// export const loadBoards = () => {
-//     return async (dispatch) => {
-//         try {
-//             const boards = await boardService.query()
-//             // console.log('loading boards',boards)
-//             dispatch({
-//                 type: "SET_BOARDS",
-//                 boards,
-//             });
-
-//         }
-//         catch (err) {
-//             console.log('cant set boards', err)
-//         }
-//     }
-// }
+export const loadExercises = () => {
+    return async (dispatch) => {
+        try {
+            const exercises = await exerciseService.query()
+            dispatch({
+                type: "SET_EXERCISES",
+                exercises,
+            });
+            console.log('exercises returned',exercises)
+        }
+        catch (err) {
+            console.log('can\'t set exercises', err)
+        }
+    }
+}
 
 // export const loadBoard = (boardId) => {
 //     return async (dispatch) => {
@@ -71,7 +71,6 @@ export const saveExercise = (exercises, exercise) => {
 //     }
 // }
 
-
 // export const removeBoard = (boardId) => {
 //     return async (dispatch) => {
 //         try {
@@ -97,5 +96,3 @@ export const saveExercise = (exercises, exercise) => {
 
 //     }
 // }
-
-
