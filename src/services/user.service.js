@@ -1,10 +1,6 @@
-import { storageService } from './async-storage.service'
-import { httpService } from './http.service'
+// import { httpService } from './http.service'
 import Axios from 'axios';
-// // import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service'
 const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
-const DB_KEY = 'user'
-// var gWatchedUser = null;
 
 const axios = Axios.create({
     withCredentials: true
@@ -75,26 +71,34 @@ export const userService = {
 //     return user;
 // }
 
-async function login(userCred) {
-    const users = await storageService.query(DB_KEY)
-    const user = users.find(user => user.username === userCred.username)
-    return _saveLocalUser(user)
-
-    // const user = await httpService.post('auth/login', userCred)
-    // socketService.emit('set-user-socket', user._id);
-    // if (user) return _saveLocalUser(user)
+async function login(credentials) {
+    try {
+        const res = await axios.post('http://localhost:3030/api/auth/login', credentials)
+        const user = res.data
+        if (user) {
+            sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
+        }
+        return user
+    }
+    catch (err) {
+        console.log('server replied: cannot login', err)
+        throw err
+    }
 }
 
 async function signup(userCred) {
-    // const user = await storageService.post(DB_KEY, userCred)
-
-    // const user = await httpService.post('auth/signup', userCred)
-    // sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
-    // return user
-    
-    const res = await axios.post(`http://localhost:3030/api/auth/signup`, userCred)
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(res.data))
-    return res.data
+    try {
+        const res = await axios.post(`http://localhost:3030/api/auth/signup`, userCred)
+        const user = res.data
+        if (user) {
+            sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
+        }
+        return user
+    }
+    catch (err) {
+        console.log('server replied: cannot login', err)
+        throw err
+    }
 }
 
 async function logout() {
@@ -110,12 +114,6 @@ async function logout() {
 //     await update(user)
 //     return user.score
 // }
-
-
-function _saveLocalUser(user) {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
-    return user
-}
 
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN) || 'null')

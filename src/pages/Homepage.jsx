@@ -19,7 +19,7 @@ function _Homepage(props) {
         } else {
             res = await props.onLogin({ username, password });
         }
-        // if (res) props.history.push("/menu");
+        if (res) props.history.push("/menu");
     }
 };
 

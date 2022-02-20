@@ -77,17 +77,18 @@ export function onSignup(credentials) {
     }
 }
 
-
 export function onLogout() {
-    return (dispatch) => {
-        userService.logout()
-            .then(() => dispatch({
+    return async (dispatch) => {
+        try {
+            await userService.logout()
+            dispatch({
                 type: 'SET_USER',
                 user: null
-            }))
-            .catch(err => {
-                // showErrorMsg('Cannot logout')
-                console.log('Cannot logout', err)
             })
+        }
+        catch (err) {
+            // showErrorMsg('Cannot logout')
+            console.log('Cannot logout', err)
+        }
     }
 }
