@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-// import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import React from 'react';
 import { Draggable } from "react-beautiful-dnd";
 import { LoaderSpinner } from '../LoaderSpinner'
 
-
 export function CurrWorkoutExercise(props) {
-
     const { exercise, onRemoveExercise, index } = props
     if (!exercise) return <LoaderSpinner />
     return (
@@ -19,7 +15,7 @@ export function CurrWorkoutExercise(props) {
                     className={`curr-workout-exercise flex space-between ${index % 2 ? 'light-left' : 'light-right'}`}
                 >
                     <div className="curr-workout-img">
-                        <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} />
+                        <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"/>
                     </div>
                     <div className="curr-workout-content flex column">
                         <h2>{exercise.title}</h2>

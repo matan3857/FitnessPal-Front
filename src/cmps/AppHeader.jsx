@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import logo from '../assets/img/logo.jpg';
@@ -20,7 +20,7 @@ function _AppHeader({ user, onLogout, history }) {
 
         <Link to="/menu">
           <div className="logo flex justify-center">
-            <img src={logo} className="logo logo-icon" />
+            <img src={logo} className="logo logo-icon" alt="logo"/>
             <h1>Fitness Pal</h1>
           </div>
         </Link>
@@ -29,7 +29,7 @@ function _AppHeader({ user, onLogout, history }) {
           <p className="logout">
             Logout
           </p>
-          <img src={logout} className="logout-icon" />
+          <img src={logout} className="logout-icon" alt="logout"/>
         </div>}
 
       </header>

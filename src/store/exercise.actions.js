@@ -1,5 +1,4 @@
 import { exerciseService } from '../services/exercise.service';
-import { utilService } from '../services/util.service';
 
 export const loadExercises = () => {
     return async (dispatch) => {

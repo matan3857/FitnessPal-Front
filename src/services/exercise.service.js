@@ -1,9 +1,9 @@
 import { httpService } from './http.service'
-import Axios from 'axios';
+// import Axios from 'axios';
 
-const axios = Axios.create({
-    withCredentials: true
-});
+// const axios = Axios.create({
+//     withCredentials: true
+// });
 
 export const exerciseService = {
     query,

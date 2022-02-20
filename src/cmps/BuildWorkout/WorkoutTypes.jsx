@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from "react-redux";
 import { WorkoutTypePreview } from './WorkoutTypePreview';
 
 export function _WorkoutTypes(props) {
-
     const { onToggleShowExercise, exercises } = props
-
-    console.log('exercises',exercises)
-
     return (
         <>{
             exercises.map((exercise, idx) => (

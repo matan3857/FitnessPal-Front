@@ -1,12 +1,9 @@
 import React from 'react'
-// const { Switch, Route } = ReactRouterDOM
-import { Switch, Route } from 'react-router'
-
+import { Route } from 'react-router'
 import routes from './routes'
 import { AppHeader } from './cmps/AppHeader'
 
 export class RootCmp extends React.Component {
-
     render() {
         return (
             <div>
@@ -18,5 +15,3 @@ export class RootCmp extends React.Component {
         )
     }
 }
-
-

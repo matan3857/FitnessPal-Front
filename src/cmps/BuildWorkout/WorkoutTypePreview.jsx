@@ -5,7 +5,7 @@ export function WorkoutTypePreview(props) {
         return (
             <div className="exercise-type" onClick={() => onToggleShowExercise(exerciseType)}>
                 <div className="exercise-type">
-                    <img src={require(`../../assets/img/${exerciseType}.png`).default} />
+                    <img src={require(`../../assets/img/${exerciseType}.png`).default} alt="exercise_Type"/>
                 </div>
             </div>
         )

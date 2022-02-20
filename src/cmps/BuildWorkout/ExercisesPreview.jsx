@@ -9,7 +9,7 @@ export function _ExercisesPreview(props) {
     <div className="exercise-preview">
       <h1>{exercise.title}</h1>
       {exercise.desc.length > 60 ? <h3>{`${exercise.desc.slice(0, 60)}...`}</h3> : <h3>{exercise.desc}</h3>}
-      <img src={require(`../../assets/img/${exerciseType}/${exercise.title}/${exercise.img1}.png`).default} />
+      <img src={require(`../../assets/img/${exerciseType}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"/>
 
       <div className="exercise-btns flex column">
         <button className="exercise-btn" onClick={() => { onAddExerciseToWorkout(exercise) }}>Add to Workout list</button>
