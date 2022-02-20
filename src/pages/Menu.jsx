@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { PageList } from "../cmps/PageList";
 import { LoaderSpinner } from '../cmps/LoaderSpinner'
 
-export function Menu(props) {
+export function Menu() {
   const [pages, setPages] = useState(null);
 
   useEffect(() => {

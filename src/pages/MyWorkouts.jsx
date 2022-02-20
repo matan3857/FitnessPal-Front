@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
-// import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
+import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { ModalMsg } from "../cmps/ModalMsg";
-
 import { updateUser } from "../store/user.actions";
 import { MyWorkoutPreview } from "../cmps/MyWorkouts/MyWorkoutPreview";
 import { Link } from "react-router-dom";
 import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
 
-export function _MyWorkouts({ user }) {
+function _MyWorkouts({ user }) {
     const [selectedOption, setSelectedOption] = useState(null);
     const [modalRemove, setModalRemove] = useState(false);
-    // const [isExerciseDetails, setIsExerciseDetails] = useState(false);
+    const [isExerciseDetails, setIsExerciseDetails] = useState(false);
+    const [currExercise, setCurrExercise] = useState(null);
 
     console.log('user', user)
 
@@ -21,7 +21,18 @@ export function _MyWorkouts({ user }) {
     })
 
     const onDeleteWorkout = () => {
-        console.log('Delete workout',selectedOption);
+        console.log('Delete workout', selectedOption);
+    }
+
+    const onShowExerciseDetails = (exercise) => {
+        setCurrExercise(exercise)
+        setIsExerciseDetails(true)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const onHideDetails = () => {
+        setIsExerciseDetails(false)
+        setCurrExercise(null)
     }
 
     return (
@@ -39,7 +50,7 @@ export function _MyWorkouts({ user }) {
             }
             {selectedOption &&
                 <>
-                    {/* {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onHideDetails={onHideDetails} isEditWorkout={isEditWorkout} />} */}
+                    {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={null} onBackToAll={null} onHideDetails={onHideDetails} isEditWorkout={false} />}
                     <div className='my-workout-header'>
                         <h1>{user.workouts[selectedOption.value].workoutTitle}</h1>
                         <div className='my-workout-btns'>
@@ -55,7 +66,7 @@ export function _MyWorkouts({ user }) {
                                 <MyWorkoutPreview
                                     exercise={exercise}
                                     key={idx}
-                                // onShowExerciseDetails={onShowExerciseDetails}
+                                    onShowExerciseDetails={onShowExerciseDetails}
                                 />
                             ))}
                     </div>

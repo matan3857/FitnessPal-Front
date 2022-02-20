@@ -5,27 +5,6 @@ import { connect } from "react-redux";
 
 export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorkout, onBackToAll, onHideDetails, saveExercise, exercises }) {
 
-    // const [imgToShow, setImgToShow] = useState(exercise.img1);
-
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         // console.log('imgToShow === exercise.img2',imgToShow===exercise.img1)
-    //         console.log('imgToShow',imgToShow)
-    //         if (imgToShow.charAt(imgToShow.length - 1) === '1') {
-    //             console.log('if')
-    //             setImgToShow(exercise.img2)
-    //         }
-    //         else {
-    //             console.log('else')
-    //             setImgToShow(exercise.img1)
-    //         }
-
-    //         // imgToShow === exercise.img1 ? setImgToShow(exercise.img2) : setImgToShow(exercise.img1) 
-    //     }, 2000);
-    //     return () => clearInterval(interval);
-    // }, []);
-
-
     const [desc, setDescription] = useState(exercise.desc);
 
     const onSubmit = async (ev) => {
@@ -60,7 +39,7 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
                 <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} />
             </div>
             <div className='exercise-btns flex column'>
-                {!isEditWorkout &&
+                {!isEditWorkout && onAddExerciseToWorkout &&
                     <button className='exercise-details-btn add-exercise-btn' onClick={() => { onAddExerciseToWorkout(exercise) }}>Add to Workout list</button>
                 }
                 {isEditWorkout &&

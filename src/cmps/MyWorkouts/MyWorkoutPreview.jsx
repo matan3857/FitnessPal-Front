@@ -1,10 +1,8 @@
 import React from 'react';
 import { LoaderSpinner } from '../LoaderSpinner'
 
-
-
 export function MyWorkoutPreview(props) {
-    const { exercise } = props
+    const { exercise, onShowExerciseDetails } = props
     if (!exercise) return <LoaderSpinner />
     return (
         <div className="exercise-preview">
@@ -17,8 +15,7 @@ export function MyWorkoutPreview(props) {
             <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} />
 
             <div className="exercise-btns flex column">
-                {/* <button className="exercise-btn" onClick={() => { onShowExerciseDetails(exercise) }}>More Details...</button> */}
-                <button className="exercise-btn">More Details...</button>
+                <button className="exercise-btn" onClick={() => { onShowExerciseDetails(exercise) }}>More Details...</button>
             </div>
         </div>
     )

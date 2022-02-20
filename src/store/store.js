@@ -4,7 +4,6 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk'
 
-
 import { exerciseReducer } from './exercise.reducer.js'
 import { userReducer } from './user.reducer.js'
 
@@ -13,7 +12,6 @@ const rootReducer = combineReducers({
     exerciseModule: exerciseReducer,
     userModule: userReducer,
     // systemModule: systemReducer,
-    // reviewModule: reviewReducer,
 })
 
 
