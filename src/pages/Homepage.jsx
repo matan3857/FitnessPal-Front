@@ -7,19 +7,21 @@ function _Homepage(props) {
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const [isLogin, setIsLogin] = useState(true);
+  const [err, setErr] = useState(false);
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
     if (username.trim() && password.trim()) {
-        let res
-        if (!isLogin) {
-            res = props.onSignup({ username, password, fullname });
-        } else {
-            res = await props.onLogin({ username, password });
-        }
-        if (res) props.history.push("/menu");
+      let res
+      if (!isLogin) {
+        res = props.onSignup({ username, password, fullname });
+      } else {
+        res = await props.onLogin({ username, password });
+        if (!res) setErr(true)
+      }
+      if (res) props.history.push("/menu");
     }
-};
+  };
 
   return (
     <div className="login-signup  flex column align-center margin-top">
@@ -46,12 +48,13 @@ function _Homepage(props) {
             onChange={(ev) => setPassword(ev.target.value)}
             placeholder="Enter Password"
           />
+          {err && <span className="err">Incorrect password or username</span>}
           <button className="login-submit">
             {isLogin ? "Log me in" : "Sign me up"}
           </button>
         </form>
 
-        <p onClick={() => setIsLogin(!isLogin)}>
+        <p onClick={() => { setIsLogin(!isLogin); setErr(false); }}>
           {isLogin ? "Or sign up..." : "Back to Login"}
         </p>
       </div>

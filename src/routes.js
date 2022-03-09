@@ -3,6 +3,7 @@ import { Menu } from './pages/Menu'
 import { BuildWorkout } from './pages/BuildWorkout'
 import { Info } from './pages/Info'
 import { MyWorkouts } from './pages/MyWorkouts'
+import { WeightTrack } from './pages/WeightTrack'
 
 
 const routes = [
@@ -28,6 +29,12 @@ const routes = [
         path: '/info',
         component: Info,
         label: 'info',
+        isExact: true
+    },
+    {
+        path: '/weight',
+        component: WeightTrack,
+        label: 'weight',
         isExact: true
     },
     {
