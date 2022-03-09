@@ -5,7 +5,6 @@ import { Info } from './pages/Info'
 import { MyWorkouts } from './pages/MyWorkouts'
 import { WeightTrack } from './pages/WeightTrack'
 
-
 const routes = [
     {
         path: '/menu',
