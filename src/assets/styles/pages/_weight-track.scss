@@ -1,6 +1,10 @@
 .weight-track {
+    text-align: center;
     h1{
         margin-top: 1rem;
+        font-family: LeagueSpartan, sans-serif;
+        font-size: 2.3rem;
+        line-height: 2.7rem;
     }
     form {
         width: 100%;
@@ -29,6 +33,6 @@
     }
     .chart-container {
         margin-top: 1rem;
-        width: 80%;
+        width: 95%;
     }
 }
