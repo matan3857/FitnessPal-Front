@@ -116,3 +116,19 @@ textarea {
 .margin-top {
     margin-top: 70px;
 }
+
+
+//Styled Input
+.styled-input{
+    font-size: 14px;
+    background-color: #fafbfc;
+    border-radius: 3px;
+    border: 2px solid #dfe1e6;
+    height: 44px;
+    padding: 7px;
+    transition: background-color 0.2s ease-in-out 0s,
+      border-color 0.2s ease-in-out 0s;
+    box-shadow: unset;
+    margin-bottom: 17px;
+    width: 100%;
+}

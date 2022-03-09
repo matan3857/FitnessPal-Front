@@ -93,22 +93,23 @@ function _WeightTrack(props) {
     };
 
     return (
-        <div className="flex column align-center margin-top menu">
-            <h1>Weight</h1>
-            <form className="flex column" onSubmit={onSubmit}>
+        <div className="weight-track flex column align-center margin-top menu">
+            <h1>Hello {user.fullname}, Welcome to your Weight Tracking!</h1>
+            <form className="flex justify-center" onSubmit={onSubmit}>
                 <input
+                    className='styled-input'
                     type="number"
                     value={weight}
                     onChange={(ev) => setWeight(ev.target.value)}
                     placeholder="Enter Current Weight"
                 />
-                <button className="login-submit">Update Weight</button>
+                <button className="styled-btn-basic">Update Weight</button>
             </form>
 
-            {/* <div className='chart-container'>
+            <div className='chart-container'>
 
-            </div> */}
-            <Line data={data} />
+                <Line data={data} />
+            </div>
 
 
         </div>
