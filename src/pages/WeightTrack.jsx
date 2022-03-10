@@ -28,15 +28,20 @@ function _WeightTrack(props) {
     const { user } = props
     const [weight, setWeight] = useState('');
 
-    console.log('user from', user)
-
     const onSubmit = async (ev) => {
         ev.preventDefault();
         const weightToday = { weight, date: Date.now() }
         user.weight.push(weightToday)
         if (user.weight.length > 12) user.weight.splice(0, 1) // Max 12 Weeks to chart
+        setWeight('')
         props.onUpdate(user)
     };
+
+    const onDeleteLastWeight = () => {
+        if (!user.weight.length) return
+        user.weight.pop()
+        props.onUpdate(user)
+    }
 
     const userWeights = user.weight.map(currWeight => currWeight.weight)
     const userWeightDates = user.weight.map(currWeight => {
@@ -49,8 +54,6 @@ function _WeightTrack(props) {
         const today = `${dd}/${mm}/${yyyy}`
         return today
     })
-    console.log('userWeights', userWeights)
-    console.log('userWeightDates', userWeightDates)
 
     const data = {
         labels: userWeightDates,
@@ -68,17 +71,18 @@ function _WeightTrack(props) {
 
     return (
         <div className="weight-track flex column align-center margin-top menu">
-            <h1>Hello {user.fullname},<br/> Welcome to your Weight Tracking</h1>
+            <h1>Hello {user.fullname},<br /> Welcome to your Weight Tracking</h1>
             <form className="flex justify-center" onSubmit={onSubmit}>
                 <input
                     className='styled-input'
                     type="number"
                     value={weight}
                     onChange={(ev) => setWeight(ev.target.value)}
-                    placeholder="Enter Current Weight"
+                    placeholder="Enter Your Current Weight"
                 />
                 <button className="styled-btn-basic">Update Weight</button>
             </form>
+            <button className="danger-btn" onClick={onDeleteLastWeight}>Delete Last Weight</button>
 
             <div className='chart-container'>
                 <Line data={data} />

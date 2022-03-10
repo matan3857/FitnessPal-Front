@@ -71,6 +71,7 @@ function _BuildWorkout(props) {
     const saveNewWorkout = async (workoutTitle) => {
         if (!workoutTitle) return
         let workout = { workoutTitle, ex: currWorkout }
+        console.log('workout',workout)
         user.workouts.push(workout)
         const res = await props.onUpdate(user)
         if (res) history.push("/menu")
