@@ -1,9 +1,25 @@
-.start-workout{
+.start-workout {
     text-align: center;
-    h1{
-        font-family: LeagueSpartan,sans-serif;
+    h1 {
+        font-family: LeagueSpartan, sans-serif;
         font-size: 2.7rem;
         margin: 0;
         padding: 10px 0;
+    }
+    .start-workout-exercises {
+        font-family: LeagueSpartan, sans-serif;
+        .exercise-info {
+            h2{
+                font-size: 2.2rem;
+            }
+            .imgs-container {
+                img {
+                    width: 320px;
+                }
+                @include for-mobile-layout {
+                    flex-direction: column;
+                }
+            }
+        }
     }
 }
