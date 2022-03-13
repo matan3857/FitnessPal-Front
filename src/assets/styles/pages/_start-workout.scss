@@ -1,16 +1,64 @@
 .start-workout {
     text-align: center;
+    text-align: -webkit-center;
     h1 {
         font-family: LeagueSpartan, sans-serif;
         font-size: 2.7rem;
         margin: 0;
         padding: 10px 0;
     }
+    .done-workout{
+        padding: 50px;
+        background-color: #38cb3a;
+        font-size: 1.8rem;
+        border-radius: 1rem;
+    }
     .start-workout-exercises {
         font-family: LeagueSpartan, sans-serif;
+        margin-top: 10px;
+        .toggle-btns {
+            margin-bottom: 10px;
+        }
+        .light-btn {
+            margin: 7px 10px;
+        }
         .exercise-info {
-            h2{
-                font-size: 2.2rem;
+            box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0,
+                rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+            background-color: whitesmoke;
+
+            padding: 1rem;
+            width: 90%;
+            h2 {
+                font-size: 2.4rem;
+                margin-bottom: 10px;
+            }
+            span {
+                padding: 0 10px;
+                font-size: 1.3rem;
+            }
+            .done-rep-btn {
+                padding: 0.6rem 1.5rem;
+                margin: 0.4rem;
+                border-radius: 3px;
+                // text-transform: uppercase;
+                font-weight: 600;
+                font-size: 0.8rem;
+                border-style: groove;
+                background-color: salmon;
+            }
+            .done-rep-btn:focus {
+                outline-width: 0;
+            }
+            .done-rep-btn:hover{
+                background-color: tomato;
+
+            }
+            .light-btn-info {
+                background-color: #05bdd540;
+            }
+            .light-btn-info:hover {
+                background-color: #00bcd46b;
             }
             .imgs-container {
                 img {
