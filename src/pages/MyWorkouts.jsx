@@ -37,10 +37,6 @@ function _MyWorkouts(props) {
         setCurrExercise(null)
     }
 
-    const onStartWorkout = (workoutToDo) => {
-        console.log('workoutToDo', workoutToDo)
-    }
-
     return (
         <section className='my-workouts margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
             <h1>My workouts</h1>
@@ -72,7 +68,6 @@ function _MyWorkouts(props) {
                             }}>
                             <button className='primary-btn'>Start Workout</button>
                             </Link>
-                            {/* <button onClick={() => { onStartWorkout(user.workouts[selectedOption.value].ex) }} className='primary-btn'>Start Workout</button> */}
                         </>
                     </div>
                     <div className='exercise-list'>

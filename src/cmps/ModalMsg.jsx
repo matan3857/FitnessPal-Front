@@ -1,7 +1,7 @@
 import React from "react";
 
 export function ModalMsg({ setOpenModal, msg, onAction }) {
-
+console.log('msg',msg)
     return (
         <div className="modal-background">
             <div className="modal-container">
@@ -9,7 +9,7 @@ export function ModalMsg({ setOpenModal, msg, onAction }) {
                     <button className="close-btn" onClick={() => { setOpenModal(false) }}>X</button>
                 </div>
                 <div className="modal-title">
-                    <h1>{msg}</h1>
+                    <h1 className="modal-title-msg">{msg}</h1>
                 </div>
                 <div className="modal-footer">
                     <button onClick={() => { setOpenModal(false) }} className=" modal-btns cancel-btn">Cancel</button>
