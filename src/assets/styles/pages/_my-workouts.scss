@@ -1,54 +1,56 @@
-.my-workouts{
+.my-workouts {
     min-height: 100vh;
     text-align: -webkit-center;
     padding-bottom: 3rem;
-    
     .exercise-preview {
+        width: 340px;
+        @include for-mobile-layout {
+            width: 300px;
+        }
+        .exercise-preview-info {
+            margin-bottom: 5px;
+        }
         box-shadow: 0 0 10px rgba(247, 244, 244, 0.716);
-        img{
+        img {
             border-radius: 1rem;
+            background-color: white;
         }
     }
-    h1,h2,h3{
-        color: white;
-        -webkit-text-stroke: 1px black;
+    h1,
+    h2,
+    h3,
+    p,
+    span {
+        font-family: LeagueSpartan, sans-serif;
+        color: whitesmoke;
     }
-    h2,h3{
+    span {
+        font-size: 1.2rem;
+        margin: 0 5px 0;
+    }
+    h2,
+    h3 {
         margin: 0.5rem;
     }
-    
-    h1{
+
+    h1 {
         text-align: center;
         font-size: 3rem;
         padding: 1rem;
         margin: 0;
     }
-    h2{
-        font-size: 2rem;
+    h2 {
+        font-size: 2.2rem;
     }
-    h3{
-        font-size: 1.5rem;
-    }
-    p{
-        color: aliceblue;
-    }
-    .my-workouts-select{
+    .my-workouts-select {
         width: 50%;
     }
-    .my-workout-header{
+    .my-workout-header {
         padding: 7px;
         text-align: center;
-        .my-workout-btns{
-            button{
+        .my-workout-btns {
+            button {
                 margin: 5px;
-            }
-        }
-    }
-    .exercise-list{
-        .exercise-preview{
-            width: 440px;
-            @include for-mobile-layout {
-                width: 300px;
             }
         }
     }

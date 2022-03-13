@@ -6,10 +6,10 @@ export function MyWorkoutPreview(props) {
     if (!exercise) return <LoaderSpinner />
     return (
         <div className="exercise-preview">
-            <div>
+            <div className='exercise-preview-info'>
                 <h2>{exercise.title}</h2>
-                <h3>Sets: {exercise.sets}</h3>
-                <h3>Reps: {exercise.reps}</h3>
+                <span>Sets: {exercise.sets}</span>
+                <span>Reps: {exercise.reps}</span>
             </div>
 
             <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"/>

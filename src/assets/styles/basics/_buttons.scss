@@ -24,7 +24,8 @@
 }
 
 .primary-btn {
-    background-color: $clr1;
+    // background-color: $clr1;
+    background-color: #02a75a;
     box-shadow: none;
     border: none;
     color: #fff;
@@ -33,13 +34,15 @@
     font-weight: 400;
     border-radius: 3px;
     cursor: pointer;
-    padding: 6px 12px;
+    padding: 8px 14px;
 
     &:hover {
-        background-color: #026aa7;
+        background-color: rgb(39, 226, 70);
+        // background-color: #026aa7;
     }
     &:active {
-        background-color: #055a8c;
+        background-color: #058c54;
+        // background-color: #055a8c;
     }
 }
 .danger-btn:hover {

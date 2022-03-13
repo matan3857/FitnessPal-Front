@@ -4,6 +4,7 @@ import { BuildWorkout } from './pages/BuildWorkout'
 import { Info } from './pages/Info'
 import { MyWorkouts } from './pages/MyWorkouts'
 import { WeightTrack } from './pages/WeightTrack'
+import { StartWorkout } from './pages/StartWorkout'
 
 const routes = [
     {
@@ -34,6 +35,12 @@ const routes = [
         path: '/weight',
         component: WeightTrack,
         label: 'weight',
+        isExact: true
+    },
+    {
+        path: '/startWorkout/:workoutIdx',
+        component: StartWorkout,
+        label: 'startWorkout',
         isExact: true
     },
     {
