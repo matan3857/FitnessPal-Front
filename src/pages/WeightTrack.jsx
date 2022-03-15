@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { connect } from "react-redux"
 import { onUpdate } from "../store/user.actions";
 import { Line } from "react-chartjs-2";
+import { Redirect } from 'react-router-dom';
 
 import {
     Chart as ChartJS,
@@ -27,6 +28,8 @@ ChartJS.register(
 function _WeightTrack(props) {
     const { user } = props
     const [weight, setWeight] = useState('');
+
+    if (!user) return (<Redirect to={'/'} />)
 
     const onSubmit = async (ev) => {
         ev.preventDefault();

@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { connect } from "react-redux";
 import { Timer } from '../cmps/StartWorkout/Timer'
 import { LoaderSpinner } from '../cmps/LoaderSpinner'
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 function _StartWorkout(props) {
     const { user } = props
     let { workoutToDo } = props.location
-    console.log('workoutToDo', workoutToDo)
 
     if (!workoutToDo) {
         const link = window.location.href
@@ -15,31 +14,30 @@ function _StartWorkout(props) {
         const stopIdx = reverseLink.indexOf('/')
         const reversedIdx = reverseLink.substring(0, stopIdx)
         const currectIdx = reversedIdx.split("").reverse().join("")
-
-        // console.log('currectIdx', currectIdx)
-        // console.log('user', user)
-        workoutToDo = user.workouts[currectIdx]
-        // console.log('workoutToDo', workoutToDo)
+        workoutToDo = !user ? '' : user.workouts[currectIdx]
     }
-    const [currExerciseIdx, setCurrExerciseIdx] = useState(0);
 
-    const exercise = workoutToDo.ex[currExerciseIdx]
+    const [currExerciseIdx, setCurrExerciseIdx] = useState(0);
+    const exercise = !user ? '' : workoutToDo.ex[currExerciseIdx]
     const [setsCount, setSetsCount] = useState(+exercise.sets);
     const [loaded, setLoaded] = useState(false);
     const [isInfo, setIsInfo] = useState(false);
     const [isDoneWorkout, setIsDoneWorkout] = useState(false);
 
-    console.log('Exercise', exercise)
+    if (!user) return (<Redirect to={'/'} />)
+
 
     const onToggleExercise = (isNext) => {
         if (isNext) {
             if (currExerciseIdx + 1 > workoutToDo.ex.length - 1) return
             setCurrExerciseIdx(currExerciseIdx + 1)
+            setSetsCount(+exercise.sets)
             setLoaded(false)
         }
         else {
             if (currExerciseIdx - 1 < 0) return
             setCurrExerciseIdx(currExerciseIdx - 1)
+            setSetsCount(+exercise.sets)
             setLoaded(false)
         }
     }
@@ -50,8 +48,7 @@ function _StartWorkout(props) {
 
     const onNextRep = () => {
         if (setsCount - 1 === 0) {
-            //Check if last exercise
-            if (currExerciseIdx === workoutToDo.ex.length - 1) setIsDoneWorkout(true)
+            if (currExerciseIdx === workoutToDo.ex.length - 1) setIsDoneWorkout(true) //Check if last exercise
             else {
                 setSetsCount(+exercise.sets)
                 onToggleExercise(1)
@@ -87,13 +84,6 @@ function _StartWorkout(props) {
                                 <h2>Now doing: {exercise.title}</h2>
                                 <span>Remaining Sets: {setsCount}</span>
                                 <span>Reps Per Set: {exercise.reps}</span>
-                                {/* {
-                            Array.apply(null, { length: +exercise.sets }).map((e, i) => (
-                                <span className="busterCards" key={i}>
-                                    ♦
-                                </span>
-                            ))
-                        } */}
                                 <br />
                                 <button className='done-rep-btn' onClick={onNextRep}>Next Rep!</button>
                                 {isInfo &&
@@ -116,11 +106,9 @@ function _StartWorkout(props) {
                 :
                 <LoaderSpinner />
             }
-
         </div>
     )
 }
-
 
 function mapStateToProps(state) {
     return {

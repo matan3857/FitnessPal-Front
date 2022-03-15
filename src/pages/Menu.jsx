@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { connect } from "react-redux";
 import { PageList } from "../cmps/PageList";
 import { LoaderSpinner } from '../cmps/LoaderSpinner'
+import { Redirect } from 'react-router-dom';
 
-export function Menu() {
+export function _Menu(props) {
   const [pages, setPages] = useState(null);
 
   useEffect(() => {
@@ -16,6 +18,7 @@ export function Menu() {
   }, []);
 
   if (!pages || !pages.length) return <LoaderSpinner />
+  if (!props.user) return (<Redirect to={'/'} />)
   return (
     <>
       <div className="flex column align-center margin-top menu">
@@ -30,3 +33,11 @@ export function Menu() {
     </>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    user: state.userModule.loggedinUser,
+  };
+}
+
+export const Menu = connect(mapStateToProps, null)(_Menu);

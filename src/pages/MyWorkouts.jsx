@@ -4,7 +4,7 @@ import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { ModalMsg } from "../cmps/ModalMsg";
 import { onUpdate } from "../store/user.actions";
 import { MyWorkoutPreview } from "../cmps/MyWorkouts/MyWorkoutPreview";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
 
@@ -14,6 +14,8 @@ function _MyWorkouts(props) {
     const [modalRemove, setModalRemove] = useState(false);
     const [isExerciseDetails, setIsExerciseDetails] = useState(false);
     const [currExercise, setCurrExercise] = useState(null);
+
+    if (!user) return (<Redirect to={'/'} />)
 
     const options = user.workouts.map((workout, idx) => {
         return { value: idx, label: workout.workoutTitle }
@@ -66,7 +68,7 @@ function _MyWorkouts(props) {
                                 pathname: `/startWorkout/${selectedOption.value}`,
                                 workoutToDo: user.workouts[selectedOption.value]
                             }}>
-                            <button className='primary-btn'>Start Workout</button>
+                                <button className='primary-btn'>Start Workout</button>
                             </Link>
                         </>
                     </div>

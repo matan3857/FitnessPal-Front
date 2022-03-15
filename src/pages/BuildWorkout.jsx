@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { WorkoutTypes } from '../cmps/BuildWorkout/WorkoutTypes';
 import { CurrWorkoutBuild } from '../cmps/BuildWorkout/CurrWorkoutBuild';
 import { BuildWorkoutType } from '../cmps/BuildWorkout/BuildWorkoutType';
@@ -86,6 +86,7 @@ function _BuildWorkout(props) {
         setCurrWorkout(items)
     }
 
+    if (!user) return (<Redirect to={'/'} />)
     return (
         <section className="build-workout-container">
             <Link to="/info"><h1 className="help-build pointer">Dont know how to build? click here!</h1></Link>
