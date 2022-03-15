@@ -1,9 +1,8 @@
 import { userService } from '../services/user.service.js'
 
-
 const initialState = {
-    // loggedinUser: userService.getLoggedinUser(),
-    loggedinUser: '',
+    loggedinUser: userService.getLoggedinUser(),
+    // loggedinUser: '',
 }
 export function userReducer(state = initialState, action) {
     var newState = state;

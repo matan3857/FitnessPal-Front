@@ -12,7 +12,7 @@ import { onUpdate } from "../store/user.actions";
 import { loadExercises } from '../store/exercise.actions'
 
 function _BuildWorkout(props) {
-    const { user, history, location } = props
+    const { user, history, location, exercises, loadExercises } = props
     const { workoutToEdit } = location
     const [currWorkout, setCurrWorkout] = useState(workoutToEdit ? workoutToEdit : []);
     const [showExercise, setShowExercise] = useState(false);
@@ -25,8 +25,8 @@ function _BuildWorkout(props) {
     const [isEditWorkout, setIsEditWorkout] = useState(false);
 
     useEffect(() => {
-        if (!props.exercises.length) props.loadExercises()
-    }, []);
+        if (!exercises.length) loadExercises()
+    });
 
     const onRemoveExercise = (exId) => {
         let newCurrWorkout = currWorkout.filter(exercise => exercise.id !== exId)
