@@ -19,6 +19,7 @@ export function _Menu(props) {
 
   if (!pages || !pages.length) return <LoaderSpinner />
   if (!props.user) return (<Redirect to={'/'} />)
+  console.log('user',props.user)
   return (
     <>
       <div className="flex column align-center margin-top menu">
