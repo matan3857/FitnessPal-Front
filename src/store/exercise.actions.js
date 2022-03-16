@@ -15,25 +15,6 @@ export const loadExercises = () => {
     }
 }
 
-// export const loadBoard = (boardId) => {
-//     return async (dispatch) => {
-//         try {
-//             const board = await boardService.getById(boardId)
-//             // console.log('loading board',board)
-//             if(board)
-//             dispatch({
-//                 type: "SET_BOARD",
-//                 board,
-//             });
-
-//         }
-//         catch (err) {
-//             console.log('cant set board', err)
-//             throw Error(err)
-//         }
-//     }
-// }
-
 export const saveExercise = (exercises, exercise) => {
     return async (dispatch) => {
         try {
