@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { onLogin, onSignup } from "../store/user.actions";
+import { Redirect } from "react-router-dom";
 
 function _Homepage(props) {
   const [username, setUsername] = useState("");
@@ -8,6 +9,8 @@ function _Homepage(props) {
   const [fullname, setFullname] = useState("");
   const [isLogin, setIsLogin] = useState(true);
   const [err, setErr] = useState(false);
+
+  if (props.user) return (<Redirect to={'/menu'} />)
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
@@ -24,7 +27,7 @@ function _Homepage(props) {
   };
 
   return (
-    <div className="login-signup  flex column align-center margin-top">
+    <div className="login-signup flex column align-center margin-top">
       <div className="login-container flex column">
         {isLogin ? <p>Log in to Fitness Pal</p> : <p>Sign up</p>}
         <form className="flex column" onSubmit={onSubmit}>
@@ -62,9 +65,15 @@ function _Homepage(props) {
   );
 }
 
+function mapStateToProps(state) {
+  return {
+      user: state.userModule.loggedinUser,
+  };
+}
+
 const mapDispatchToProps = {
   onLogin,
   onSignup,
 };
 
-export const Homepage = connect(null, mapDispatchToProps)(_Homepage);
+export const Homepage = connect(mapStateToProps, mapDispatchToProps)(_Homepage);
