@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { onLogin, onSignup } from "../store/user.actions";
 import { Redirect } from "react-router-dom";
+import FacebookLogin from 'react-facebook-login';
 
 function _Homepage(props) {
   const [username, setUsername] = useState("");
@@ -9,6 +10,7 @@ function _Homepage(props) {
   const [fullname, setFullname] = useState("");
   const [isLogin, setIsLogin] = useState(true);
   const [err, setErr] = useState(false);
+  const [errMsg, setErrMsg] = useState('');
 
   if (props.user) return (<Redirect to={'/menu'} />)
 
@@ -17,14 +19,30 @@ function _Homepage(props) {
     if (username.trim() && password.trim()) {
       let res
       if (!isLogin) {
-        res = props.onSignup({ username, password, fullname });
+        // props.onSignup({ username, password, fullname });
+        res = await props.onSignup({ username, password, fullname });
+        if (!res) {
+          setErrMsg('Username already exists')
+          setErr(true)
+        }
       } else {
         res = await props.onLogin({ username, password });
-        if (!res) setErr(true)
+        if (!res) {
+          setErrMsg('Incorrect password or username')
+          setErr(true)
+        }
       }
       if (res) props.history.push("/menu");
     }
   };
+
+  const componentClicked = () => {
+    console.log('clicked')
+  }
+
+  const responseFacebook = (res) => {
+    console.log('res', res)
+  }
 
   return (
     <div className="login-signup flex column align-center margin-top">
@@ -51,11 +69,21 @@ function _Homepage(props) {
             onChange={(ev) => setPassword(ev.target.value)}
             placeholder="Enter Password"
           />
-          {err && <span className="err">Incorrect password or username</span>}
+          {err && <span className="err">{errMsg}</span>}
           <button className="login-submit">
             {isLogin ? "Log me in" : "Sign me up"}
           </button>
         </form>
+        
+        <FacebookLogin
+          appId="1150970532306174"
+          autoLoad={true}
+          fields="name,email,picture"
+          onClick={componentClicked}
+          callback={responseFacebook}
+          cssClass="loginBtn loginBtn--facebook"
+          textButton= {isLogin ? "Continue with Facebook" : 'Sign up with Facebook'}
+        />
 
         <p onClick={() => { setIsLogin(!isLogin); setErr(false); }}>
           {isLogin ? "Or sign up..." : "Back to Login"}
@@ -67,7 +95,7 @@ function _Homepage(props) {
 
 function mapStateToProps(state) {
   return {
-      user: state.userModule.loggedinUser,
+    user: state.userModule.loggedinUser,
   };
 }
 
