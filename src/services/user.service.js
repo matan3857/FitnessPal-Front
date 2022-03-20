@@ -41,6 +41,12 @@ export const userService = {
 // ]
 // localStorage.setItem(DB_KEY, JSON.stringify(gUsers))
 
+// async function login(userCred) {
+//     const user = await httpService.post('auth/login', userCred)
+//     if (user) sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
+//     return user
+// }
+
 async function login(credentials) {
     try {
         const res = await axios.post('http://localhost:3030/api/auth/login', credentials)
@@ -57,30 +63,28 @@ async function login(credentials) {
 }
 
 //Another Way
-async function signup(userCred) {
-    const user = await httpService.post('auth/signup', userCred)
-    if (user) {
-        sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
-    }
-    return user
-}
-
 // async function signup(userCred) {
-//     try {
-//         const res = await axios.post(`http://localhost:3030/api/auth/signup`, userCred)
-//         console.log('res from service',res)
-//         const user = res.data
-//         console.log('user from service',user)
-//         if (user) {
-//             sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
-//         }
-//         return user
+//     const user = await httpService.post('auth/signup', userCred)
+//     if (user) {
+//         sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
 //     }
-//     catch (err) {
-//         console.log('server replied: cannot signup', err)
-//         throw err
-//     }
+//     return user
 // }
+
+async function signup(userCred) {
+    try {
+        const res = await axios.post(`http://localhost:3030/api/auth/signup`, userCred)
+        const user = res.data
+        if (user) {
+            sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
+        }
+        return user
+    }
+    catch (err) {
+        console.log('server replied: cannot signup', err)
+        throw err
+    }
+}
 
 async function logout() {
     const res = await axios.post(`http://localhost:3030/api/auth/logout`)

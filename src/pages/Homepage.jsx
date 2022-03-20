@@ -11,6 +11,7 @@ function _Homepage(props) {
   const [isLogin, setIsLogin] = useState(true);
   const [err, setErr] = useState(false);
   const [errMsg, setErrMsg] = useState('');
+  const [isFacebookLogin, setIsFacebookLogin] = useState(false);
 
   if (props.user) return (<Redirect to={'/menu'} />)
 
@@ -36,12 +37,19 @@ function _Homepage(props) {
     }
   };
 
-  const componentClicked = () => {
-    console.log('clicked')
+  const onFacebookClicked = () => {
+    setIsFacebookLogin(true)
   }
 
-  const responseFacebook = (res) => {
-    console.log('res', res)
+  const responseFacebook = async (res) => {
+    if (!isFacebookLogin) return
+    const fullname = res.name;
+    const username = res.email;
+    const password = res.id;
+    isLogin
+      ? await props.onLogin({ username, password })
+      : await props.onSignup({ username, password, fullname });
+    props.history.push("/menu");
   }
 
   return (
@@ -74,15 +82,15 @@ function _Homepage(props) {
             {isLogin ? "Log me in" : "Sign me up"}
           </button>
         </form>
-        
+
         <FacebookLogin
           appId="1150970532306174"
           autoLoad={true}
           fields="name,email,picture"
-          onClick={componentClicked}
+          onClick={onFacebookClicked}
           callback={responseFacebook}
           cssClass="loginBtn loginBtn--facebook"
-          textButton= {isLogin ? "Continue with Facebook" : 'Sign up with Facebook'}
+          textButton={isLogin ? "Continue with Facebook" : 'Sign up with Facebook'}
         />
 
         <p onClick={() => { setIsLogin(!isLogin); setErr(false); }}>
