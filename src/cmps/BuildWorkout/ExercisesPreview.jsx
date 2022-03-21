@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
 import { LoaderSpinner } from '../LoaderSpinner'
+import noImg from '../../assets/img/no-img.svg'
 
 export function _ExercisesPreview(props) {
   const { exercise, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails, user } = props
@@ -15,6 +16,7 @@ export function _ExercisesPreview(props) {
         style={{ display: loaded ? 'block' : 'none' }}
         onLoad={() => setLoaded(true)}
         src={require(`../../assets/img/${exerciseType}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"
+        // src={noImg} alt="exercise"
       />
       {!loaded && <LoaderSpinner />}
 

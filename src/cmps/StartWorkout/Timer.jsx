@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export function Timer(props) {
-  const [seconds, setSeconds] = useState(0);
-  const [isActive, setIsActive] = useState(false);
-
-  const onToggle = () => {
-    setIsActive(!isActive);
-  }
-
-  const onResetTimer = () => {
-    setSeconds(0);
-    setIsActive(false);
-  }
+  const { seconds, isActive, onToggle, onResetTimer } = props
 
   const formatedTime = (time) => {
     let seconds = time % 60;
@@ -20,18 +10,6 @@ export function Timer(props) {
     seconds = seconds.toString().length === 1 ? "0" + seconds : seconds;
     return minutes + ':' + seconds;
   }
-
-  useEffect(() => {
-    let interval = null;
-    if (isActive) {
-      interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
-      }, 1000);
-    } else if (!isActive && seconds !== 0) {
-      clearInterval(interval);
-    }
-    return () => clearInterval(interval);
-  }, [isActive, seconds]);
 
   return (
     <div className="timer-container flex column">
