@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import logo from '../assets/img/logo.jpg';
 import logout from '../assets/img/logout.png';
 import { onLogout } from "../store/user.actions";
 
-
 function _AppHeader({ user, onLogout, history }) {
+  const [isShowTitle, setIsShowTitle] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("resize", function () {
+      window.innerWidth > 500 ? setIsShowTitle(true) : setIsShowTitle(false)
+    });
+  }, []);
 
   return (
     <>
       <header className={`main-header flex align-center ${!user || !user._id ? 'justify-center' : ''} `}>
-
         {user && user._id && <div className="header-btn-container flex">
           <div className="header-btn pointer">
             <span className="home">Menu</span>
@@ -20,8 +25,9 @@ function _AppHeader({ user, onLogout, history }) {
 
         <Link to="/menu">
           <div className="logo flex justify-center">
-            <img src={logo} className="logo logo-icon" alt="logo"/>
-            <h1>Fitness Pal</h1>
+            <img src={logo} className="logo logo-icon" alt="logo" />
+            {/* <h1>Fitness Pal</h1> */}
+            {isShowTitle && <h1>Fitness Pal</h1>}
           </div>
         </Link>
 
@@ -29,9 +35,8 @@ function _AppHeader({ user, onLogout, history }) {
           <p className="logout">
             Logout
           </p>
-          <img src={logout} className="logout-icon" alt="logout"/>
+          <img src={logout} className="logout-icon" alt="logout" />
         </div>}
-
       </header>
     </>
   );

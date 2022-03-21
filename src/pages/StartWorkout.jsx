@@ -7,10 +7,10 @@ import { Link, Redirect } from "react-router-dom";
 function _StartWorkout(props) {
     const { user } = props
     let { workoutToDo } = props.location
-    const [seconds, setSeconds] = useState(0);
-    const [isActive, setIsActive] = useState(false);
+    const [seconds, setSeconds] = useState(0); //Timer cmp state
+    const [isActive, setIsActive] = useState(false); //Timer cmp state
 
-    useEffect(() => {
+    useEffect(() => { //Timer useEffect
         let interval = null;
         if (isActive) {
             interval = setInterval(() => {
@@ -41,11 +41,11 @@ function _StartWorkout(props) {
 
     if (!user) return (<Redirect to={'/'} />)
 
-    const onToggleTimer = () => {
+    const onToggleTimer = () => { //Timer cmp Function
         setIsActive(!isActive);
     }
 
-    const onResetTimer = () => {
+    const onResetTimer = () => { //Timer cmp Function
         setSeconds(0);
         setIsActive(false);
     }
