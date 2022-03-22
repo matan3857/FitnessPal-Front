@@ -6,8 +6,8 @@ export function NutritionMenuPreview(props) {
    
     return (
         <div className="food-menu-container">
-            {/* <FoodMenuHeader /> */}
             <h1>Food Name</h1>
+            <h1>Amount</h1>
             <h1>Calories</h1>
             <h1>Protein</h1>
             <h1>Carb</h1>
@@ -25,13 +25,13 @@ export function NutritionMenuPreview(props) {
             ))}
 
             <h1>Total</h1>
+            <p></p>
             <h1>{sumInfo.sumCalories}</h1>
             <h1>{sumInfo.sumProtein}</h1>
             <h1>{sumInfo.sumCarb}</h1>
             <h1>{sumInfo.sumFat}</h1>
             <h1>{sumInfo.sumSodium}</h1>
             <h1>{sumInfo.sumFiber}</h1>
-            <p></p>
         </div>
     );
 }
