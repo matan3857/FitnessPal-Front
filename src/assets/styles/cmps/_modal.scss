@@ -10,6 +10,9 @@
     justify-content: center;
     // align-items: center;
     .modal-container {
+        max-height: calc(100vh - 130px);
+        overflow-y: auto;
+
         position: relative;
         top: 13%;
         width: 450px;

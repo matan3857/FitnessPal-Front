@@ -122,7 +122,7 @@ export function FoodTypeAdd({ onAddFood, setOpenModal }) {
                     </form>
                 </div>
                 <div className="modal-footer">
-                    <button onClick={() => { onAddFood(foodName, gram) }} className=" modal-btns continue-btn">ADD</button>
+                    <button onClick={() => { onAddFood(foodName, gram, { calories, protein, carb, fat, sodium, fiber }); setOpenModal(false); }} className=" modal-btns continue-btn">ADD</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,24 @@
+.food-menu-container{
+    color: #fff;
+    background-color: #036;
+    border-radius: 0.2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(8,auto);
+    // grid-row-gap: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    h1{
+        color: #FC0;
+        // padding-left: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .food-menu-btn{
+        border: none;
+        background: inherit;
+        color: #FC0;
+        font-weight: 500;
+    }
+}
