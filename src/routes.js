@@ -5,6 +5,7 @@ import { Info } from './pages/Info'
 import { MyWorkouts } from './pages/MyWorkouts'
 import { WeightTrack } from './pages/WeightTrack'
 import { StartWorkout } from './pages/StartWorkout'
+import { BuildMenu } from './pages/BuildMenu'
 
 const routes = [
     {
@@ -17,6 +18,12 @@ const routes = [
         path: '/buildWorkout',
         component: BuildWorkout,
         label: 'buildWorkout',
+        isExact: true
+    },
+    {
+        path: '/buildMenu',
+        component: BuildMenu,
+        label: 'buildMenu',
         isExact: true
     },
     {

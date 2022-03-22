@@ -11,7 +11,7 @@
   background: #302f2f;
   .header-btn-container {
     .header-btn {
-      background: whitesmoke;
+      background: rgba(245, 245, 245, 0.993);
       padding: 0 8px;
       border-radius: 3px;
       height: 32px;
@@ -24,13 +24,13 @@
       .home {
         font-size: 1rem;
         font-weight: 600;
-        color: #302f2f;
+        color: #343232e8;
       }
     }
     .header-btn:hover {
-      background-color: white;
-      .home {
-        color: rgba(50, 49, 49, 0.891);
+      background-color: #ffffffe7;
+      .home{
+        color: #2e2929ed;
       }
     }
   }

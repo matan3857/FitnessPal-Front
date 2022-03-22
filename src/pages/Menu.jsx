@@ -11,7 +11,7 @@ export function _Menu(props) {
     const pages = [{ title: 'My Workouts', linkTo: 'myWorkouts' },
     { title: 'My diet menus', linkTo: 'nutritionMine' },
     { title: 'Building a training program', linkTo: 'buildWorkout' },
-    { title: 'Building a nutrition menu', linkTo: 'buildNutrition' },
+    { title: 'Building a nutrition menu', linkTo: 'buildMenu' },
     { title: 'Weight tracking', linkTo: 'weight' },
     { title: 'Build Workout guide', linkTo: 'info' }]
     setPages(pages)

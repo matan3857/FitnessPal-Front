@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { onLogout } from "../store/user.actions";
 import logo from '../assets/img/logo.jpg';
 import logout from '../assets/img/logout.png';
-import { onLogout } from "../store/user.actions";
 
 function _AppHeader({ user, onLogout, history }) {
   const [isShowTitle, setIsShowTitle] = useState(true);
@@ -18,15 +18,16 @@ function _AppHeader({ user, onLogout, history }) {
     <>
       <header className={`main-header flex align-center ${!user || !user._id ? 'justify-center' : ''} `}>
         {user && user._id && <div className="header-btn-container flex">
-          <div className="header-btn pointer">
-            <span className="home">Menu</span>
-          </div>
+          <Link to="/menu">
+            <div className="header-btn pointer">
+              <span className="home">Back</span>
+            </div>
+          </Link>
         </div>}
 
         <Link to="/menu">
           <div className="logo flex justify-center">
             <img src={logo} className="logo logo-icon" alt="logo" />
-            {/* <h1>Fitness Pal</h1> */}
             {isShowTitle && <h1>Fitness Pal</h1>}
           </div>
         </Link>
