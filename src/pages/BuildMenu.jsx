@@ -30,6 +30,10 @@ function _BuildMenu(props) {
         setNutritionMenu(nutritionMenu => [...nutritionMenu, foodValues]);
     }
 
+    const onRemoveFood = (idxToRemove) => {
+        setNutritionMenu(nutritionMenu => [...(nutritionMenu.filter((food, foodIdx) => foodIdx !== idxToRemove))]);
+    }
+
     const calcInfo = () => {
         let [sumCalories, sumProtein, sumCarb, sumFat, sumSodium, sumFiber] = [0, 0, 0, 0, 0, 0]
         for (let i = 0; i < nutritionMenu.length; i++) {
@@ -56,7 +60,7 @@ function _BuildMenu(props) {
             <h1 className='header-title'>Hello {user.fullname}, Welcome To Build Menu Page</h1>
             <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
             {isAddFood && <FoodTypeAdd setOpenModal={setIsAddFood} onAddFood={onAddFood} />}
-            <NutritionMenuPreview nutritionMenu={nutritionMenu} sumInfo={sumInfo} />
+            <NutritionMenuPreview nutritionMenu={nutritionMenu} sumInfo={sumInfo} onRemoveFood={onRemoveFood} />
             <button className='primary-btn' onClick={() => { setModalNameOpen(true) }}>Save Nutrition menu</button>
             {modalNameOpen && <ModalSetName setOpenModal={setModalNameOpen} msg={'Menu'} onAction={saveNewMenu} />}
         </section>
@@ -70,7 +74,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    onUpdate,
+    onUpdate
 }
 
 export const BuildMenu = connect(mapStateToProps, mapDispatchToProps)(_BuildMenu);

@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { FoodPreview } from "./FoodPreview";
 
 export function NutritionMenuPreview(props) {
-    const { nutritionMenu, sumInfo } = props;
-   
+    const { nutritionMenu, sumInfo, onRemoveFood } = props;
+
     return (
         <div className="food-menu-container">
             <h1>Food Name</h1>
@@ -18,9 +18,10 @@ export function NutritionMenuPreview(props) {
 
             {nutritionMenu.map((foodDetails, idx) => (
                 <FoodPreview
-                    foodDetails={foodDetails}
                     key={idx}
-                // onAddExerciseToWorkout={onAddExerciseToWorkout}
+                    idx={idx}
+                    foodDetails={foodDetails}
+                    onRemoveFood={onRemoveFood}
                 />
             ))}
 

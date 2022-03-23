@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function FoodPreview(props) {
-    const { foodDetails } = props
+    const { foodDetails, onRemoveFood, idx } = props
 
     return (
         <>
@@ -15,7 +15,7 @@ export function FoodPreview(props) {
             <p>{foodDetails.fiber}</p>
 
             <div>
-                <button className='food-menu-btn'>Remove</button>
+                <button className='food-menu-btn' onClick={() => { onRemoveFood(idx) }}>Remove</button>
             </div>
         </>
     )
