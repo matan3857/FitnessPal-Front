@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 import { ModalMsg } from "../cmps/ModalMsg";
 import { onUpdate } from "../store/user.actions";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
 import { NutritionMenuPreview } from "../cmps/BuildMenu/NutritionMenuPreview";
 import { ModalSetName } from "../cmps/ModalSetName";
-
+import { FoodTypeAdd } from "../cmps/BuildMenu/FoodTypeAdd";
 
 function _MyMenus(props) {
     const { user, onUpdate } = props
@@ -15,12 +15,11 @@ function _MyMenus(props) {
     const [modalRemove, setModalRemove] = useState(false);
     const [nutritionMenu, setNutritionMenu] = useState(null);
     const [modalNameOpen, setModalNameOpen] = useState(false);
+    const [isAddFood, setIsAddFood] = useState(false);
 
     useEffect(() => {
         if (user.nutritionMenus[selectedOption.value]) setNutritionMenu(user.nutritionMenus[selectedOption.value].menu)
     }, [selectedOption]);
-
-    console.log('nutritionMenu', nutritionMenu)
 
     if (!user) return (<Redirect to={'/'} />)
 
@@ -28,12 +27,21 @@ function _MyMenus(props) {
         return { value: idx, label: menu.menuTitle }
     })
 
+    const onAddFood = (foodName, gram, foodValues) => {
+        for (const food in foodValues) {
+            if (!foodValues[food]) foodValues[food] = 0
+            foodValues[food] = foodValues[food] > 999 ? 999 : Math.round(+foodValues[food] * (gram / 100))
+        }
+        foodValues.foodName = foodName
+        foodValues.gram = gram
+        setNutritionMenu(nutritionMenu => [...nutritionMenu, foodValues])
+    }
+
     const onDeleteMenu = () => {
         user.nutritionMenus.splice(selectedOption.value, 1)
         onUpdate(user)
         setModalRemove(false)
     }
-    console.log(user)
 
     const onRemoveFood = (idxToRemove) => {
         setNutritionMenu(nutritionMenu => [...(nutritionMenu.filter((food, foodIdx) => foodIdx !== idxToRemove))]);
@@ -73,6 +81,8 @@ function _MyMenus(props) {
                     </div>
                     {nutritionMenu &&
                         <>
+                            <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
+                            {isAddFood && <FoodTypeAdd setOpenModal={setIsAddFood} onAddFood={onAddFood} />}
                             <NutritionMenuPreview nutritionMenu={nutritionMenu} onRemoveFood={onRemoveFood} />
                             <button className='primary-btn' onClick={() => { setModalNameOpen(true) }}>Save Nutrition menu</button>
                             {modalNameOpen && <ModalSetName setOpenModal={setModalNameOpen} msg={'Menu'} onAction={saveNewMenu} />}
