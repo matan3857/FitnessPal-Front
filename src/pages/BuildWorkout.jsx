@@ -4,7 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { WorkoutTypes } from '../cmps/BuildWorkout/WorkoutTypes';
 import { CurrWorkoutBuild } from '../cmps/BuildWorkout/CurrWorkoutBuild';
 import { BuildWorkoutType } from '../cmps/BuildWorkout/BuildWorkoutType';
-import { ModalWorkoutName } from "../cmps/ModalWorkoutName";
+import { ModalSetName } from "../cmps/ModalSetName";
 import { ModalSetRep } from "../cmps/ModalSetRep";
 import { DragDropContext } from "react-beautiful-dnd";
 import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
@@ -103,7 +103,7 @@ function _BuildWorkout(props) {
                     <CurrWorkoutBuild currWorkout={currWorkout} onRemoveExercise={onRemoveExercise} />
                 </DragDropContext>
                 <button className="openModalBtn save-workout-btn" onClick={() => { setModalOpen(true) }}>Save New Workout!</button>
-                {modalOpen && <ModalWorkoutName setOpenModal={setModalOpen} saveNewWorkout={saveNewWorkout} />}
+                {modalOpen && <ModalSetName setOpenModal={setModalOpen} msg={'Workout'} onAction={saveNewWorkout} />}
                 {setsRepsModal && <ModalSetRep setOpenModal={setSetsRepsModal} addExWithSetsReps={addExWithSetsReps} />}
             </div>
         </section>

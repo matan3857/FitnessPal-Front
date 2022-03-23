@@ -95,9 +95,9 @@ async function logout() {
 async function update(user) {
     console.log('user to update in service', user)
     try {
-        // const res = await axios.put(`http://localhost:3030/api/user/${user._id}`, user)
-        // const updatedUser = res.data
-        const updatedUser = await httpService.put('user', user)
+        const res = await axios.put(`http://localhost:3030/api/user/`, user)
+        const updatedUser = res.data
+        // const updatedUser = await httpService.put('user', user)
         if (updatedUser) {
             sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(updatedUser))
         }
