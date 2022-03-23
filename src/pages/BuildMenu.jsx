@@ -9,13 +9,7 @@ import { ModalSetName } from "../cmps/ModalSetName";
 function _BuildMenu(props) {
     const [isAddFood, setIsAddFood] = useState(false);
     const [nutritionMenu, setNutritionMenu] = useState([]);
-    const [sumInfo, setSumInfo] = useState({ sumCalories: 0, sumProtein: 0, sumCarb: 0, sumFat: 0, sumSodium: 0, sumFiber: 0 })
     const [modalNameOpen, setModalNameOpen] = useState(false);
-
-    useEffect(() => {
-        calcInfo()
-    }, [nutritionMenu]);
-
     const { user } = props
 
     if (!user) return (<Redirect to={'/'} />)
@@ -34,19 +28,6 @@ function _BuildMenu(props) {
         setNutritionMenu(nutritionMenu => [...(nutritionMenu.filter((food, foodIdx) => foodIdx !== idxToRemove))]);
     }
 
-    const calcInfo = () => {
-        let [sumCalories, sumProtein, sumCarb, sumFat, sumSodium, sumFiber] = [0, 0, 0, 0, 0, 0]
-        for (let i = 0; i < nutritionMenu.length; i++) {
-            sumCalories += +(nutritionMenu[i].calories)
-            sumProtein += +(nutritionMenu[i].protein)
-            sumCarb += +(nutritionMenu[i].carb)
-            sumFat += +(nutritionMenu[i].fat)
-            sumSodium += +(nutritionMenu[i].sodium)
-            sumFiber += +(nutritionMenu[i].fiber)
-        }
-        setSumInfo(prevSumInfo => ({ ...prevSumInfo, sumCalories, sumProtein, sumCarb, sumFat, sumSodium, sumFiber }))
-    }
-
     const saveNewMenu = async (menuTitle) => {
         if (!menuTitle) return
         let menu = { menuTitle, menu: nutritionMenu }
@@ -60,7 +41,7 @@ function _BuildMenu(props) {
             <h1 className='header-title'>Hello {user.fullname}, Welcome To Build Menu Page</h1>
             <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
             {isAddFood && <FoodTypeAdd setOpenModal={setIsAddFood} onAddFood={onAddFood} />}
-            <NutritionMenuPreview nutritionMenu={nutritionMenu} sumInfo={sumInfo} onRemoveFood={onRemoveFood} />
+            <NutritionMenuPreview nutritionMenu={nutritionMenu} onRemoveFood={onRemoveFood} />
             <button className='primary-btn' onClick={() => { setModalNameOpen(true) }}>Save Nutrition menu</button>
             {modalNameOpen && <ModalSetName setOpenModal={setModalNameOpen} msg={'Menu'} onAction={saveNewMenu} />}
         </section>
