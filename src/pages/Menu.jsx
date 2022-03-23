@@ -9,7 +9,7 @@ export function _Menu(props) {
 
   useEffect(() => {
     const pages = [{ title: 'My Workouts', linkTo: 'myWorkouts' },
-    { title: 'My diet menus', linkTo: 'nutritionMine' },
+    { title: 'My diet menus', linkTo: 'myMenus' },
     { title: 'Building a training program', linkTo: 'buildWorkout' },
     { title: 'Building a nutrition menu', linkTo: 'buildMenu' },
     { title: 'Weight tracking', linkTo: 'weight' },
