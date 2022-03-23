@@ -73,7 +73,7 @@ function _WeightTrack(props) {
     };
 
     return (
-        <div className="weight-track flex column align-center margin-top menu">
+        <div className="weight-track flex column align-center margin-top menu background-style">
             <h1>Hello {user.fullname},<br /> Welcome to your Weight Tracking</h1>
             <form className="flex justify-center" onSubmit={onSubmit}>
                 <input

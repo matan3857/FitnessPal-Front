@@ -41,7 +41,7 @@ function _MyWorkouts(props) {
 
     return (
         <section className='my-workouts margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
-            <h1>My workouts</h1>
+            <h1></h1>
             {user.workouts.length ?
                 <Select
                     value={selectedOption}

@@ -2,13 +2,24 @@
     min-height: 100vh;
     text-align: -webkit-center;
     padding-bottom: 3rem;
+    .my-menus-title {
+        color: whitesmoke;
+        font-size: 2rem;
+        padding: 1rem;
+        margin: 0;
+    }
+    h2 {
+        padding: 1rem;
+        margin: 0;
+    }
     .my-menus-header {
         padding: 7px;
         text-align: center;
-        .my-menus-btns {
-            button {
-                margin: 5px;
-            }
+    }
+    .my-menus-btns {
+        margin-bottom: 15px;
+        button {
+            margin: 5px;
         }
     }
 }

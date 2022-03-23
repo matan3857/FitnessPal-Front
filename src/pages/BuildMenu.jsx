@@ -37,7 +37,7 @@ function _BuildMenu(props) {
     }
 
     return (
-        <section className="build-menu-container margin-top">
+        <section className="build-menu-container background-style margin-top">
             <h1 className='header-title'>Hello {user.fullname}, Welcome To Build Menu Page</h1>
             <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
             {isAddFood && <FoodTypeAdd setOpenModal={setIsAddFood} onAddFood={onAddFood} />}

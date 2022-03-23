@@ -4,7 +4,7 @@ import { ModalMsg } from "../cmps/ModalMsg";
 import { onUpdate } from "../store/user.actions";
 import { Redirect } from "react-router-dom";
 import Select from 'react-select';
-import hero from '../assets/img/hero-my-workouts.png';
+import hero from '../assets/img/hero-my-menus.jpg';
 import { NutritionMenuPreview } from "../cmps/BuildMenu/NutritionMenuPreview";
 import { ModalSetName } from "../cmps/ModalSetName";
 import { FoodTypeAdd } from "../cmps/BuildMenu/FoodTypeAdd";
@@ -60,7 +60,7 @@ function _MyMenus(props) {
 
     return (
         <section className='my-menus margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
-            <h1>My Menus</h1>
+            <h2></h2>
             {user.nutritionMenus.length ?
                 <Select
                     value={selectedOption}
@@ -75,13 +75,13 @@ function _MyMenus(props) {
                 <>
                     <div className='my-menus-header'>
                         <h1>{user.nutritionMenus[selectedOption.value].menuTitle}</h1>
-                        <div className='my-menus-btns'>
-                            <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Menu</button>
-                        </div>
                     </div>
                     {nutritionMenu &&
                         <>
-                            <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
+                            <div className='my-menus-btns'>
+                                <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Menu</button>
+                                <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
+                            </div>
                             {isAddFood && <FoodTypeAdd setOpenModal={setIsAddFood} onAddFood={onAddFood} />}
                             <NutritionMenuPreview nutritionMenu={nutritionMenu} onRemoveFood={onRemoveFood} />
                             <button className='primary-btn' onClick={() => { setModalNameOpen(true) }}>Save Nutrition menu</button>

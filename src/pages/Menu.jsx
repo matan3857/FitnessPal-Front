@@ -22,7 +22,7 @@ export function _Menu(props) {
   
   return (
     <>
-      <div className="flex column align-center margin-top menu">
+      <div className="flex column align-center margin-top menu background-style">
         {pages.length ? (
           <PageList
             pages={pages}
