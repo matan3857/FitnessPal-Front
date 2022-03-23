@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
-// import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { ModalMsg } from "../cmps/ModalMsg";
 import { onUpdate } from "../store/user.actions";
-// import { MyWorkoutPreview } from "../cmps/MyWorkouts/MyWorkoutPreview";
 import { Link, Redirect } from "react-router-dom";
 import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
+import { NutritionMenuPreview } from "../cmps/BuildMenu/NutritionMenuPreview";
+import { ModalSetName } from "../cmps/ModalSetName";
+
 
 function _MyMenus(props) {
     const { user, onUpdate } = props
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedOption, setSelectedOption] = useState(0);
     const [modalRemove, setModalRemove] = useState(false);
-    // const [isExerciseDetails, setIsExerciseDetails] = useState(false);
-    const [currMenu, setCurrMenu] = useState(null);
+    const [nutritionMenu, setNutritionMenu] = useState(null);
+    const [modalNameOpen, setModalNameOpen] = useState(false);
+
+    useEffect(() => {
+        if (user.nutritionMenus[selectedOption.value]) setNutritionMenu(user.nutritionMenus[selectedOption.value].menu)
+    }, [selectedOption]);
+
+    console.log('nutritionMenu', nutritionMenu)
 
     if (!user) return (<Redirect to={'/'} />)
 
@@ -25,64 +32,53 @@ function _MyMenus(props) {
         user.nutritionMenus.splice(selectedOption.value, 1)
         onUpdate(user)
         setModalRemove(false)
-        props.history.push("/menu")
+    }
+    console.log(user)
+
+    const onRemoveFood = (idxToRemove) => {
+        setNutritionMenu(nutritionMenu => [...(nutritionMenu.filter((food, foodIdx) => foodIdx !== idxToRemove))]);
     }
 
-    // const onShowExerciseDetails = (exercise) => {
-    //     setCurrExercise(exercise)
-    //     setIsExerciseDetails(true)
-    //     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // }
-
-    // const onHideDetails = () => {
-    //     setIsExerciseDetails(false)
-    //     setCurrExercise(null)
-    // }
+    const saveNewMenu = async (menuTitle) => {
+        if (!menuTitle) return
+        let menu = { menuTitle, menu: nutritionMenu }
+        user.nutritionMenus = [...user.nutritionMenus, menu]
+        const res = await props.onUpdate(user)
+        if (res) {
+            setModalNameOpen(false)
+            setSelectedOption(0)
+        }
+    }
 
     return (
-        <section className='my-workouts margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
+        <section className='my-menus margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
             <h1>My Menus</h1>
             {user.nutritionMenus.length ?
                 <Select
                     value={selectedOption}
                     onChange={setSelectedOption}
                     options={options}
-                    className='my-workouts-select'
+                    className='my-select'
                 />
                 :
                 <p>You dont have menus yet..</p>
             }
-            {selectedOption &&
+            {!!selectedOption &&
                 <>
-                    {/* {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={null} onBackToAll={null} onHideDetails={onHideDetails} isEditWorkout={false} />} */}
-                    <div className='my-workout-header'>
+                    <div className='my-menus-header'>
+                        <h1>{user.nutritionMenus[selectedOption.value].menuTitle}</h1>
+                        <div className='my-menus-btns'>
+                            <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Menu</button>
+                        </div>
+                    </div>
+                    {nutritionMenu &&
                         <>
-                            <h1>{user.nutritionMenus[selectedOption.value].menuTitle}</h1>
-                            <div className='my-workout-btns'>
-                                {/* <Link to={{ pathname: '/buildWorkout', workoutToEdit: user.workouts[selectedOption.value].ex }} >
-                                    <button className='light-btn'>Edit Workout</button>
-                                </Link> */}
-                                <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Menu</button>
-                            </div>
-                            {/* <Link to={{
-                                pathname: `/startWorkout/${selectedOption.value}`,
-                                workoutToDo: user.workouts[selectedOption.value]
-                            }}>
-                                <button className='primary-btn'>Start Workout</button>
-                            </Link> */}
+                            <NutritionMenuPreview nutritionMenu={nutritionMenu} onRemoveFood={onRemoveFood} />
+                            <button className='primary-btn' onClick={() => { setModalNameOpen(true) }}>Save Nutrition menu</button>
+                            {modalNameOpen && <ModalSetName setOpenModal={setModalNameOpen} msg={'Menu'} onAction={saveNewMenu} />}
                         </>
-                    </div>
-                    <div className='exercise-list'>
-                        <h2>Here Show Menu</h2>
-                        {/* {
-                            user.nutritionMenus[selectedOption.value].ex.map((exercise, idx) => (
-                                <MyWorkoutPreview
-                                    exercise={exercise}
-                                    key={idx}
-                                    onShowExerciseDetails={onShowExerciseDetails}
-                                />
-                            ))} */}
-                    </div>
+
+                    }
                 </>
             }
             {modalRemove && <ModalMsg setOpenModal={setModalRemove} msg={'Are you sure you want to delete this menu?'} onAction={onDeleteMenu} />}

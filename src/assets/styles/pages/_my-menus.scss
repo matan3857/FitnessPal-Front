@@ -1,0 +1,14 @@
+.my-menus {
+    min-height: 100vh;
+    text-align: -webkit-center;
+    padding-bottom: 3rem;
+    .my-menus-header {
+        padding: 7px;
+        text-align: center;
+        .my-menus-btns {
+            button {
+                margin: 5px;
+            }
+        }
+    }
+}

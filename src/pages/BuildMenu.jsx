@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { onUpdate } from "../store/user.actions";
 import { FoodTypeAdd } from "../cmps/BuildMenu/FoodTypeAdd";
 import { NutritionMenuPreview } from "../cmps/BuildMenu/NutritionMenuPreview";
@@ -21,11 +21,11 @@ function _BuildMenu(props) {
         }
         foodValues.foodName = foodName
         foodValues.gram = gram
-        setNutritionMenu(nutritionMenu => [...nutritionMenu, foodValues]);
+        setNutritionMenu(nutritionMenu => [...nutritionMenu, foodValues])
     }
 
     const onRemoveFood = (idxToRemove) => {
-        setNutritionMenu(nutritionMenu => [...(nutritionMenu.filter((food, foodIdx) => foodIdx !== idxToRemove))]);
+        setNutritionMenu(nutritionMenu => [...(nutritionMenu.filter((food, foodIdx) => foodIdx !== idxToRemove))])
     }
 
     const saveNewMenu = async (menuTitle) => {
