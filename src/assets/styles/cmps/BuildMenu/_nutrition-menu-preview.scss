@@ -1,4 +1,4 @@
-.food-menu-container{
+.food-menu-container {
     color: #fff;
     background-color: #036;
     border-radius: 0.2em;
@@ -7,24 +7,35 @@
     margin-bottom: 1rem;
     min-height: 600px;
     display: grid;
-    grid-template-columns: repeat(9,auto);
+    grid-template-columns: repeat(9, auto);
     grid-row-gap: 1px;
     justify-content: space-around;
     align-items: center;
     justify-items: center;
     align-content: start;
-    h1{
-        color: #FC0;
-        border-bottom: 1px solid rgba(255,255,255,.12);
+    h1 {
+        color: #fc0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         padding: 0 5px;
+        @include for-mobile-layout {
+            font-size: 0.9rem;
+            padding: 0 3px;
+            font-weight: 600;
+        }
     }
-    p{
+    p {
         font-size: 1.125rem;
+        @include for-mobile-layout {
+            font-size: 0.9rem;
+        }
     }
-    .food-menu-btn{
+    .food-menu-btn {
         border: none;
         background: inherit;
-        color: #FC0;
+        color: #fc0;
         font-weight: 500;
+        @include for-mobile-layout {
+            font-size: 0.7rem;
+        }
     }
 }

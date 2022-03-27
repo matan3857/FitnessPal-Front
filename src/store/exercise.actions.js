@@ -65,13 +65,3 @@ export const saveExercise = (exercises, exercise) => {
 //         }
 //     }
 // }
-
-// export const clearBoard = () => {
-//     return (dispatch) => {
-//         dispatch({
-//             type: "SET_BOARD",
-//             board: null
-//         });
-
-//     }
-// }

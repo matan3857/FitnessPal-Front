@@ -60,7 +60,7 @@ function _MyMenus(props) {
 
     return (
         <section className='my-menus margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
-            <h2></h2>
+            <h3></h3>
             {user.nutritionMenus.length ?
                 <Select
                     value={selectedOption}
@@ -74,7 +74,7 @@ function _MyMenus(props) {
             {!!selectedOption &&
                 <>
                     <div className='my-menus-header'>
-                        <h1>{user.nutritionMenus[selectedOption.value].menuTitle}</h1>
+                        <h2>{user.nutritionMenus[selectedOption.value].menuTitle}</h2>
                     </div>
                     {nutritionMenu &&
                         <>

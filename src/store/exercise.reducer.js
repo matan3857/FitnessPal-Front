@@ -10,9 +10,6 @@ export function exerciseReducer(state = initialState, action) {
         case 'SET_EXERCISES':
             newState = { ...state, exercises: action.exercises }
             break
-        // case 'SET_EXERCISE':
-        //     newState = { ...state, exercise: action.exercise }
-        //     break
         case 'SAVE_EXERCISE':
             // exercises = state.exercises.map(exercise => (exercise._id === action.exercise._id) ? action.exercise : exercise)
             newState = { ...state, exercises: action.exercises }
