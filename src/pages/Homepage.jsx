@@ -17,23 +17,32 @@ function _Homepage(props) {
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
+    if (!username || !password) {
+      setErrMsg('Please fill in all fields')
+      setErr(true)
+      return
+    }
     if (username.trim() && password.trim()) {
       let res
       if (!isLogin) {
-        // props.onSignup({ username, password, fullname });
-        res = await props.onSignup({ username, password, fullname });
+        if (!fullname) {
+          setErrMsg('Please fill in all fields')
+          setErr(true)
+          return
+        }
+        res = await props.onSignup({ username: username.trim(), password, fullname });
         if (!res) {
           setErrMsg('Username already exists')
           setErr(true)
         }
       } else {
-        res = await props.onLogin({ username, password });
+        res = await props.onLogin({ username: username.trim(), password });
         if (!res) {
           setErrMsg('Incorrect password or username')
           setErr(true)
         }
       }
-      if (res) props.history.push("/menu");
+      if (res) props.history.push("/menu")
     }
   };
 
@@ -62,6 +71,7 @@ function _Homepage(props) {
             value={username}
             onChange={(ev) => setUsername(ev.target.value)}
             placeholder="Enter Username"
+            className={(!username && err) ? 'input-err' : ''}
           />
           {!isLogin && (
             <input
@@ -69,6 +79,7 @@ function _Homepage(props) {
               value={fullname}
               onChange={(ev) => setFullname(ev.target.value)}
               placeholder="Enter Full Name"
+              className={(!fullname && err) ? 'input-err' : ''}
             />
           )}
           <input
@@ -76,10 +87,11 @@ function _Homepage(props) {
             value={password}
             onChange={(ev) => setPassword(ev.target.value)}
             placeholder="Enter Password"
+            className={(!password && err) ? 'input-err' : ''}
           />
           {err && <span className="err">{errMsg}</span>}
           <button className="login-submit">
-            {isLogin ? "Log me in" : "Sign me up"}
+            {isLogin ? "Log In" : "Sign Up"}
           </button>
         </form>
 
@@ -93,7 +105,7 @@ function _Homepage(props) {
           textButton={isLogin ? "Continue with Facebook" : 'Sign up with Facebook'}
         />
 
-        <p onClick={() => { setIsLogin(!isLogin); setErr(false); }}>
+        <p onClick={() => { setErr(false); setIsLogin(!isLogin); }}>
           {isLogin ? "Or sign up..." : "Back to Login"}
         </p>
       </div>

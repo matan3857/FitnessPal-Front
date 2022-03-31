@@ -1,7 +1,6 @@
 import React from "react";
 
 export function ModalMsg({ setOpenModal, msg, onAction }) {
-console.log('msg',msg)
     return (
         <div className="modal-background">
             <div className="modal-container">

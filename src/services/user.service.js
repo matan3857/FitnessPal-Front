@@ -1,4 +1,4 @@
-import { httpService } from './http.service'
+// import { httpService } from './http.service'
 import Axios from 'axios';
 const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
 

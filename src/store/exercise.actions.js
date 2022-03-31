@@ -18,13 +18,12 @@ export const loadExercises = () => {
 export const saveExercise = (exercises, exercise) => {
     return async (dispatch) => {
         try {
-            // const updatedExercises = await exerciseService.save(exercises, exercise)
-            const updatedExercises = exercises
+            const updatedExercises = await exerciseService.save(exercises, exercise)
             dispatch({
                 type: "SAVE_EXERCISE",
-                exercises: updatedExercises,
+                exercises,
             });
-
+            return updatedExercises
         }
         catch (err) {
             console.log('cant save exercise', err)

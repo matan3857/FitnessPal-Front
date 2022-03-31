@@ -27,7 +27,17 @@ async function query() {
     }
 }
 
-function save(exercises, exercise) {
-    // const exercisesTypeToUpdate = exercises.find(currTypes => currTypes.type === exercise.type)
-    // console.log('exercisesTypeToUpdate',exercisesTypeToUpdate.ex)
+async function save(exercises,exercise) {
+    try {
+        const exerciseType = exercises.find(currTypes => currTypes.type === exercise.type)
+
+        const res = await axios.put(`http://localhost:3030/api/exercise/`, exerciseType)
+        const updatedExerciseType = res.data
+        // const updatedUser = await httpService.put('user', user)
+        return updatedExerciseType
+    }
+    catch (err) {
+        console.log('server replied: cannot update', err)
+        throw err
+    }
 }

@@ -16,7 +16,7 @@ export function _ExercisesPreview(props) {
         style={{ display: loaded ? 'block' : 'none' }}
         onLoad={() => setLoaded(true)}
         src={require(`../../assets/img/${exerciseType}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"
-        // src={noImg} alt="exercise"
+      // src={noImg} alt="exercise"
       />
       {!loaded && <LoaderSpinner />}
 

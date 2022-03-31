@@ -20,7 +20,7 @@ function _AppHeader({ user, onLogout, history }) {
         {user && user._id && <div className="header-btn-container flex">
           <Link to="/menu">
             <div className="header-btn pointer">
-              <span className="home">Back</span>
+              <span className="home">Menu</span>
             </div>
           </Link>
         </div>}

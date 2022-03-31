@@ -9,7 +9,7 @@ import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
 
 function _MyWorkouts(props) {
-    const { user, history, onUpdate } = props
+    const { user, onUpdate } = props
     const [selectedOption, setSelectedOption] = useState(null);
     const [modalRemove, setModalRemove] = useState(false);
     const [isExerciseDetails, setIsExerciseDetails] = useState(false);
@@ -25,7 +25,7 @@ function _MyWorkouts(props) {
         user.workouts.splice(selectedOption.value, 1)
         onUpdate(user)
         setModalRemove(false)
-        history.push("/menu")
+        setSelectedOption(null)
     }
 
     const onShowExerciseDetails = (exercise) => {
@@ -50,7 +50,7 @@ function _MyWorkouts(props) {
                     className='my-select'
                 />
                 :
-                <p>You dont have workouts yet..</p>
+                <p className='fs30'>You dont have workouts yet..</p>
             }
             {selectedOption &&
                 <>

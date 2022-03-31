@@ -10,8 +10,8 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
     const onSubmit = async (ev) => {
         ev.preventDefault();
         exercise.desc = desc
-        saveExercise(exercises, exercise)
-        onBackToAll()
+        const res = await saveExercise(exercises, exercise)
+        if (res) onBackToAll()
     };
 
     return (
@@ -35,8 +35,8 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
                 <p>{exercise.desc}</p>
             }
             <div className='imgs-container flex'>
-                <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise_1"/>
-                <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} alt="exercise_2"/>
+                <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise_1" />
+                <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} alt="exercise_2" />
             </div>
             <div className='exercise-btns flex column'>
                 {!isEditWorkout && onAddExerciseToWorkout &&

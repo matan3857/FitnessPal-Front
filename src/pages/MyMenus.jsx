@@ -69,7 +69,7 @@ function _MyMenus(props) {
                     className='my-select'
                 />
                 :
-                <p>You dont have menus yet..</p>
+                <p className='fs30'>You dont have menus yet..</p>
             }
             {!!selectedOption &&
                 <>
