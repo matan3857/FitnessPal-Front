@@ -16,6 +16,17 @@ export function Exercises(props) {
     // Change page
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
+    const onTogglePage = (toggleDirection) => {
+        if (toggleDirection) {
+            if (currentPage + 1 > Math.ceil(currExercises.length / exercisesPerPage)) return
+            setCurrentPage(prevPage => prevPage + 1)
+        }
+        else {
+            if (currentPage - 1 < 1) return
+            setCurrentPage(prevPage => prevPage - 1)
+        }
+    }
+
     return (
         <>
             <div className="exercise-list flex">
@@ -34,6 +45,7 @@ export function Exercises(props) {
                 exercisesPerPage={exercisesPerPage}
                 totalExercises={currExercises.length}
                 currentPage={currentPage}
+                onTogglePage={onTogglePage}
                 paginate={paginate}
             />
         </>
