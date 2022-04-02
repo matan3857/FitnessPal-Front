@@ -1,0 +1,25 @@
+.pagination{
+    padding: 20px 0;
+    .page-link{
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #333;
+        background-color: rgb(114, 112, 112);
+        margin: 0 3px 6px;
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        padding: 13px;
+        color: #fff;
+        font-weight: 700;
+    }
+    .page-link:not(.chosen-page):hover{
+        background-color: #5b5d6c;;
+        color: whitesmoke;
+    }
+
+    .chosen-page{
+        background: #2f3237;
+    }
+}

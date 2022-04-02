@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Exercises } from "./Exercises";
 
 export function _BuildWorkoutType(props) {
-    
     const { exerciseType, onAddExerciseToWorkout, onShowExerciseDetails, exercises } = props
 
     const exercisesToShow = () => {
