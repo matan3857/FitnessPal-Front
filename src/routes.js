@@ -63,8 +63,6 @@ const routes = [
         label: 'Home 🏠',
         isExact: true
     },
-
 ]
-
 
 export default routes;

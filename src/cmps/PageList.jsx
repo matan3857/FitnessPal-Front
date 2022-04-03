@@ -4,7 +4,7 @@ import { PagePreview } from "./PagePreview";
 export function PageList(props) {
   const { pages } = props;
   return (
-    <div className="page-list">
+    <div className="page-list flex column">
       {pages &&
         pages.map((page, idx) => (
           <PagePreview

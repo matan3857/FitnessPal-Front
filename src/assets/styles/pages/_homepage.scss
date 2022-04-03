@@ -13,12 +13,13 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
     min-width: 400px;
     p {
-      color: #5e6c84;
+      color: #302f2f;
+      font-family: cursive;
       text-align: center;
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: -0.01em;
       line-height: 28px;
-      font-weight: 700;
+      font-weight: 500;
       margin-bottom: 25px;
       &:last-child {
         color: #5e6c84;
@@ -32,7 +33,7 @@
       text-align: center;
       align-items: center;
       input {
-        font-size: 14px;
+        font-size: 15px;
         background-color: #fafbfc;
         border-radius: 3px;
         border: 2px solid #dfe1e6;
@@ -54,22 +55,6 @@
         margin-bottom: 7px;
       }
       button.login-submit {
-        // // background: linear-gradient(180deg, #61bd4f 0, #5aac44);
-        // background: linear-gradient(180deg, #bd4f4f 0, #ac4444);
-        // // box-shadow: 0 2px 0 #3f6f21;
-        // box-shadow: 0 2px 0 #6f2121;
-        // color: #fff;
-        // font-weight: 700;
-        // box-shadow: none;
-        // margin-bottom: 17px;
-        // font-size: 14px;
-        // line-height: 20px;
-        // border-radius: 3px;
-        // padding: 6px 12px;
-        // transition:background-color .2s;
-        // &:hover {
-        //     // background: linear-gradient(180deg, #5aaf49 0, #55a140);        }
-        //     background: linear-gradient(180deg, #af4949 0, #a14040);        }
         border: 0;
         border-radius: 4px;
         font-weight: 600;
@@ -93,7 +78,6 @@
         // background-color: rgb(224, 152, 85);
         &:hover{
           color: white;
-          // width:;
           box-shadow: 0 0 20px rgba(224, 85, 138, 0.6);
           // box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
           background-color: rgb(224, 85, 103);

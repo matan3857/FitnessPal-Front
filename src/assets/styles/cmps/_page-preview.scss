@@ -1,15 +1,14 @@
 .page-preview {
   .page-content {
     // min-width: 350px;
-    width: 350px;
-    min-height: 250px;
+    // width: 350px;
+    min-height: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 15px 0 15px;
+    margin: 15px 0 0;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.316);
-
     // text-align: -webkit-center;
     cursor: pointer;
     height: 110px;
@@ -18,14 +17,19 @@
     filter: brightness(1);
     background: #ff8008; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffc837, #ff8008); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffc837, #ff8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(
+      to right,
+      #ffc837,
+      #ff8008
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     &:hover {
       filter: brightness(0.8);
     }
   }
   p {
     color: #172b4d;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-family: system-ui;
     font-weight: 600;
     margin-inline-start: 10px;
     max-width: 30ch;

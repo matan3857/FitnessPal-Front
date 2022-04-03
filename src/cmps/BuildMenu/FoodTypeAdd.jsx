@@ -30,7 +30,7 @@ export function FoodTypeAdd({ onAddFood, setOpenModal }) {
                                 type="text"
                                 value={foodName}
                                 onChange={(ev) => setFoodName(ev.target.value)}
-                                placeholder="Enter food name.."
+                                placeholder="Insert food name.."
                                 required
                             />
                         </label>
