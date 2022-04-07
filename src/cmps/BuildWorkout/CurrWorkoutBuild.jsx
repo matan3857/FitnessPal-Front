@@ -7,6 +7,7 @@ export function CurrWorkoutBuild(props) {
     const { currWorkout, onRemoveExercise } = props
 
     if (!currWorkout.length) return <div><h2>Your training program is currently empty..</h2></div>
+    console.log('currWorkout',currWorkout)
     return (
         <Droppable
             droppableId={"all-groups"}
@@ -19,7 +20,7 @@ export function CurrWorkoutBuild(props) {
                     ref={provided.innerRef}
                 >
                     {currWorkout.map((exercise, index) => (
-                        <div key={index}> {/*Change Here to ID*/}
+                        <div key={exercise.id}>
                             <CurrWorkoutExercise
                                 exercise={exercise}
                                 onRemoveExercise={onRemoveExercise}

@@ -14,7 +14,10 @@ export function Exercises(props) {
     const exercisesToShow = currExercises.slice(indexOfFirstEx, indexOfLastEx);
 
     // Change page
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const paginate = pageNumber => {
+        setCurrentPage(pageNumber)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
 
     const onTogglePage = (toggleDirection) => {
         if (toggleDirection) {
@@ -25,6 +28,7 @@ export function Exercises(props) {
             if (currentPage - 1 < 1) return
             setCurrentPage(prevPage => prevPage - 1)
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     return (

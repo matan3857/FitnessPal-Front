@@ -41,10 +41,9 @@ function _BuildWorkout(props) {
 
     const addExWithSetsReps = (sets, reps) => {
         if (!sets || !reps) return
-        currExerciseToAdd['sets'] = sets
-        currExerciseToAdd['reps'] = reps
-        currWorkout.push(currExerciseToAdd)
-        setCurrWorkout([...currWorkout])
+        const updateCurrExerciseToAdd = { ...currExerciseToAdd, sets, reps }
+        setCurrExerciseToAdd(updateCurrExerciseToAdd)
+        setCurrWorkout(prevCurrWorkout => [...prevCurrWorkout , updateCurrExerciseToAdd])
         setSetsRepsModal(false)
     }
 
