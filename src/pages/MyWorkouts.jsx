@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
 import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
-import { ModalMsg } from "../cmps/ModalMsg";
 import { onUpdate } from "../store/user.actions";
 import { MyWorkoutPreview } from "../cmps/MyWorkouts/MyWorkoutPreview";
 import { Link, Redirect } from "react-router-dom";
 import Select from 'react-select';
 import hero from '../assets/img/hero-my-workouts.png';
+import Swal from 'sweetalert2';
 
 function _MyWorkouts(props) {
     const { user, onUpdate } = props
     const [selectedOption, setSelectedOption] = useState(null);
-    const [modalRemove, setModalRemove] = useState(false);
     const [isExerciseDetails, setIsExerciseDetails] = useState(false);
     const [currExercise, setCurrExercise] = useState(null);
 
@@ -20,13 +19,6 @@ function _MyWorkouts(props) {
     const options = user.workouts.map((workout, idx) => {
         return { value: idx, label: workout.workoutTitle }
     })
-
-    const onDeleteWorkout = () => {
-        user.workouts.splice(selectedOption.value, 1)
-        onUpdate(user)
-        setModalRemove(false)
-        setSelectedOption(null)
-    }
 
     const onShowExerciseDetails = (exercise) => {
         setCurrExercise(exercise)
@@ -37,6 +29,29 @@ function _MyWorkouts(props) {
     const onHideDetails = () => {
         setIsExerciseDetails(false)
         setCurrExercise(null)
+    }
+
+    const onDeleteMsg = () => {
+        Swal.fire({
+            title: 'Are you sure you want to delete workout?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                user.workouts.splice(selectedOption.value, 1)
+                onUpdate(user)
+                setSelectedOption(null)
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
     }
 
     return (
@@ -62,7 +77,7 @@ function _MyWorkouts(props) {
                                 <Link to={{ pathname: '/buildWorkout', workoutToEdit: user.workouts[selectedOption.value].ex }} >
                                     <button className='light-btn'>Edit Workout</button>
                                 </Link>
-                                <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Workout</button>
+                                <button onClick={() => { onDeleteMsg() }} className='light-btn'>Delete Workout</button>
                             </div>
                             <Link to={{
                                 pathname: `/startWorkout/${selectedOption.value}`,
@@ -84,7 +99,6 @@ function _MyWorkouts(props) {
                     </div>
                 </>
             }
-            {modalRemove && <ModalMsg setOpenModal={setModalRemove} msg={'Are you sure you want to delete this workout?'} onAction={onDeleteWorkout} />}
         </section >
     )
 }

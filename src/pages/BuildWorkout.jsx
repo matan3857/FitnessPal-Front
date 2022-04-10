@@ -43,7 +43,7 @@ function _BuildWorkout(props) {
         if (!sets || !reps) return
         const updateCurrExerciseToAdd = { ...currExerciseToAdd, sets, reps }
         setCurrExerciseToAdd(updateCurrExerciseToAdd)
-        setCurrWorkout(prevCurrWorkout => [...prevCurrWorkout , updateCurrExerciseToAdd])
+        setCurrWorkout(prevCurrWorkout => [...prevCurrWorkout, updateCurrExerciseToAdd])
         setSetsRepsModal(false)
     }
 
@@ -90,8 +90,10 @@ function _BuildWorkout(props) {
         <section className="build-workout-container">
             <Link to="/info"><h1 className="help-build pointer">Dont know how to build? click here!</h1></Link>
             {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onHideDetails={onHideDetails} isEditWorkout={isEditWorkout} />}
-            {showExercise && <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onShowExerciseDetails={onShowExerciseDetails} />}
-            {!showExercise &&
+
+            {showExercise ?
+                <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onShowExerciseDetails={onShowExerciseDetails} />
+                :
                 <div className="workout-types-container">
                     <WorkoutTypes onToggleShowExercise={onToggleShowExercise} />
                 </div>

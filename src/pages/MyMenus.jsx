@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
-import { ModalMsg } from "../cmps/ModalMsg";
 import { onUpdate } from "../store/user.actions";
 import { Redirect } from "react-router-dom";
 import Select from 'react-select';
@@ -8,11 +7,11 @@ import hero from '../assets/img/hero-my-menus.jpg';
 import { NutritionMenuPreview } from "../cmps/BuildMenu/NutritionMenuPreview";
 import { ModalSetName } from "../cmps/ModalSetName";
 import { FoodTypeAdd } from "../cmps/BuildMenu/FoodTypeAdd";
+import Swal from 'sweetalert2';
 
 function _MyMenus(props) {
     const { user, onUpdate } = props
     const [selectedOption, setSelectedOption] = useState(0);
-    const [modalRemove, setModalRemove] = useState(false);
     const [nutritionMenu, setNutritionMenu] = useState(null);
     const [modalNameOpen, setModalNameOpen] = useState(false);
     const [isAddFood, setIsAddFood] = useState(false);
@@ -37,12 +36,6 @@ function _MyMenus(props) {
         setNutritionMenu(nutritionMenu => [...nutritionMenu, foodValues])
     }
 
-    const onDeleteMenu = () => {
-        user.nutritionMenus.splice(selectedOption.value, 1)
-        onUpdate(user)
-        setModalRemove(false)
-    }
-
     const onRemoveFood = (idxToRemove) => {
         setNutritionMenu(nutritionMenu => [...(nutritionMenu.filter((food, foodIdx) => foodIdx !== idxToRemove))]);
     }
@@ -56,6 +49,29 @@ function _MyMenus(props) {
             setModalNameOpen(false)
             setSelectedOption(0)
         }
+    }
+
+    const onDeleteMsg = () => {
+        Swal.fire({
+            title: 'Are you sure you want to delete menu?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                user.nutritionMenus.splice(selectedOption.value, 1)
+                onUpdate(user)
+                setSelectedOption(0)
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
     }
 
     return (
@@ -79,7 +95,7 @@ function _MyMenus(props) {
                     {nutritionMenu &&
                         <>
                             <div className='my-menus-btns'>
-                                <button onClick={() => { setModalRemove(true) }} className='light-btn'>Delete Menu</button>
+                                <button onClick={() => { onDeleteMsg() }} className='light-btn'>Delete Menu</button>
                                 <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
                             </div>
                             {isAddFood && <FoodTypeAdd setOpenModal={setIsAddFood} onAddFood={onAddFood} />}
@@ -87,11 +103,9 @@ function _MyMenus(props) {
                             <button className='primary-btn' onClick={() => { setModalNameOpen(true) }}>Save Nutrition menu</button>
                             {modalNameOpen && <ModalSetName setOpenModal={setModalNameOpen} msg={'Menu'} onAction={saveNewMenu} />}
                         </>
-
                     }
                 </>
             }
-            {modalRemove && <ModalMsg setOpenModal={setModalRemove} msg={'Are you sure you want to delete this menu?'} onAction={onDeleteMenu} />}
         </section >
     )
 }
