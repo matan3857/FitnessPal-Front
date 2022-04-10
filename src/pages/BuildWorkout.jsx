@@ -10,6 +10,7 @@ import { DragDropContext } from "react-beautiful-dnd";
 import { ExerciseDetails } from '../cmps/BuildWorkout/ExerciseDetails'
 import { onUpdate } from "../store/user.actions";
 import { loadExercises } from '../store/exercise.actions'
+import Swal from 'sweetalert2';
 
 function _BuildWorkout(props) {
     const { user, history, location, exercises, loadExercises } = props
@@ -73,8 +74,26 @@ function _BuildWorkout(props) {
         let workout = { workoutTitle, ex: currWorkout }
         user.workouts.push(workout)
         const res = await props.onUpdate(user)
-        if (res) history.push("/menu")
+        if (res) {
+            Toast.fire({
+                icon: 'success',
+                title: 'Workout Saved!'
+              })
+            history.push("/menu")
+        }
     }
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
 
     const onDragEnd = (result) => {
         const { destination, source } = result;
