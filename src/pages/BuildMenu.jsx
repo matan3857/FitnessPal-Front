@@ -5,6 +5,7 @@ import { onUpdate } from "../store/user.actions";
 import { FoodTypeAdd } from "../cmps/BuildMenu/FoodTypeAdd";
 import { NutritionMenuPreview } from "../cmps/BuildMenu/NutritionMenuPreview";
 import { ModalSetName } from "../cmps/ModalSetName";
+import Swal from 'sweetalert2';
 
 function _BuildMenu(props) {
     const [isAddFood, setIsAddFood] = useState(false);
@@ -33,8 +34,26 @@ function _BuildMenu(props) {
         let menu = { menuTitle, menu: nutritionMenu }
         user.nutritionMenus = [...user.nutritionMenus, menu]
         const res = await props.onUpdate(user)
-        if (res) props.history.push("/menu")
+        if (res) {
+            Toast.fire({
+                icon: 'success',
+                title: 'Menu Saved!'
+              })
+              props.history.push("/menu")
+        }
     }
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
 
     return (
         <section className="build-menu-container background-style margin-top">

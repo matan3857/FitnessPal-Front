@@ -46,6 +46,10 @@ function _MyMenus(props) {
         user.nutritionMenus = [...user.nutritionMenus, menu]
         const res = await props.onUpdate(user)
         if (res) {
+            Toast.fire({
+                icon: 'success',
+                title: 'Menu Saved!'
+            })
             setModalNameOpen(false)
             setSelectedOption(0)
         }
@@ -73,6 +77,18 @@ function _MyMenus(props) {
             }
         })
     }
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
 
     return (
         <section className='my-menus margin-top' style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
