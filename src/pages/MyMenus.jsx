@@ -71,7 +71,7 @@ function _MyMenus(props) {
                 setSelectedOption(0)
                 Swal.fire(
                     'Deleted!',
-                    'Your file has been deleted.',
+                    'Your menu has been deleted.',
                     'success'
                 )
             }

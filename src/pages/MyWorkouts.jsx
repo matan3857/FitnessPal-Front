@@ -47,7 +47,7 @@ function _MyWorkouts(props) {
                 setSelectedOption(null)
                 Swal.fire(
                     'Deleted!',
-                    'Your file has been deleted.',
+                    'Your workout has been deleted.',
                     'success'
                 )
             }

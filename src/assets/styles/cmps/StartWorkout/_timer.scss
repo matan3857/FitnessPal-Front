@@ -18,25 +18,17 @@
             font-weight: 600;
             font-size: 0.8rem;
             border-style: groove;
+            border: 1px solid #1b1f2b;
         }
         button:focus {
             outline-width: 0;
         }
+        .start-pause-btn{
+            background-color: #3151ff;
+            color: white;
+        }
         .start-pause-btn:hover {
             background-color: #2641d4;
-            border: 1px solid #1b1f2b;
-        }
-        
-        .start-pause-btn-active {
-            background-color: #3151ff;
-            border: 1px solid #152684;
-            color: white;
-        }
-        
-        .start-pause-btn-inactive {
-            background-color: #3151ff;
-            border: 1px solid #152684;
-            color: white;
         }
         .reset-btn:hover{
             background-color: rgb(250, 250, 250);

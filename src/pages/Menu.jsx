@@ -8,12 +8,12 @@ export function _Menu(props) {
   const [pages, setPages] = useState(null);
 
   useEffect(() => {
-    const pages = [{ title: 'My Workouts', linkTo: 'myWorkouts' },
+    const pages = [{ title: 'My workouts', linkTo: 'myWorkouts' },
     { title: 'My diet menus', linkTo: 'myMenus' },
     { title: 'Building a training program', linkTo: 'buildWorkout' },
     { title: 'Building a nutrition menu', linkTo: 'buildMenu' },
     { title: 'Weight tracking', linkTo: 'weight' },
-    { title: 'Build Workout guide', linkTo: 'info' }]
+    { title: 'How to build workout plan?', linkTo: 'info' }]
     setPages(pages)
   }, []);
 

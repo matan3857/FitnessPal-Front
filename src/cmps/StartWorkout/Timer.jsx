@@ -17,7 +17,7 @@ export function Timer(props) {
         {formatedTime(seconds)}
       </div>
       <div className='timer-btns'>
-        <button className={`start-pause-btn start-pause-btn-${isActive ? 'active' : 'inactive'}`} onClick={onToggle}>
+        <button className='start-pause-btn' onClick={onToggle}>
           {isActive ? 'Pause' : 'Start'}
         </button>
         <button className="reset-btn" onClick={onResetTimer}>
