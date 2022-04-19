@@ -35,7 +35,6 @@ function _BuildWorkout(props) {
     }
 
     const onAddExerciseToWorkout = (exercise) => {
-        // console.log('exercise',{id: exercise.id})
         setSetsRepsModal(true)
         setCurrExerciseToAdd(exercise)
     }

@@ -1,7 +1,7 @@
 .my-workouts {
     min-height: 100vh;
     text-align: -webkit-center;
-    padding-bottom: 3rem;
+    padding: 2.5rem 0;
     .exercise-preview {
         width: 340px;
         @include for-mobile-layout {

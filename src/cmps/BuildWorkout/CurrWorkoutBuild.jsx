@@ -7,7 +7,6 @@ export function CurrWorkoutBuild(props) {
     const { currWorkout, onRemoveExercise } = props
 
     if (!currWorkout.length) return <div><h2>Your training program is currently empty..</h2></div>
-    console.log('currWorkout',currWorkout)
     return (
         <Droppable
             droppableId={"all-groups"}

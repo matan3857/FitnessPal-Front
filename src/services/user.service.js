@@ -93,7 +93,6 @@ async function logout() {
 }
 
 async function update(user) {
-    console.log('user to update in service', user)
     try {
         const res = await axios.put(`http://localhost:3030/api/user/`, user)
         const updatedUser = res.data

@@ -30,6 +30,11 @@ function _Homepage(props) {
           setErr(true)
           return
         }
+        if (password.length < 6) {
+          setErrMsg('Password must contain at least 6 characters')
+          setErr(true)
+          return
+        }
         res = await props.onSignup({ username: username.trim(), password, fullname });
         if (!res) {
           setErrMsg('Username already exists')
