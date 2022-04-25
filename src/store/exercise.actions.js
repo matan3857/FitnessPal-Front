@@ -27,40 +27,7 @@ export const saveExercise = (exercises, exercise) => {
         }
         catch (err) {
             console.log('cant save exercise', err)
-            // throw Error(err)
+            throw Error(err)
         }
     }
 }
-
-// export const addBoard = (title = "new board", bgClr = "black", bgImg) => {
-//     return async (dispatch) => {
-//         const board = { title, style: { bgClr, bgImg } }
-//         try {
-//             const newBoard = await boardService.save(board)
-//             dispatch({
-//                 type: "ADD_BOARD",
-//                 board: newBoard,
-//             });
-//             return newBoard
-//         }
-//         catch (err) {
-//             console.log('cant add board', err)
-//         }
-//     }
-// }
-
-// export const removeBoard = (boardId) => {
-//     return async (dispatch) => {
-//         try {
-//             const board = await boardService.remove(boardId)
-//             dispatch({
-//                 type: "REMOVE_BOARD",
-//                 boardId: boardId,
-//             });
-
-//         }
-//         catch (err) {
-//             console.log('cant remove board', err)
-//         }
-//     }
-// }
