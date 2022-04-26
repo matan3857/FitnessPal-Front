@@ -1,5 +1,4 @@
 import { userService } from '../services/user.service.js';
-// import { showErrorMsg } from '../services/event-bus.service.js'
 
 export function onLogin(credentials) {
     return async (dispatch) => {
@@ -12,7 +11,6 @@ export function onLogin(credentials) {
             return user
         }
         catch (err) {
-            // showErrorMsg('Wrong username or password')
             console.log('Cannot login', err)
         }
     }
@@ -30,7 +28,6 @@ export function onSignup(credentials) {
             return user
         }
         catch (err) {
-            // showErrorMsg('Cannot signup')
             console.log('Cannot signup', err)
         }
     }
@@ -46,7 +43,6 @@ export function onLogout() {
             })
         }
         catch (err) {
-            // showErrorMsg('Cannot logout')
             console.log('Cannot logout', err)
         }
     }
@@ -63,7 +59,6 @@ export function onUpdate(credentials) {
             return user
         }
         catch (err) {
-            // showErrorMsg('Wrong password')
             console.log('Cannot update user', err)
         }
     }

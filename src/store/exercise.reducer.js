@@ -1,6 +1,5 @@
 const initialState = {
     exercises: []
-    // filterBy: {},
 }
 export function exerciseReducer(state = initialState, action) {
     var newState = state
@@ -9,7 +8,6 @@ export function exerciseReducer(state = initialState, action) {
             newState = { ...state, exercises: action.exercises }
             break
         case 'SAVE_EXERCISE':
-            // exercises = state.exercises.map(exercise => (exercise._id === action.exercise._id) ? action.exercise : exercise)
             newState = { ...state, exercises: action.exercises }
             break
         default:

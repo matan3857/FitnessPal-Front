@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { saveExercise } from "../../store/exercise.actions";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import Swal from 'sweetalert2';
 
 export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorkout, onBackToAll, onHideDetails, saveExercise, exercises }) {
 
@@ -11,8 +12,26 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
         ev.preventDefault();
         exercise.desc = desc
         const res = await saveExercise(exercises, exercise)
-        if (res) onBackToAll()
+        if (res) {
+            Toast.fire({
+                icon: 'success',
+                title: 'Exercise Saved!'
+              })
+            onBackToAll()
+        }
     };
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
 
     return (
         <div className='exercise-details flex column align-center'>
@@ -20,7 +39,7 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
                 <button className="close-btn" onClick={() => onHideDetails()}>X</button>
             </div>
             <h1>{exercise.title}</h1>
-            {isEditWorkout &&
+            {isEditWorkout ?
                 <form className="flex column edit-exercise" onSubmit={onSubmit}>
                     <textarea
                         type="txt"
@@ -30,8 +49,7 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
                         placeholder="Enter Description"
                     />
                 </form>
-            }
-            {!isEditWorkout &&
+                :
                 <p>{exercise.desc}</p>
             }
             <div className='imgs-container flex'>
