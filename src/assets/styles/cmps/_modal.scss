@@ -12,7 +12,7 @@
         overflow-y: auto;
         position: relative;
         top: 13%;
-        width: 450px;
+        width: 475px;
         max-width: 80%;
         height: fit-content;
         border-radius: 12px;
@@ -24,7 +24,7 @@
         .title-close-btn {
             display: flex;
             justify-content: flex-end;
-            button{
+            button {
                 font-size: 1.4rem !important;
             }
         }
@@ -35,7 +35,7 @@
                 color: #302f2f;
                 font-size: 1.7rem;
             }
-            .modal-title-msg{
+            .modal-title-msg {
                 line-height: 2.5rem;
             }
         }
@@ -55,18 +55,17 @@
                     border: none;
                     outline: none;
                 }
-                label{
+                label {
                     display: flex;
                     align-items: baseline;
                     text-align: start;
                     height: 55px;
                     padding: 5px;
                     margin: 5px 0;
-                    span{
+                    span {
                         width: 150px;
                     }
                 }
-                
             }
         }
         .modal-footer {
@@ -100,4 +99,20 @@
             }
         }
     }
+}
+
+//Modal Scroll-Bar
+.modal-container::-webkit-scrollbar {
+    width: 8px;
+    background: inherit;
+}
+.modal-container::-webkit-scrollbar-track:vertical {
+    border-right: 8px solid rgba(0, 0, 0, 0.089);
+}
+.modal-container::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+.modal-container::-webkit-scrollbar-thumb:vertical {
+    border-right: 8px solid #9d9ea0;
+    border-radius: 20px;
 }

@@ -98,6 +98,7 @@ function _MyMenus(props) {
                     onChange={setSelectedOption}
                     options={options}
                     className='my-select'
+                    placeholder='Select Menu...'
                 />
                 :
                 <p className='fs30'>You dont have menus yet..</p>

@@ -11,8 +11,8 @@ export function MyWorkoutPreview(props) {
                 <span>Sets: {exercise.sets}</span>
                 <span>Reps: {exercise.reps}</span>
             </div>
-
-            <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"/>
+            {/* <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"/> */}
+            <img src={`${exercise.gif}`} alt="exercise"/>
 
             <div className="exercise-btns flex column">
                 <button className="exercise-btn" onClick={() => { onShowExerciseDetails(exercise) }}>More Details...</button>

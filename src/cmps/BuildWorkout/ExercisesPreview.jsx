@@ -8,6 +8,7 @@ export function _ExercisesPreview(props) {
   const [loaded, setLoaded] = useState(false);
 
   if (!exercise) return <LoaderSpinner />
+  console.log('exercise',exercise)
   return (
     <div className="exercise-preview">
       <h1>{exercise.title}</h1>
@@ -15,7 +16,8 @@ export function _ExercisesPreview(props) {
       <img
         style={{ display: loaded ? 'block' : 'none' }}
         onLoad={() => setLoaded(true)}
-        src={require(`../../assets/img/${exerciseType}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"
+        // src={require(`../../assets/img/${exerciseType}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise"
+        src={`${exercise.gif}`} alt="exercise"
       // src={noImg} alt="exercise"
       />
       {!loaded && <LoaderSpinner />}

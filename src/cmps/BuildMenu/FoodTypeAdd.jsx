@@ -115,7 +115,7 @@ export function FoodTypeAdd({ onAddFood, setOpenModal }) {
                                 type="number"
                                 value={gram}
                                 onChange={(ev) => setGram(ev.target.value)}
-                                placeholder="Insert amount of food weight(gram).."
+                                placeholder="Insert amount of food weight(gram)"
                                 required
                             />
                         </label>

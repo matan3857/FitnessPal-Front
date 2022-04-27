@@ -16,7 +16,7 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
             Toast.fire({
                 icon: 'success',
                 title: 'Exercise Saved!'
-              })
+            })
             onBackToAll()
         }
     };
@@ -28,10 +28,10 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
         timer: 3000,
         timerProgressBar: true,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-      })
+    })
 
     return (
         <div className='exercise-details flex column align-center'>
@@ -53,8 +53,9 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
                 <p>{exercise.desc}</p>
             }
             <div className='imgs-container flex'>
-                <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise_1" />
-                <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} alt="exercise_2" />
+                <img src={`${exercise.gif}`} alt="exercise"/>
+                {/* <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise_1" /> */}
+                {/* <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} alt="exercise_2" /> */}
             </div>
             <div className='exercise-btns flex column'>
                 {!isEditWorkout && onAddExerciseToWorkout &&

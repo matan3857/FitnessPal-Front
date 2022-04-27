@@ -6,6 +6,7 @@ import { FoodTypeAdd } from "../cmps/BuildMenu/FoodTypeAdd";
 import { NutritionMenuPreview } from "../cmps/BuildMenu/NutritionMenuPreview";
 import { ModalSetName } from "../cmps/ModalSetName";
 import Swal from 'sweetalert2';
+import hero from '../assets/img/hero-my-menus.jpg';
 
 function _BuildMenu(props) {
     const [isAddFood, setIsAddFood] = useState(false);
@@ -56,7 +57,7 @@ function _BuildMenu(props) {
       })
 
     return (
-        <section className="build-menu-container background-style margin-top">
+        <section className="build-menu-container background-style margin-top" style={{ backgroundImage: `url(${hero})`, backgroundSize: '100%' }}>
             <h1 className='header-title'>Hello {user.fullname}, Welcome To Build Menu Page</h1>
             <button className='light-btn' onClick={() => { setIsAddFood(true) }}>Add food to menu</button>
             {isAddFood && <FoodTypeAdd setOpenModal={setIsAddFood} onAddFood={onAddFood} />}

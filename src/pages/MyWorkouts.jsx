@@ -62,6 +62,7 @@ function _MyWorkouts(props) {
                     onChange={setSelectedOption}
                     options={options}
                     className='my-select'
+                    placeholder='Select Workout...'
                 />
                 :
                 <p className='fs30'>You dont have workouts yet..</p>
