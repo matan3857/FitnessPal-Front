@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Slider from "../cmps/Info/Slider";
 import Data from '../cmps/Info/Data';
 
-export function Info(props) {
+export function Info() {
     return (
         <div className="info-container margin-top">
             <h1>Welcome to Building workout guide</h1>
