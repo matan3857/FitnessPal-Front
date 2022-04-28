@@ -7,7 +7,6 @@ import Swal from 'sweetalert2';
 export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorkout, onBackToAll, onHideDetails, saveExercise, exercises }) {
 
     const [desc, setDescription] = useState(exercise.desc);
-
     const onSubmit = async (ev) => {
         ev.preventDefault();
         exercise.desc = desc
@@ -50,12 +49,10 @@ export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorko
                     />
                 </form>
                 :
-                <p>{exercise.desc}</p>
+                <p className='display-linebreak'>{exercise.desc}</p>
             }
             <div className='imgs-container flex'>
                 <img src={`${exercise.gif}`} alt="exercise"/>
-                {/* <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise_1" /> */}
-                {/* <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} alt="exercise_2" /> */}
             </div>
             <div className='exercise-btns flex column'>
                 {!isEditWorkout && onAddExerciseToWorkout &&

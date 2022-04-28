@@ -6,7 +6,7 @@ export function Exercises(props) {
     const { currExercises, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails } = props;
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [exercisesPerPage] = useState(4);
+    const [exercisesPerPage] = useState(8);
 
     // Get current exercises
     const indexOfLastEx = currentPage * exercisesPerPage;

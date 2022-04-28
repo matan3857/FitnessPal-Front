@@ -117,7 +117,7 @@ function _StartWorkout(props) {
                                 <br />
                                 <button className='done-rep-btn' onClick={onNextRep}>Next Rep!</button>
                                 {isInfo &&
-                                    <p>{exercise.desc}</p>
+                                    <p className='display-linebreak'>{exercise.desc}</p>
                                 }
                                 <div
                                     className='imgs-container flex justify-center'

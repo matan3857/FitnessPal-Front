@@ -11,52 +11,136 @@ db.getCollection('exercise').insertMany([
             },
             {
                 "id": "Lg4Iem",
-                "title": "Squat",
+                "title": "Deadlift",
                 "type": "Legs",
-                "desc": "Start with your feet slightly wider than hip-width apart. Keep your chest up, engage your abdominals, and shift your weight onto your heels as you push your hips back into a sitting position. Lower your hips until your thighs are parallel or almost parallel to the floor.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/2/8/21628.gif"
+                "desc": "Stand tall with your feet shoulder-width apart, holding a barbell off the floor with an overhand grip just outside your thighs. Keeping a slight bend in your knees, bend forwards from the hips – not the waist – and lower the bar down the front of your shins until you feel a good stretch in your hamstrings.",
+                "gif": "https://gymvisual.com/img/p/2/0/8/3/1/20831.gif"
             },
             {
                 "id": "1zVm5L",
-                "title": "Squat",
+                "title": "Romanian Deadlift",
                 "type": "Legs",
-                "desc": "Start with your feet slightly wider than hip-width apart. Keep your chest up, engage your abdominals, and shift your weight onto your heels as you push your hips back into a sitting position. Lower your hips until your thighs are parallel or almost parallel to the floor.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/2/8/21628.gif"
+                "desc": "1. Load a barbell and stand with your feet shoulder-width apart and toes forwards. Position the barbell so that it’s over your shoelaces when you look straight down.\n\n2.Bend down and grab the bar with a slightly wider than shoulder-width grip, be sure to keep your back flat and shoulders over the barbell. Once you have stood up, be sure to brace.\n\n3.Once you have set the back, brace the core and push the hips back while maintaining a flat back. Keep the knees positioned over the ankles.\n\n4.Once you have assumed a position in which the hamstrings are contracted, the back is flat, and the barbell is a few inches below the knee, stand up, keeping the barbell close to your body.\n\n5.At the top of the movement, contract the upper back, core, and glutes by flexing from the middle of the back to the buttocks (glutes). Repeat for repetitions.",
+                "gif": "https://gymvisual.com/img/p/4/8/1/9/4819.gif"
             },
             {
                 "id": "RtpDAb",
-                "title": "Squat",
+                "title": "Front Squat",
                 "type": "Legs",
-                "desc": "Start with your feet slightly wider than hip-width apart. Keep your chest up, engage your abdominals, and shift your weight onto your heels as you push your hips back into a sitting position. Lower your hips until your thighs are parallel or almost parallel to the floor.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/2/8/21628.gif"     
+                "desc": "Take one step backwards. Position your feet shoulder-width apart, with your toes pointing very slightly diagonally away from each other. Brace yourself, take a deep breath in to fill your chest and keep your torso strong, then bend your legs to lower into a squat. Keep your knees wide apart and heels down.",
+                "gif": "https://gymvisual.com/img/p/1/2/6/0/3/12603.gif"     
             },
             {
                 "id": "Bkismy",
-                "title": "Squat",
+                "title": "Hip Thrust",
                 "type": "Legs",
-                "desc": "Start with your feet slightly wider than hip-width apart. Keep your chest up, engage your abdominals, and shift your weight onto your heels as you push your hips back into a sitting position. Lower your hips until your thighs are parallel or almost parallel to the floor.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/2/8/21628.gif"
+                "desc": "1. Place a loaded barbell parallel to a bench.\n\n2. Sit on the floor with your back up against the bench. Roll the barbell over your hips until the barbell rests in the crease of your hips.\n\n3. With your upper back in contact with the bench, lift your hips slightly off of the ground. Your upper arms should rest against the bench. Rotate your shoulders outward to engage your lats. The bottom of your shoulder blades should be in contact with the bench. The weight on your feet should be evenly distributed along each entire foot. Rotate your feet into the floor to create a stable foot position. Your chin should remain tucked throughout the movement, as if you were holding an egg under your chin. All repetitions should begin from this position.\n\n4. To begin the upward movement, squeeze your glutes and push your feet into the ground.\n\n5. Continue squeezing your glutes as you push your hips toward the ceiling to achieve full hip extension. Your core should be engaged to keep your ribs down and your pelvis should be slightly tucked at the top. Your shins should be vertical.\n\n6. Pause for 2–3 seconds at the top.\n\n7. To begin the downward movement, hinge from your hips to return to the starting position. Allow your chest to follow your hips. Gaze forward while keeping your chin tucked. Maintain tension on your glutes and keep your core engaged. Your torso should create a 45-degree angle with the ground at the bottom of the movement.",
+                "gif": "https://gymvisual.com/img/p/5/7/6/1/5761.gif"
             },
             {
                 "id": "T2LAi6",
-                "title": "Squat",
+                "title": "Calf Press",
                 "type": "Legs",
-                "desc": "Start with your feet slightly wider than hip-width apart. Keep your chest up, engage your abdominals, and shift your weight onto your heels as you push your hips back into a sitting position. Lower your hips until your thighs are parallel or almost parallel to the floor.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/2/8/21628.gif"
+                "desc": "Sit on seat with lower back against back of seat. Place toes and balls of feet on lower portion of platform with heels and arches extending off. Grasp handles to sides and straighten knees. Push lever by extending ankles as far as possible.",
+                "gif": "https://gymvisual.com/img/p/1/0/1/6/7/10167.gif"
             },
             {
                 "id": "e1HugL",
-                "title": "Squat",
+                "title": "Leg Press",
                 "type": "Legs",
-                "desc": "Start with your feet slightly wider than hip-width apart. Keep your chest up, engage your abdominals, and shift your weight onto your heels as you push your hips back into a sitting position. Lower your hips until your thighs are parallel or almost parallel to the floor.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/2/8/21628.gif"
+                "desc": "Take a deep breath, extend your legs, and unlock the safeties. Lower the weight under control until the legs are roughly 45 degrees or slightly below. Drive the weight back to the starting position by extending the knees but don't forcefully lockout. Repeat for the desired number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/9/4/0/4/9404.gif"
             },
             {
                 "id": "u0u2N9",
-                "title": "Squat",
+                "title": "Hip Abduction",
                 "type": "Legs",
-                "desc": "Start with your feet slightly wider than hip-width apart. Keep your chest up, engage your abdominals, and shift your weight onto your heels as you push your hips back into a sitting position. Lower your hips until your thighs are parallel or almost parallel to the floor.",
+                "desc": "1. Setup in an upright position with your back against the pad and your spine neutral.\n\n2. Exhale and push the legs apart as you open the pads.\n\n3. Once your hips are fully externally rotated, slowly return to the starting position.\n4. Repeat for the desired number of repetitions.",
                 "gif": "https://gymvisual.com/img/p/2/1/6/2/8/21628.gif"
+            },
+            {
+                "id": "aFbpWY",
+                "title": "Leg Extension",
+                "type": "Legs",
+                "desc": "1. Place your hands on the hand bars.\n\n2. Lift the weight while exhaling until your legs are almost straight. Do not lock your knees. Keep your back against the backrest and do not arch your back.\n\n3. Exhale and lower the weight back to starting position.\n\n4. Do three sets of eight to 12 repetitions.",
+                "gif": "https://gymvisual.com/img/p/5/3/2/2/5322.gif"
+            },
+            {
+                "id": "yck0oZ",
+                "title": "Dumbbell Bar Grip Sumo Squat",
+                "type": "Legs",
+                "desc": "1. Grab the dumbbell with one hand and hold it in the other.\n\n2. Place your feet slightly outward and extend your feet.\n\n3. Keep your spine straight and your core tight.\n\n4. Bend forward about 30 degrees at the hips.\n\n5. Squat until your legs are parallel or at your preferred depth to get to a standing position.\n\n6. Next, drive your heels and midfoot into a standing position.",
+                "gif": "https://gymvisual.com/img/p/1/8/5/2/6/18526.gif"
+            },
+            {
+                "id": "zXGc9m",
+                "title": "Dumbbell Contralateral Forward Lunge",
+                "type": "Legs",
+                "desc": "1. Set up with your feet shoulder width apart and a dumbbell in the opposite hand as the forward leg.\n\n2. Step forward with one leg and allow both knees to bend simultaneously.\n\n3. Descend until the back knee touches the floor.",
+                "gif": "https://gymvisual.com/img/p/1/4/3/4/2/14342.gif"
+            },
+            {
+                "id": "tf34mk",
+                "title": "Dumbbell Cossack Squats",
+                "type": "Legs",
+                "desc": "Hold a light plate or dumbbell by its sides at chest level, so your elbows are pointing out and down.\nStand with your feet shoulder- to hip-width apart.\nBegin to squat, sitting your hips back and bending your knees.\nAs you drop into a deep squat, your elbows should come inside your knees, pushing them out.",
+                "gif": "https://gymvisual.com/img/p/2/1/7/6/7/21767.gif"
+            },
+            {
+                "id": "se2IKN",
+                "title": "Dumbbell Squat",
+                "type": "Legs",
+                "desc": "1. Assume athletic stance with dumbbells at sides and feet slightly wider than hip width.\n\n2. Keeping back straight and knees behind toes, sink hips back and lower into squat until thighs are parallel to ground.\n\n3. Extend hips and knees to drive up out of squat position",
+                "gif": "https://gymvisual.com/img/p/7/0/2/3/7023.gif"
+            },
+            {
+                "id": "LP6Y6G",
+                "title": "Vertical Hack Squat",
+                "type": "Legs",
+                "desc": "Step into the machine, placing your feet shoulder-width apart and your shoulders and back against the pads.\nRelease the safety handles, inhale, and lower down, bending your knees until they reach a 90-degree angle.\nPause here, then push up through the back of your feet to extend your legs back to the starting position.",
+                "gif": "https://gymvisual.com/img/p/2/4/3/2/6/24326.gif"
+            },
+            {
+                "id": "qhCIWW",
+                "title": "Lever Hip Extension",
+                "type": "Legs",
+                "desc": "Stand on platform facing to one side and grasp bar for support. Place leg nearest machine on padded roller while standing on other leg.\n\nLower lever by extending hip. Return until knee is higher than hip. Repeat. Continue with opposite leg.",
+                "gif": "https://gymvisual.com/img/p/9/4/2/3/9423.gif"
+            },
+            {
+                "id": "kyz77b",
+                "title": "Seated Leg Curl",
+                "type": "Legs",
+                "desc": "1. Select the desired weight, then adjust the pad so it rests comfortably above the back of the heels.\n\n2. Tense up the hamstrings by taking the weight slightly off the stack.\n\n3. Take a deep breath, squeeze the hamstrings, and curl the weight up as far as possible while keeping the spine neutral.",
+                "gif": "https://gymvisual.com/img/p/1/0/4/8/2/10482.gif"
+            },
+            {
+                "id": "junVx4",
+                "title": "Smith Leg Press",
+                "type": "Legs",
+                "desc": "Extend your legs to lockout to unrack the safeties and then allow the bar to descend by bending your knees and flexing your hips. Drive your feet into the bar and exhale as you extend your knees and hips. Slowly lower back to the starting position and repeat for the desired number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/5/4/8/4/5484.gif"
+            },
+            {
+                "id": "mJFBi9",
+                "title": "Smith Single Leg Split Squat",
+                "type": "Legs",
+                "desc": "Lower body on leg by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor.\n Return to original standing position by extending hip and knee of forward leg.\n Repeat.\n Continue with opposite leg.",
+                "gif": "https://gymvisual.com/img/p/5/4/9/2/5492.gif"
+            },
+            {
+                "id": "8XWFVr",
+                "title": "Smith Sprint Lunge",
+                "type": "Legs",
+                "desc": "Descend by flexing both knees simultaneously and continue until the back knee touches the ground directly beneath the hip. Drive through the front foot and extend the knee as you return to the starting position.\n Repeat for the desired number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/1/0/2/8/2/10282.gif"
+            },
+            {
+                "id": "cRFLB0",
+                "title": "Smith Chair Squat",
+                "type": "Legs",
+                "desc": "1. Set the Smith machine bar to just under shoulder height.\n\n2. Stand under the bar with the bar across the back of your shoulders, and grasp it at both sides.\n\n3. Unlatch the bar by rotating it, and stand erect to lift it off the rack.\n\n4. Take a step forward and stand with your feet shoulder-width apart, with your feet pointing slightly out to the sides.\n\n5. Keeping your back straight and your torso upright, inhale as you lower the bar by flexing your hips and knees. Descend until your thighs are at least parallel with the floor.\n\n6. Exhale as you push the bar back up by extending your hips and knees, driving through your heels and repeat.\n\n7. Once finished, latch the bar back on to the rail by rotating it.",
+                "gif": "https://gymvisual.com/img/p/5/4/7/4/5474.gif"
             }
         ]
     },
