@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import SliderContent from "./SliderContent";
 import Arrows from "./Arrows";
 import sliderImage from "./sliderImage";
-import "./slider.css";
 
 // Get the len of the imageSlider for holding it
 const len = sliderImage.length - 1;
 
 // Slider function to hold the clicks
-function Slider(props) {
+function Slider() {
     // variables for set the slider image's slider
     const [activeIndex, setActiveIndex] = useState(0);
 

@@ -1,3 +1,54 @@
 .slider-container {
+    height: 500px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    text-align: -webkit-left;
+    .silder-content {
+        div {
+            .slide-image {
+                position: absolute;
+                cursor: pointer;
+            }
+            .slide-text {
+                color: aliceblue;
+                position: absolute;
+                top: 65%;
+                font-size: 2rem;
+            }
+        }
+        .active {
+            display: inline-block;
+        }
 
+        .inactive {
+            display: none;
+        }
+    }
+    .arrows {
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 1rem;
+            margin-top: -3rem;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 0px 5px 5px 0px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: all 0.5s ease-in;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 5px 0px 0px 5px;
+        }
+    }
 }

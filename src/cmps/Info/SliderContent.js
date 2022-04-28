@@ -1,14 +1,13 @@
-// src/components/SliderContent.js
 import React from "react";
 
 function SliderContent({ activeIndex, sliderImage }) {
     
     return (
-        <section>
+        <section className="silder-content">
         {sliderImage.map((slide, index) => (
             <div
                 key={index}
-                className={`${index === activeIndex ? "Sliders active" : "inactive"} flex justify-center align-center`}>
+                className={`${index === activeIndex ? "active" : "inactive"} flex justify-center align-center`}>
                 <img className="slide-image" src={slide.urls} onClick={() => {
                      window.open(slide.targetURL, "_blank")
                 }}/>
