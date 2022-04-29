@@ -155,61 +155,139 @@ db.getCollection('exercise').insertMany([
                 "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
             },
             {
-                "id": "I3zuVb",
-                "title": "Bench-Press",
+                "id": "G9bbvj",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "hr0oOj",
-                "title": "Bench-Press",
+                "id": "U8kPr4",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "b5qJRV",
-                "title": "Bench-Press",
+                "id": "LdqU8V",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "4Y4OTM",
-                "title": "Bench-Press",
+                "id": "SpJtDo",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "tlFv6z",
-                "title": "Bench-Press",
+                "id": "pD4w1n",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "sD3bFn",
-                "title": "Bench-Press",
+                "id": "6SG3EZ",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "sPmpgg",
-                "title": "Bench-Press",
+                "id": "BrbMd5",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "wntwuV",
-                "title": "Bench-Press",
+                "id": "781Z2Y",
+                "title": "",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
-                "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "z0CN6Q",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "GYy7eF",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "QMuPWr",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "wMKHiT",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "ajeSPV",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "7jvlU1",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "zTVNMt",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "oZ8xgr",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "WMJmRG",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "JpvXf7",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "UvQFUF",
+                "title": "",
+                "type": "Chest",
+                "desc": "",
+                "gif": ""
             }
+           
         ]
     },
     {
@@ -224,53 +302,137 @@ db.getCollection('exercise').insertMany([
             },
             {
                 "id": "V9jbBq",
-                "title": "Bar-Curls",
+                "title": "Barbell Close Grip Curl",
                 "type": "Arm",
-                "desc": "Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged.",
-                "gif": "https://gymvisual.com/img/p/6/6/9/3/6693.gif"
+                "desc": "1. Hold a barbell with both hands, palms up and a few inches apart.\n\n2. Stand with your torso straight and your head up.\n\n3. Curl the bar up in a semicircular motion until the forearms touch your biceps.\n\n4. Slowly go back down to the starting position as you inhale.",
+                "gif": "https://gymvisual.com/img/p/1/2/2/3/3/12233.gif"
             },
             {
                 "id": "RkTqXN",
-                "title": "Bar-Curls",
+                "title": "Barbell Curl",
                 "type": "Arm",
-                "desc": "Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged.",
-                "gif": "https://gymvisual.com/img/p/6/6/9/3/6693.gif"
+                "desc": "1. Stand Up Tall. Stand erect with the shoulder blades down the back, chest up, and shoulder pulled back.\n\n2. Squeeze the Bar.\n\n3. Curl Up and Slightly Out.\n\n4. Find the Contraction and Hold it.\n\n5. Control the Bar on the Way Down",
+                "gif": "https://gymvisual.com/img/p/5/1/8/8/5188.gif"
             },
             {
                 "id": "9ruYyI",
-                "title": "Bar-Curls",
+                "title": "Dumbbell Incline Hammer Curl",
                 "type": "Arm",
-                "desc": "Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged.",
-                "gif": "https://gymvisual.com/img/p/6/6/9/3/6693.gif"
+                "desc": "1. Seat yourself on an incline bench with a dumbbell in each hand.\n\n2. Initiate the movement by flexing at the elbow, attempting to keep the upper arm stationary.\n\n3. Continue to the top of the movement and pause, then slowly return to the start position.",
+                "gif": "https://gymvisual.com/img/p/5/0/6/1/5061.gif"
             },
             {
                 "id": "frlqTd",
-                "title": "Bar-Curls",
+                "title": "Cable Biceps Curl",
                 "type": "Arm",
-                "desc": "Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged.",
-                "gif": "https://gymvisual.com/img/p/6/6/9/3/6693.gif"
+                "desc": "Use the single-hand attachment, then stand so you are facing away from the cable machine.\n Extend your arm, holding the handle in your hand.\n Next, curl the handle up, moving only your lower arm.\n Once your biceps are fully contracted, return to the starting position.",
+                "gif": "https://gymvisual.com/img/p/7/0/7/4/7074.gif"
             },
             {
                 "id": "e6xEFx",
-                "title": "Bar-Curls",
+                "title": "Dumbbell Alternate Biceps Curl",
                 "type": "Arm",
-                "desc": "Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged.",
-                "gif": "https://gymvisual.com/img/p/6/6/9/3/6693.gif"
+                "desc": "Curl one dumbbell toward the same shoulder, keeping the opposite arm extended.\n As you curl the weight up, slightly rotate the wrist so your palm is facing you.\n Pause, and then return to the starting position. Alternate sides on the next repetition.",
+                "gif": "https://gymvisual.com/img/p/5/0/1/8/5018.gif"
             },
             {
                 "id": "sB8RLE",
-                "title": "Bar-Curls",
+                "title": "Cable Kneeling Preacher Curl",
                 "type": "Arm",
-                "desc": "Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged.",
-                "gif": "https://gymvisual.com/img/p/6/6/9/3/6693.gif"
+                "desc": "Kneel in front of a cable stack holding a straight bar attached to the top. Curl the bar behind your head and squeeze your biceps. Keeping your elbows up slowly return the weight back to the starting position.",
+                "gif": "https://gymvisual.com/img/p/2/1/9/2/9/21929.gif"
             },
             {
                 "id": "4K2kII",
-                "title": "Bar-Curls",
+                "title": "Cable Overhead Curl",
                 "type": "Arm",
-                "desc": "Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged.",
-                "gif": "https://gymvisual.com/img/p/6/6/9/3/6693.gif"
-            }
+                "desc": "1. Get the cable station ready for the exercise by selecting a comfortable weight, swapping the conventional handle with the stirrup or the D-handle, and adjusting the height to just above shoulder height. It has to be above your shoulders at least.\n\n2. Stand in the middle of the two weight stacks grabbing the handles with an underhand grip.\nThat is, the palms facing upwards. Your feet should be shoulder-width apart.\nThe hands should be fully extended and straight, aligned in a straight line with the shoulders. This is your starting position. The idea here is to pull horizontally while keeping the upper arm stationary.\n\n3. Exhale as you curl and pull the handles towards your shoulder, contracting and curling the biceps.\nContinue to pull until the forearms touch your biceps.\nThat’s the final position. Ensure that you achieve max contraction in this position.\n\n4. Slowly lower the weights and extend your hands back to the starting position, in a slow and controlled motion. That’s one rep. Repeat until the desired number of reps.",
+                "gif": "https://gymvisual.com/img/p/7/2/4/9/7249.gif"
+            },
+            {
+                "id": "aGjvUC",
+                "title": "Barbell Curl",
+                "type": "Arm",
+                "desc": "1. Stand up straight while holding a barbell in a shoulder-width grip.\n\n2. Contract your biceps to curl the weight forward. Your upper arms should remain stationary during this process.\n\n3. Continue moving the barbell until the biceps are fully contracted and the bar is at shoulder height.",
+                "gif": "https://gymvisual.com/img/p/2/2/6/4/6/22646.gif"
+            },
+            {
+                "id": "XYJfhz",
+                "title": "Barbell Prone Incline Curl",
+                "type": "Arm",
+                "desc": "1. Keeping your upper arms fixed, exhale as you curl the barbell upward until your elbows are fully flexed.\n\n2. Hold for a count of two and squeeze your biceps.\n\n3. Inhale as you lower the barbell to the starting position in a controlled manner.",
+                "gif": "https://gymvisual.com/img/p/4/8/0/3/4803.gif"
+            },
+            {
+                "id": "RRw0rf",
+                "title": "Cable Overhead Triceps Extension",
+                "type": "Arm",
+                "desc": "Slowly lower the rope behind your head as you hold the upper arms stationary. Inhale as you perform this movement and pause when your triceps are fully stretched. Return to the starting position by flexing your triceps as you breathe out. Repeat for the recommended amount of repetitions.",
+                "gif": "https://gymvisual.com/img/p/4/9/2/7/4927.gif"
+            },
+            {
+                "id": "6sOsC6",
+                "title": "Dumbbell Bench Dip",
+                "type": "Arm",
+                "desc": "1. Sit down on a bench, hands next to your thighs.\n\n2. Walk your feet out and extend your legs, lifting your bottom off the bench and holding there with extended arms.\n\n3. Hinging at the elbow, lower your body down as far as you can go, or until your arms form a 90-degree angle.",
+                "gif": "https://gymvisual.com/img/p/2/0/3/0/4/20304.gif"
+            },
+            {
+                "id": "Utmokl",
+                "title": "Dumbbell Incline Two Arm Extension",
+                "type": "Arm",
+                "desc": "Lower the weights towards your shoulders by unlocking the elbows while maintaining a neutral grip. Once your forearms reach parallel or just below, drive the dumbbell back to the starting point by extending the elbows and flexing the triceps.",
+                "gif": "https://gymvisual.com/img/p/7/5/3/7/7537.gif"
+            },
+            {
+                "id": "vVPQPx",
+                "title": "Dumbbell Kickback",
+                "type": "Arm",
+                "desc": "1. Grab a set of dumbbells, bring your torso forward and bend your knees slightly.\n\n2. Bring your elbows up, so that your upper arms are parallel to the floor, and kick back until your arms are fully extended.\n\n3. Slowly lower the weights to the starting position.",
+                "gif": "https://gymvisual.com/img/p/5/0/7/4/5074.gif"
+            },
+            {
+                "id": "Vwr77o",
+                "title": "Bar Lying Extension Behind Head",
+                "type": "Arm",
+                "desc": "Keeping your elbows fixed in place and not pointing out, slowly lower the bar until it is almost touching the top of your head or bench behind your head. Pause, and then slowly extend your arms back to the starting position. Do not lock your elbows out, and then repeat for desired reps.",
+                "gif": "https://gymvisual.com/img/p/7/5/5/2/7552.gif"
+            },
+            {
+                "id": "eaa7ay",
+                "title": "Cable Standing One Arm Tricep Pushdown",
+                "type": "Arm",
+                "desc": "Grab the bar and stand upright with your back straight and your elbows tucked in to your sides. Stand with your feet hip-width apart, or place one in front of the other if it helps you balance.\nPull the cable down until the bar touches your thighs and pause to squeeze your triceps at the bottom of the move.",
+                "gif": "https://gymvisual.com/img/p/5/9/1/5/5915.gif"
+            },
+            {
+                "id": "dYCEle",
+                "title": "Cable Pushdown",
+                "type": "Arm",
+                "desc": "Stand with your feet hip-width apart, or place one in front of the other if it helps you balance. Pull the cable down until the bar touches your thighs and pause to squeeze your triceps at the bottom of the move.\nThen slowly raise the bar back to the starting position.",
+                "gif": "https://gymvisual.com/img/p/4/9/3/4/4934.gif"
+            },
+            {
+                "id": "TbBJLh",
+                "title": "Barbell Lying extension",
+                "type": "Arm",
+                "desc": "Grab a straight bar with a pronated grip just inside shoulder width. Lie on a flat bench with the bar in your hands, and then press the bar up so that it's positioned over your head.\nLower the bar behind your head—indeed, behind the bench—until you feel an intense stretch in the long (inner) head of your triceps.",
+                "gif": "https://gymvisual.com/img/p/4/7/8/8/4788.gif"
+            },
+            {
+                "id": "0Tbrdp",
+                "title": "Barbell Close Grip Bench Press",
+                "type": "Arm",
+                "desc": "Lift the bar with assistance from the rack, arms locked, and holding bar straight over you.\nInhale and slowly bring the bar down toward your chest keeping elbows close to your body for the entire exercise. \nExhale and push the bar up using the triceps muscles and locking arms at the top of the movement.",
+                "gif": "https://gymvisual.com/img/p/1/0/0/6/1/10061.gif"
+            },
+            {
+                "id": "wbhxrN",
+                "title": "Assisted Triceps Dip",
+                "type": "Arm",
+                "desc": "Press your weight into your palms and lift yourself up, sliding your bottom forward so it is off the edge of the chair or bench.\nLower yourself by bending your elbows and lower to 45 to 90 degrees.\nGo slowly with control. Push yourself back up until your arms are straight.",
+                "gif": "https://gymvisual.com/img/p/4/7/5/0/4750.gif"
+            },
         ]
     },
     {
@@ -284,53 +446,137 @@ db.getCollection('exercise').insertMany([
                 "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
             },
             {
-                "id": "jZZ9sB",
-                "title": "Bent-Over",
+                "id": "1t842Q",
+                "title": "",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "9jUpSp",
-                "title": "Bent-Over",
+                "id": "kcQ0vN",
+                "title": "",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "MjmcQ2",
-                "title": "Bent-Over",
+                "id": "KypGmy",
+                "title": "",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "fteWMs",
-                "title": "Bent-Over",
+                "id": "AD9jui",
+                "title": "",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "ZePARL",
-                "title": "Bent-Over",
+                "id": "GvyqmO",
+                "title": "",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "1xbq9Y",
-                "title": "Bent-Over",
+                "id": "q5J29h",
+                "title": "",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "kHE73a",
-                "title": "Bent-Over",
+                "id": "1KREtJ",
+                "title": "",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "zu8sWl",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "sADOE0",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "UyyHos",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "xytKkw",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "2fhiUm",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "XJBn6M",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "12CDhy",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "TXaohG",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "BZTqzL",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "0Y0lFy",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "sipQuQ",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "u4tdVx",
+                "title": "",
+                "type": "Back",
+                "desc": "",
+                "gif": ""
             }
         ]
     },
@@ -346,52 +592,136 @@ db.getCollection('exercise').insertMany([
             },
             {
                 "id": "XhBpm2",
-                "title": "Overhead-Press",
+                "title": "",
                 "type": "Shoulder",
-                "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "desc": "",
+                "gif": ""
             },
             {
                 "id": "G6eF2z",
                 "title": "Overhead-Press",
                 "type": "Shoulder",
-                "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "desc": "",
+                "gif": ""
             },
             {
                 "id": "Vqd67X",
                 "title": "Overhead-Press",
                 "type": "Shoulder",
-                "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "desc": "",
+                "gif": ""
             },
             {
                 "id": "Rt1tXg",
-                "title": "Overhead-Press",
+                "title": "",
                 "type": "Shoulder",
-                "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "desc": "",
+                "gif": ""
             },
             {
                 "id": "d66cv5",
-                "title": "Overhead-Press",
+                "title": "",
                 "type": "Shoulder",
-                "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "desc": "",
+                "gif": ""
             },
             {
                 "id": "U013up",
-                "title": "Overhead-Press",
+                "title": "",
                 "type": "Shoulder",
-                "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "desc": "",
+                "gif": ""
             },
             {
                 "id": "tBdVoX",
-                "title": "Overhead-Press",
+                "title": "",
                 "type": "Shoulder",
-                "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "DFrvw4",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "oGpLdU",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "1ecElE",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "lyAgKs",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "FTqgTK",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "uO94iX",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "CDxqlp",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "u3YZrW",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "L4PJRz",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "sMYYBM",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "ActwyC",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "BD9uDM",
+                "title": "",
+                "type": "Shoulder",
+                "desc": "",
+                "gif": ""
             }
         ]
     },
@@ -406,46 +736,137 @@ db.getCollection('exercise').insertMany([
                 "gif": "https://gymvisual.com/img/p/2/1/6/4/8/21648.gif"
             },
             {
-                "id": "Hxjo4g",
-                "title": "Body Saw Plank",
+                "id": "B0MVxK",
+                "title": "",
                 "type": "ABS",
-                "desc": "Place forearms on the floor with elbows aligned below shoulders and arms parallel to your body at about shoulder width. If flat palms bother your wrists, clasp your hands together.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/4/8/21648.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "TTzyzH",
-                "title": "Body Saw Plank",
+                "id": "yjJ9kj",
+                "title": "",
                 "type": "ABS",
-                "desc": "Place forearms on the floor with elbows aligned below shoulders and arms parallel to your body at about shoulder width. If flat palms bother your wrists, clasp your hands together.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/4/8/21648.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "E4yjbk",
-                "title": "Body Saw Plank",
+                "id": "aUM2yn",
+                "title": "",
                 "type": "ABS",
-                "desc": "Place forearms on the floor with elbows aligned below shoulders and arms parallel to your body at about shoulder width. If flat palms bother your wrists, clasp your hands together.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/4/8/21648.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "utBjC2",
-                "title": "Body Saw Plank",
+                "id": "jt5feJ",
+                "title": "",
                 "type": "ABS",
-                "desc": "Place forearms on the floor with elbows aligned below shoulders and arms parallel to your body at about shoulder width. If flat palms bother your wrists, clasp your hands together.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/4/8/21648.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "tBV3br",
-                "title": "Body Saw Plank",
+                "id": "3DdakM",
+                "title": "",
                 "type": "ABS",
-                "desc": "Place forearms on the floor with elbows aligned below shoulders and arms parallel to your body at about shoulder width. If flat palms bother your wrists, clasp your hands together.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/4/8/21648.gif"
+                "desc": "",
+                "gif": ""
             },
             {
-                "id": "6K7MFG",
-                "title": "Body Saw Plank",
+                "id": "0VIzzg",
+                "title": "",
                 "type": "ABS",
-                "desc": "Place forearms on the floor with elbows aligned below shoulders and arms parallel to your body at about shoulder width. If flat palms bother your wrists, clasp your hands together.",
-                "gif": "https://gymvisual.com/img/p/2/1/6/4/8/21648.gif"
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "dQB6G3",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "5F0bN7",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "0pqNvX",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "eHw9In",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "yRRkzQ",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "fFnAUw",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "qz55c9",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "scwc27",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "VCALhB",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "CBo2WK",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "0EWhNa",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "vJMKir",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
+            },
+            {
+                "id": "SvHe6t",
+                "title": "",
+                "type": "ABS",
+                "desc": "",
+                "gif": ""
             }
         ]
     }

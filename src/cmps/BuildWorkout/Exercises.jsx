@@ -3,7 +3,7 @@ import { ExercisesPreview } from "./ExercisesPreview"
 import { Pagination } from './Pagination'
 
 export function Exercises(props) {
-    const { currExercises, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails } = props;
+    const { currExercises, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails, onHideDetails } = props;
 
     const [currentPage, setCurrentPage] = useState(1);
     const [exercisesPerPage] = useState(8);
@@ -16,6 +16,7 @@ export function Exercises(props) {
     // Change page
     const paginate = pageNumber => {
         setCurrentPage(pageNumber)
+        onHideDetails()
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
@@ -28,6 +29,7 @@ export function Exercises(props) {
             if (currentPage - 1 < 1) return
             setCurrentPage(prevPage => prevPage - 1)
         }
+        onHideDetails()
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 

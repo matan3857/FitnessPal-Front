@@ -110,7 +110,7 @@ function _BuildWorkout(props) {
             {isExerciseDetails && <ExerciseDetails exercise={currExercise} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onHideDetails={onHideDetails} isEditWorkout={isEditWorkout} />}
 
             {showExercise ?
-                <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onShowExerciseDetails={onShowExerciseDetails} />
+                <BuildWorkoutType exerciseType={exerciseType} onAddExerciseToWorkout={onAddExerciseToWorkout} onBackToAll={onBackToAll} onHideDetails={onHideDetails} onShowExerciseDetails={onShowExerciseDetails} />
                 :
                 <div className="workout-types-container">
                     <WorkoutTypes onToggleShowExercise={onToggleShowExercise} />

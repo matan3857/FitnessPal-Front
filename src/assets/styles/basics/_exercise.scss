@@ -1,6 +1,7 @@
 .exercise-list {
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 95%;
     .exercise-preview {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
         padding: 10px;
