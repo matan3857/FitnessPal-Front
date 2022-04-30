@@ -588,140 +588,140 @@ db.getCollection('exercise').insertMany([
                 "title": "Overhead-Press",
                 "type": "Shoulder",
                 "desc": "Stand with the bar on your front shoulders, and your hands next to your shoulders. Press the bar over your head, until it’s balanced over your shoulders and mid-foot. Lock your elbows at the top, and shrug your shoulders to the ceiling.",
-                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
+                "gif": "https://gymvisual.com/img/p/2/4/9/5/0/24950.gif"
             },
             {
                 "id": "XhBpm2",
-                "title": "",
+                "title": "Barbell Seated Overhead Press",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Sit down on the bench and unrack the bar using a pronated grip. Inhale, brace, tuck the chin, then lower the bar to the top of your chest.\nExhale and press the bar back to lockout. Repeat for the desired number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/4/8/2/7/4827.gif"
             },
             {
                 "id": "G6eF2z",
-                "title": "Overhead-Press",
+                "title": "Dumbbell Lateral Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Stand tall, a dumbbell in each hand.\n\n2. Raise your arms simultaneously just a couple inches out to each side and pause.\n\n3. Lift the dumbbells up and out to each side, keeping your arms almost completely straight, stopping when your elbows reach shoulder-height and your body is forming a T shape.",
+                "gif": "https://gymvisual.com/img/p/1/9/1/5/1/19151.gif"
             },
             {
                 "id": "Vqd67X",
-                "title": "Overhead-Press",
+                "title": "Dumbbell Seated Front Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Begin by raising your arms out in front of you until your arms are just above parallel to the floor. Keep a slight bend in your elbows. Pause for a brief moment at the top of the movement, and slowly lower the dumbbells back to the starting position.\nRepeat for desired reps.",
+                "gif": "https://gymvisual.com/img/p/5/1/3/3/5133.gif"
             },
             {
                 "id": "Rt1tXg",
-                "title": "",
+                "title": "Cable Standing Face Pull",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Exercise notes: Start position is standing, holding a cable attachment in each hand with palms facing each other and thumbs pointed toward your face.\nBegin pulling the rope with elbows leading the hands as you pull backward and squeezing the shoulder blades as you get the end of the movement.",
+                "gif": "https://gymvisual.com/img/p/2/4/9/7/4/24974.gif"
             },
             {
                 "id": "d66cv5",
-                "title": "",
+                "title": "Cable Upright Row",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Position a cable at the lowest position possible and attach a straight bar.\n\n2. Reach down and grab the handle with a pronated grip and stand up with the arms straight.\n\n3. Take a deep breath then pull the handle high directly up the front of your body by driving your elbows high.",
+                "gif": "https://gymvisual.com/img/p/2/4/9/3/6/24936.gif"
             },
             {
                 "id": "U013up",
-                "title": "",
+                "title": "Dumbbell Arnold Press",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Grab two dumbbells and stand with your feet hip-width apart with a slight bend in your knees.\n\n2. Hold the dumbbells slightly above your shoulders with your palms facing your body and your upper arm close to your ribcage.\n\n3. Pre-tension your shoulders and hips while engaging your core.",
+                "gif": "https://gymvisual.com/img/p/8/7/3/9/8739.gif"
             },
             {
                 "id": "tBdVoX",
-                "title": "",
+                "title": "Lever Lateral Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Stand tall, a dumbbell in each hand.\n\n2. Raise your arms simultaneously just a couple inches out to each side and pause.\n\n3. Lift the dumbbells up and out to each side, keeping your arms almost completely straight, stopping when your elbows reach shoulder-height and your body is forming a T shape.",
+                "gif": "https://gymvisual.com/img/p/5/3/2/1/5321.gif"
             },
             {
                 "id": "DFrvw4",
-                "title": "",
+                "title": "Landmine Kneeling One Arm Shoulder Press",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Start in a single-arm landmine press position, in a split stance with the opposite leg forwards.\nAt the start of the movement your weight should be over your rear leg.\nPress up, turn your body and lift your back heel so your weight shifts forwards onto your front foot. Then rotate back down as you lower the weight.",
+                "gif": "https://gymvisual.com/img/p/1/6/8/7/6/16876.gif"
             },
             {
                 "id": "oGpLdU",
-                "title": "",
+                "title": "Lever Military Press",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Set and grasp lever handles to each side with overhand grip.\n\n2. Press lever until arms are extended upward. Lower and repeat.",
+                "gif": "https://gymvisual.com/img/p/5/3/2/4/5324.gif"
             },
             {
                 "id": "1ecElE",
-                "title": "",
+                "title": "Lever Seated Reverse Fly",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Stand on chair with chest to paper. Grasp opposite handles with thumbs raised at knee height. Slightly extend elbows and unconsciously twist shoulders and elbows are still at height of shoulders.",
+                "gif": "https://gymvisual.com/img/p/5/3/3/9/5339.gif"
             },
             {
                 "id": "lyAgKs",
-                "title": "",
+                "title": "Lever Seated Shoulder Press",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Place an adjustable bench beneath the bar in an upright position. Sit down on the bench and unrack the bar using a pronated grip. Inhale, brace, tuck the chin, then lower the bar to the top of your chest. Exhale and press the bar back to lockout.",
+                "gif": "https://gymvisual.com/img/p/6/3/6/1/6361.gif"
             },
             {
                 "id": "FTqgTK",
-                "title": "",
+                "title": "Cable Lateral Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Lock your arms close to your body and hold the dumbbells in both hands.\n\n2. Raise your arms simultaneously to shoulder height.\n\n3. Partially lower your arms one-third of the way down, and then lift them back up to shoulder height.\n\n4. Lower your arms completely back down to your sides.",
+                "gif": "https://gymvisual.com/img/p/4/9/1/1/4911.gif"
             },
             {
                 "id": "uO94iX",
-                "title": "",
+                "title": "Cable Kneeling Shoulder Press",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Select an appropriate load and adopt a half-kneeling position on the floor. Your right knee should be down, and your left knee up; take the weight with your right hand.\nClean the dumbbell to your shoulder, using both hands if necessary. You should start with a neutral grip, with the palm in. Keep your head up, shoulders back, and your spine neutral. This will be your starting position.\n\n2. Initiate the movement by extending the arm, flexing and abducting the shoulder to rotate the arm as you press above your head. Pause at the top of the motion before reversing the movement to return to the starting position.",
+                "gif": "https://gymvisual.com/img/p/1/8/5/1/2/18512.gif"
             },
             {
                 "id": "CDxqlp",
-                "title": "",
+                "title": "Cable Leaning Lateral Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "You can also place your free hand on the machine for support. Now, reach across your body and grab the stirrup with your outside arm. Slightly bend your elbow to a 10- to 30-degree angle and raise your arm sideways until it's level with your shoulder, exhaling as you lift.",
+                "gif": "https://gymvisual.com/img/p/1/8/4/3/4/18434.gif"
             },
             {
                 "id": "u3YZrW",
-                "title": "",
+                "title": "Dumbbell Seated Lateral Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Hold the dumbbells out at around 4 inches from your body. This is the starting position for the exercise.\nKeeping your body still, eyes facing forward, with a slight bend in you arms, slowly raise the dumbbells up to around shoulder height.\nPause, and then slowly lower the dumbbells back to the starting position.",
+                "gif": "https://gymvisual.com/img/p/5/1/3/7/5137.gif"
             },
             {
                 "id": "L4PJRz",
-                "title": "",
+                "title": "Smith Seated Shoulder Press",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Un-rack the weights and bend your elbows slightly. This is the starting position for the movement.\nSlowly lower the weight down until the bar is just below chin height, pause, and then raise the bar back to the starting position without locking your elbows out at the top of the movement. Repeat for desired reps.",
+                "gif": "https://gymvisual.com/img/p/5/4/8/9/5489.gif"
             },
             {
                 "id": "sMYYBM",
-                "title": "",
+                "title": "Barbell Shoulder Grip Upright Row",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "1. As mentioned above, the best grip is a wide grip.\n\n2. Grip the barbell with your palms facing inwards.\n\n3. Keep your feet hip-width apart.\n\n4. Stand straight and hold the barbell at resting position at hip level.\n\n5. Pull the barbell up.\n\n6. Bring it all the way up till it's just below your shoulders.",
+                "gif": "https://gymvisual.com/img/p/2/4/9/6/2/24962.gif"
             },
             {
                 "id": "ActwyC",
-                "title": "",
+                "title": "Cable Forward Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Inhale, brace your abs, and raise the arms vertically while keeping the elbows slightly bent. Once the arms are parallel with the floor, slowly lower the handle back to the starting position. Repeat for the desired number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/4/8/9/4/4894.gif"
             },
             {
                 "id": "BD9uDM",
-                "title": "",
+                "title": "Cable Bent Over One Arm Lateral Raise",
                 "type": "Shoulder",
-                "desc": "",
-                "gif": ""
+                "desc": "Attach a D-handle to a low pulley cable and set the weight stack at a suitable weight. Stand sideways to the pulley and grab the handle with the hand that’s farther away. Bend forward from the waist; your torso should be nearly parallel with the floor. Rest the hand nearest the cable (nonworking hand) on your knee, thigh or hip in order to stabilize yourself.\n\nRaise the handle out and up in an arc until your upper arm is around parallel with the ground. Keep only a slight bend in your working elbow. Your arm should move directly out to the sides. Hold the top position for a second then slowly lower the weight back to the starting position. Repeat for the recommended amount of repetitions and repeat the movement with the other arm.",
+                "gif": "https://gymvisual.com/img/p/1/8/4/5/7/18457.gif"
             }
         ]
     },
