@@ -7,7 +7,7 @@ const axios = Axios.create({
 
 export const exerciseService = {
     query,
-    save
+    save,
 }
 
 // async function query() {

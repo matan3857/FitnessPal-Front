@@ -737,136 +737,157 @@ db.getCollection('exercise').insertMany([
             },
             {
                 "id": "B0MVxK",
-                "title": "",
+                "title": "3/4 Sit-up",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie down on the floor and secure your feet.\n\n2.Place your hands behind or to the side of your head.\n\n3.Flex your hips and spine to raise your torso toward your knees.\n\n4.At the top of the contraction your torso should be perpendicular to the ground.\n\n5.Repeat for the recommended amount of repetitions.",
+                "gif": "https://gymvisual.com/img/p/4/7/3/1/4731.gif"
             },
             {
                 "id": "yjJ9kj",
-                "title": "",
+                "title": "Alternate Heel Touchers",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie on your back, keep your knees bent, arms at the sides, and keep your back and feet flat on the mat.\n\n2.Crunch forward and to the left, touching your left heel with your left hand and hold.\n\n3.Return slowly to the starting position and repeat the movement on the right side.\n\n4.Repeat this side-to-side movement until the set is complete.",
+                "gif": "https://gymvisual.com/img/p/1/4/6/6/0/14660.gif"
             },
             {
                 "id": "aUM2yn",
-                "title": "",
+                "title": "Air bike",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lay supine in a relaxed position with your arms behind your head and legs straight.\n\n2.Exhale as you raise one knee towards your face while driving the opposite elbow to the knee.\n\n3.Once your abs are fully contracted, slowly lower yourself back to the starting position and repeat on the opposite side.\n\n4.Complete for the assigned number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/8/8/0/8/8808.gif"
             },
             {
                 "id": "jt5feJ",
-                "title": "",
+                "title": "Bridge - Mountain Climber (Cross Body)",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Get into a plank position, making sure to distribute your weight evenly between your hands and your toes.\n\n2.Check your form—your hands should be about shoulder-width apart, back flat, abs engaged, and head in alignment.\n\n3.Pull your right knee into your chest as far as you can.\n\n4.Switch legs, pulling one knee out and bringing the other knee in.Keep your hips down and run your knees in and out as far and as fast as you can. Alternate inhaling and exhaling with each leg change.",
+                "gif": "https://gymvisual.com/img/p/1/0/6/4/0/10640.gif"
             },
             {
                 "id": "3DdakM",
-                "title": "",
+                "title": "Crunch Floor",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Starting Position: Lie in a supine (on your back) position on a mat with your knees bent, feet flat on the floor and heels 12 - 18 from your tailbone.\n\n2.Place your hands behind your head, squeezing your scapulae (shoulder blades) together and pulling your elbows back without arching your low back. This elbow position should be maintained throughout the exercise. Align your head with your spine, but allow it to move into slight flexion (moving the chin towards the chest) during the upward phase of the exercise.\n\n3.Upward Phase: Exhale, contract your abdominal and core muscles and flex your chin slightly towards your chest while slowly curling your torso towards your thighs. The movement should focus on pulling your rib cage towards your pelvis (the neck stays relaxed while the chin is tucked towards the neck). Your feet, tailbone and lower back should remain in contact with the mat at all times. Continue curling up until your upper back is lifted off the mat. Hold this position briefly.\n\n4.Downward Phase: Gently inhale and slowly uncurl (lower) your torso back towards the mat in a controlled fashion keeping your feet, tailbone and low back in contact with the mat.\nProper form is important for this exercise to prevent excessive stress on your low back. Individuals usually perform this movement too rapidly and recruit the hip flexors to assist with the upward phase. This technique tilts the pelvis anteriorly, increasing the stress on the low back and should be avoided. The abdominals connect the rib cage to the pelvis so the movement should focus on bringing these two body parts closer together while keeping the neck and shoulders relaxed.",
+                "gif": "https://gymvisual.com/img/p/5/0/0/7/5007.gif"
             },
             {
                 "id": "0VIzzg",
-                "title": "",
+                "title": "Cable Kneeling Crunch",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "Starting position\n1.Kneel in front of a high pulley.\n\n2.Grasp one end of the rope attachment in each hand and place your wrists against the sides of your head.\n\n3.Lower your torso by flexing your hips, but allow the weight of the rope to lift your upper torso so that your lower back is extended (curved upward).\nExecution\n\n1.Keeping your hips fixed, exhale as you pull the rope downward by flexing your abdomen so that your back becomes arched\n\n2.Hold for a count of two.\n\n3.Inhale as you relax your abdomen and allow the rope to lift your upper torso so that your lower back goes back to being extended.\n\n4.Repeat.",
+                "gif": "https://gymvisual.com/img/p/2/5/2/2/2/25222.gif"
             },
             {
                 "id": "dQB6G3",
-                "title": "",
+                "title": "Captains Chair Straight Leg Raise",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "Starting position\n1.Climb into the captain’s chair with your forearms resting flat on the parallel bars and back pressing against the back support.\n\nExecution\n1.Keeping your knees straight and lower back pressed against the back support, exhale as you flex your hips to raise both legs until they are parallel with the floor.\n\n2.Hold for a count of two.\n\n3.Inhale as you slowly lower your legs back to the starting position.\n\n4.Repeat for the prescribed number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/1/2/2/8/9/12289.gif"
             },
             {
                 "id": "5F0bN7",
-                "title": "",
+                "title": "Jackknife Sit Up",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie flat on the floor with your legs straight and arms behind your head.\n\n2.Take a breath and engage your abs.\n\n3.Simultaneously lift your arms and legs a few inches off the floor.\n\n4.Once you're in that position, take another breath and lift your arms and legs toward one another.",
+                "gif": "https://gymvisual.com/img/p/5/2/4/5/5245.gif"
             },
             {
                 "id": "0pqNvX",
-                "title": "",
+                "title": "Weighted Crunch",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie down on the floor.\n\n2.Hold a weight plate on your chest with your arms crossed.\n\n3.Begin crunch by raising your head and shoulders off the ground and crunching your ribcage toward your pelvis.\n\n4.Repeat as necessary.",
+                "gif": "https://gymvisual.com/img/p/5/5/5/4/5554.gif"
             },
             {
                 "id": "eHw9In",
-                "title": "",
+                "title": "Butt ups",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Start by getting into push-up position, but with your elbows on the ground and resting on your forearms. Your arms should be at a 90 degree angle.\n\n2.Arch your back slightly, as opposed to keeping it completely straight.\n\n3.Lift your glutes toward the ceiling while squeezing your abs tightly to close the distance between your ribcage and your hips. You will end up in a high bridge position if you are performing the exercise correctly. Exhale as you perform this movement.\n\n4.Move back down slowly to the starting position as you breathe in. Lower back down slowly to your starting position as you breathe in. Tip: Don't let your back sag downwards.",
+                "gif": "https://gymvisual.com/img/p/5/5/9/1/5591.gif"
             },
             {
                 "id": "yRRkzQ",
-                "title": "",
+                "title": "Lying Leg Hip Raise",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie on your back with your right knee bent and right foot flat on the floor\n\n2.Raise your left leg so it's in line with your right thigh.\n\n3.Push your hips up, keeping your left leg elevated.\n\n4.Pause and slowly return to the starting position.\n\n5.Switch legs and repeat.",
+                "gif": "https://gymvisual.com/img/p/5/5/8/7/5587.gif"
             },
             {
                 "id": "fFnAUw",
-                "title": "",
+                "title": "Lying Elbow to Knee",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie on the floor, keeping your back pressed to the ground and your hands behind your head\n\n2.Raise your knees so your thighs are roughly perpendicular to the floor.\n\n3.Touch your opposite elbow to the opposite leg. That's one rep.\n\n4.Repeat",
+                "gif": "https://gymvisual.com/img/p/9/7/9/7/9797.gif"
             },
             {
                 "id": "qz55c9",
-                "title": "",
+                "title": "Janda Sit up",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Sit on the floor in a basic sit-up position. Your knees should be put in a 90 degree angle with your feet on a stability ball. Your arms can be crossed over your chest or to the sides. This is the starting position for the exercise.\n\n2.Tighten your glutes and hamstrings and fill your lungs with air. Exhale slowly, use your glutes and abs to raise your upper body to your knees, taking two or three seconds to do so.\n\n3.Slowly go back to the starting position, inhaling as you do so.\n\n4.Repeat for the desired number of reps.",
+                "gif": "https://gymvisual.com/img/p/5/2/4/6/5246.gif"
             },
             {
                 "id": "scwc27",
-                "title": "",
+                "title": "Oblique Crunch",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie face-up on an exercise mat with your knees bent and your feet on the floor. Place your left ankle over your right knee. Place your left arm by your side and your right hand on the outside of your head. Your spine and pelvis should be in a neutral position. Slightly tuck your pelvis and bring your ribcage down.\n\n2.Your chin should remain tucked throughout the movement, as if you were holding an egg under your chin. All repetitions should begin from this position.\n\n3.Begin the upward movement by squeezing your abs. While squeezing your abs and oblique muscles, curl the right side of your upper body off the floor and rotate toward your left knee. Your right elbow should travel toward your left knee. Pause at the top of the movement.\n\n4.Slowly lower to the starting position while maintaining tension on your abs.\n\n5.Repeat for the desired number of repetitions and then switch sides.",
+                "gif": "https://gymvisual.com/img/p/6/7/2/1/6721.gif"
             },
             {
                 "id": "VCALhB",
-                "title": "",
+                "title": "Lying Leg Raise",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Lie on your back, legs straight and together.\n\n2.Keep your legs straight and lift them all the way up to the ceiling until your butt comes off the floor.\n\n3.Slowly lower your legs back down till they're just above the floor. Hold for a moment.\n\n4.Raise your legs back up. Repeat.",
+                "gif": "https://gymvisual.com/img/p/5/8/5/9/5859.gif"
             },
             {
                 "id": "CBo2WK",
-                "title": "",
+                "title": "Weighted Front Plank",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "Starting position\n1.Get down on your hands and knees on the floor.\n\n2.Lower your elbows onto the floor, extend your feet backward, and straighten your body. Your shoulders should be directly above your elbows and your feet should be close together. This is the front plank position.\n\n3.Have your spotter place a weight plate on your back.\n\n4.Execution\n1.Breathe normally as you maintain the front plank position with the weight plate on your back for the prescribed duration.\n\n2.After you’ve maintained the position for the prescribed duration, have your spotter remove the weight plate from your back, before slowly getting out of the front plank position.",
+                "gif": "https://gymvisual.com/img/p/1/4/5/8/9/14589.gif"
             },
             {
                 "id": "0EWhNa",
-                "title": "",
+                "title": "Reverse Crunch",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Start lying down with your arms by your sides.\n\n2.Raise your legs so your thighs are perpendicular to the floor and your knees are bent at a 90° angle.\n\n3.Breathe out and contract your abs to bring your knees up towards your chest and raise your hips off the floor.\n\n4.Hold for a beat in this position, then slowly lower your legs back to the starting position.",
+                "gif": "https://gymvisual.com/img/p/2/0/9/5/9/20959.gif"
             },
             {
                 "id": "vJMKir",
-                "title": "",
+                "title": "Weighted Straight Leg Toe Touch Crunch",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Raise your legs straight until they are perpendicular with the floor.\n\n2.Exhale as you reach towards your toes with the weight plate.\n\n3.Once your abs are fully contracted and your upper back is off the floor, slowly lower yourself back to the starting position.\n\n4.Complete for the assigned number of repetitions.",
+                "gif": "https://gymvisual.com/img/p/1/8/5/8/1/18581.gif"
             },
             {
                 "id": "SvHe6t",
-                "title": "",
+                "title": "Opposite Crunch",
                 "type": "ABS",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Raise your legs so your thighs are perpendicular to the floor and your knees are bent at a 90° angle.\n\n2.Breathe out and contract your abs to bring your knees up towards your chest and raise your hips off the floor.\n\n3.Hold for a beat in this position, then slowly lower your legs back to the starting position.",
+                "gif": "https://gymvisual.com/img/p/2/2/9/6/5/22965.gif"
+            },
+            {
+                "id": "ASZ52Z",
+                "title": "Twisting Crunch",
+                "type": "ABS",
+                "desc": "1.Place your hands by your ears.\n\n2.Crunch your torso up off the floor, and twist to your right side while bringing your right knee into your chest.\n\n3.Twist to your left side while bringing your left knee into your chest.\n\n4.Repeat.",
+                "gif": "https://gymvisual.com/img/p/2/2/9/1/3/22913.gif"
+            },
+            {
+                "id": "66Qud7",
+                "title": "Starfish Crunch",
+                "type": "ABS",
+                "desc": "1.Lie down on your back with your stretched arms and legs spread out so that your body makes a starfish (an X) shape.\n\n2.Slowly move up one leg and the arm of the opposite side until they reach the middle while keeping these body parts stretched. These movements should come as much from your core muscles as possible. Especially for the arm movement you want the movement to come from your upper body coming off the ground.\n\n3.Lower your arm and leg to the position in step 1 in a controlled motion.\n\n4.Repeat the same movement with the opposite arm and leg.",
+                "gif": "https://gymvisual.com/img/p/1/8/3/9/5/18395.gif"
+            },
+            {
+                "id": "2Vv5zP",
+                "title": "Reverse Crunch to Dead Bug",
+                "type": "ABS",
+                "desc": "1.Setup in a supine position with your legs in a 90/90 position (90 degree bend at the hips and knees) and your arms overhead holding onto a kettlebell.\n\n2.Drive the knees towards the chest and exhale as you complete the reverse crunch.",
+                "gif": "https://gymvisual.com/img/p/1/8/5/7/7/18577.gif"
             }
         ]
     }

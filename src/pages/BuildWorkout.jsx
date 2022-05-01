@@ -35,8 +35,26 @@ function _BuildWorkout(props) {
     }
 
     const onAddExerciseToWorkout = (exercise) => {
-        setSetsRepsModal(true)
-        setCurrExerciseToAdd(exercise)
+        isExerciseExistInWorkout(exercise)
+        if (isExerciseExistInWorkout(exercise)) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'This exercise already exists in your training program!',
+            })
+        }
+        else {
+            setSetsRepsModal(true)
+            setCurrExerciseToAdd(exercise)
+        }
+    }
+
+    const isExerciseExistInWorkout = (exercise) => {
+        let isExist = false
+        currWorkout.forEach(currExercise => {
+            if (currExercise.id === exercise.id) isExist = true
+        });
+        return isExist
     }
 
     const addExWithSetsReps = (sets, reps) => {
@@ -77,7 +95,7 @@ function _BuildWorkout(props) {
             Toast.fire({
                 icon: 'success',
                 title: 'Workout Saved!'
-              })
+            })
             history.push("/menu")
         }
     }
@@ -89,10 +107,10 @@ function _BuildWorkout(props) {
         timer: 3000,
         timerProgressBar: true,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-      })
+    })
 
     const onDragEnd = (result) => {
         const { destination, source } = result;
