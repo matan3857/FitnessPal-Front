@@ -149,143 +149,143 @@ db.getCollection('exercise').insertMany([
         "ex": [
             {
                 "id": "03vCpV",
-                "title": "Bench-Press",
+                "title": "Barbell Bench Press",
                 "type": "Chest",
-                "desc": "Lie flat on your back on a bench. Grip the bar with hands just wider than shoulder-width apart, so when you're at the bottom of your move your hands are directly above your elbows, Bring the bar slowly down to your chest as you breathe in.",
+                "desc": "1. Draw your shoulder blades back behind you to keep from pressing with rounded shoulders.\n\n2. Grasp the barbell using an overhand grip, placing your thumbs on the outside of your closed fist. Your arms are slightly wider than shoulder-width apart and the angle of your upper arms is about 45 degrees to the body.\n\n3. Remove the barbell from the rack, locking your elbows. (Don't move the bar in an arc from the rack directly to the chest position.)\n\n4. Inhale while lowering the bar to your chest, at the nipple line.\n\n5. Exhale as you press the bar above your chest, extending your arms. Don't watch the bar—focus on the ceiling.\n\n6. Lower the bar so it is just above your chest. This is the starting position for the next bench press.",
                 "gif": "https://gymvisual.com/img/p/2/1/8/8/9/21889.gif"
             },
             {
                 "id": "G9bbvj",
-                "title": "",
+                "title": "Band Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Put the band over one end of the barbell\n\n2. Pull up the band underneath the bench\n\n3. Wrap the band over the opposite end of the barbell\n\n4. Put the bands inside the sleeve of the collar",
+                "gif": "https://gymvisual.com/img/p/6/5/2/1/6521.gif"
             },
             {
                 "id": "U8kPr4",
-                "title": "",
+                "title": "Cable Standing Up Straight Crossovers",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Attach a single grip handle to each side of the machine at armpit or shoulder level.\n\n2. Grab both handles and stand between the pulleys.\n\n3. Take a few steps forward and put your leading foot in front for balance.\n\n4. With your elbows slightly bent, bring both hands together by moving arms in a semicircular motion while contracting your chest.\n\n5. Hold for 2 seconds.\n\n6. Reverse the motion and bring arms back until you feel a slight stretch in your chest.\n\n7. Repeat this movement for your desired number of repetitions",
+                "gif": "https://gymvisual.com/img/p/6/5/3/6/6536.gif"
             },
             {
                 "id": "LdqU8V",
-                "title": "",
+                "title": "Cable Low Fly",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. With two cable handles aligned low and a light weight selected, grab the handles stepping forward slightly. Palms should be facing forward, head should be up, chest out and shoulders back.\n\n2. Keeping the elbows pulled in towards your sides, exhale, contracting through the chest and bringing the handles up and in until your elbows are aligned with the middle of your chest.\n\n3. Inhale, slowly lowering down keeping the elbows pulled in",
+                "gif": "https://gymvisual.com/img/p/4/9/1/2/4912.gif"
             },
             {
                 "id": "SpJtDo",
-                "title": "",
+                "title": "Barbell Incline Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "Set up your bench at an angle of around 30-45°. Lie back and place your hands on the bar, slightly wider than shoulder-width apart, with your palms facing up. Lift the bar out of the rack and press it up until your arms are extended and your hands are above your shoulders. Slowly lower the bar to your chest, then press it back up again.\nMake sure to reduce the weight when you first try the incline bench press, compared with what you normally bench",
+                "gif": "https://gymvisual.com/img/p/4/7/7/8/4778.gif"
             },
             {
                 "id": "pD4w1n",
-                "title": "",
+                "title": "Barbell Decline Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "In a decline bench press, the bench is set to 15 to 30 degrees on a decline. This angle places your upper body on a downward slope, which activates the lower pectoral muscles as you push weights away from your body. When part of a complete chest routine, decline bench presses can help your pecs look more defined.",
+                "gif": "https://gymvisual.com/img/p/4/7/6/4/4764.gif"
             },
             {
                 "id": "6SG3EZ",
-                "title": "",
+                "title": "Dumbbell Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "Lie back on a bench holding a dumbbell in each hand just to the sides of your shoulders. Your palms should be facing towards your feet in the starting position, although if you have shoulder issues then switch to a neutral grip, where the palms face each other.\nPress the weights above your chest by extending your elbows until your arms are straight, then bring the weights back down slowly. To take advantage of the range of movement offered by using dumbbells rather than a barbell, take the weights down past your shoulders and bring them closer together at the top of the movement. Don’t touch them at the top, though, because that will take some of the strain off your muscles",
+                "gif": "https://gymvisual.com/img/p/5/0/2/2/5022.gif"
             },
             {
                 "id": "BrbMd5",
-                "title": "",
+                "title": "Dumbbell Incline Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "Set up a bench at an incline of 30-45° and sit with your feet flat on the floor and your back on the bench. Lift the dumbbells to chest height with your palms facing forwards. Breathe out and push the dumbbells up until your arms are fully extended, using your pecs to power the movement. Don’t let the dumbbells touch. Pause for a second at the top, then slowly bring them back down as you inhale",
+                "gif": "https://gymvisual.com/img/p/2/0/8/2/3/20823.gif"
             },
             {
                 "id": "781Z2Y",
-                "title": "",
+                "title": "Dumbbell Decline Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "Set up a bench so it’s at a 45° angle and sit on the top of the slope. Lean back (carefully) and bring the dumbbells up to your chest. Press the weights straight up slowly, then bring them back down to your chest. The natural tendency is to let the weights drift back over your head during the lift, so focus on avoiding that. It can be worth having someone check your form when first attempting this move",
+                "gif": "https://gymvisual.com/img/p/5/0/3/4/5034.gif"
             },
             {
                 "id": "z0CN6Q",
-                "title": "",
+                "title": "Lever Chest Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "Sit on seat with chest approximately height of handles. Grasp handles with wide overhand grip; elbows out to sides just below shoulders. Press lever until arms are extended. Return weight until chest muscles are slightly stretched",
+                "gif": "https://gymvisual.com/img/p/5/3/1/4/5314.gif"
             },
             {
                 "id": "GYy7eF",
-                "title": "",
+                "title": "Dumbbell Fly",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Lie back on a flat bench (you can also do this laying on the ground, as is shown above), holding a pair of dumbbells at arm’s length over your chest, palms facing each other. (If this is your first time, select dumbbells that weigh about half of what you would use for presses).\n\n2.  Keeping your elbows slightly bent, slowly lower the dumbbells directly out to your sides until you feel a deep stretch in your chest.\n\n3. Pause, then slowly reverse the move, returning to the starting position",
+                "gif": "https://gymvisual.com/img/p/1/0/2/8/0/10280.gif"
             },
             {
                 "id": "QMuPWr",
-                "title": "",
+                "title": "Dumbbell Incline Fly",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Inhale and slowly lower the dumbbells in an arc position until you feel a mild stretch in your chest or shoulders.\n\n2. Exhale and bring the weights back to the starting position, maintaining an arc throughout the movement.\n\n3. Return the dumbbells to your body's center once you've completed this exercise. Rest the weights on your chest or thighs, depending on weight, as you exhale and use your core to sit up",
+                "gif": "https://gymvisual.com/img/p/1/0/2/8/1/10281.gif"
             },
             {
                 "id": "wMKHiT",
-                "title": "",
+                "title": "Dumbbell Decline Fly",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Grab two dumbbells and then sit on the decline bench securing your legs under the padding. Place the dumbbells on your thighs. \n\n2. Then, lie back flat on the bench and bring the dumbbells back so they are level with your head. \n\n3. Now, extend both arms away from your body until you’re in the starting position for a fly. Arms should be positioned as if you were giving someone hug.\n\n4. Bend your elbows and bring both dumbbells up and together in a semi-circular motion without allowing them to touch each other. Contract your chest muscles during this part of the movement.\n\n5. Bring both dumbbells back down until you feel a stretch in your chest muscles. But keep your arms wide apart from each other.\n\n6. Complete as many reps as desired",
+                "gif": "https://gymvisual.com/img/p/2/0/7/3/8/20738.gif"
             },
             {
                 "id": "ajeSPV",
-                "title": "",
+                "title": "Dumbbell Squeeze Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Squeeze the dumbbells together.\n\n2. Retract your shoulders to create a slight arch in your spine and breathe out as you press the dumbbells upwards.\n\n3. Next, slowly bring down the dumbbells all the way down into your chest.\n\n4. Maintain tightness in your chest and repeat this motion",
+                "gif": "https://gymvisual.com/img/p/1/8/3/5/3/18353.gif"
             },
             {
                 "id": "7jvlU1",
-                "title": "",
+                "title": "Dumbbell Decline Twist Fly",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Grab a dumbbell in each hand in each hand with a neutral grip and lie on a decline bench.\n\n2. Hold the weights above you at shoulder height. Slightly retract your shoulder blades, unlock your elbows, and slowly lower the dumbbells laterally while maintaining the angle at your elbow.\n\n3. Once the dumbbells reach chest level, reverse the movement by squeezing your pecs together. As the dumbbells are returning to the starting position, twist the handles so that the bottom of the dumbbells almost touch.\n\n4. Without allowing the dumbbells to touch, start the next repetition by untwisting the handles back to a neutral position, and continue until the set is completed",
+                "gif": "https://gymvisual.com/img/p/5/0/4/0/5040.gif"
             },
             {
                 "id": "zTVNMt",
-                "title": "",
+                "title": "Cable Seated Chest Fly",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Sit up tall and relax your neck and shoulders. Your feet should be flat on the floor.\n\n2. Grab the handles so that your palms are facing forward. Note that some machines have a foot bar that you need to push in order to release the handles and bring them forward.\n\n3. Press your arms together in front of your chest with a slow, controlled movement. Keep a slight, soft bend in the elbows with wrists relaxed.\n\n4. Pause for one second once your arms are fully closed in front of your chest.\n\n5. Bring your arms slowly back to the starting position, opening your chest and keeping posture strong and upright",
+                "gif": "https://gymvisual.com/img/p/1/8/4/2/3/18423.gif"
             },
             {
                 "id": "oZ8xgr",
-                "title": "",
+                "title": "Barbell Decline Pullover",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Lie on a decline bench and secure your feet between the support padding.\n\n2. Grab a barbell with a shoulder-width grip and hold it with arms straight, and above your lower chest.\n\n3. Now, slowly lower the barbell down until your arms are extended and aligned with your torso. Inhale during this portion of the exercise.\n\n4. Then raise the barbell back up until it’s directly above your lower chest while contracting your lats and chest. Exhale during this portion of the exercise.\n\n5. Repeat for the desired number of reps",
+                "gif": "https://gymvisual.com/img/p/6/5/2/2/6522.gif"
             },
             {
                 "id": "WMJmRG",
-                "title": "",
+                "title": "Dumbbell Flat Around the World",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Lie flat on a bench holding a pair of dumbbells around your thighs, with your palms facing up and your elbows slightly bent, this is the starting position.\n\n2. Now slowly rotate your arms towards your head, keeping your arms parallel to the floor.\n\n3. Once the dumbbells are out stretched beyond your head, slowly return them back to the starting position.\n\n4. Repeat for the desired number of repetitions and sets",
+                "gif": "https://gymvisual.com/img/p/1/8/4/8/7/18487.gif"
             },
             {
                 "id": "JpvXf7",
-                "title": "",
+                "title": "Dumbbell Reverse Bench Press",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "1. Start off by laying on a flat bench, an incline bench, or a decline bench and hold a dumbbell in each of your hands, about shoulder-width apart. \n\n2. Begin the exercise with your arms extended above your torso and your palms forming a supinated grip. \n\n3. In your starting position, your back should be arched as your feet push firmly into the ground, and your lats should be tight.\n\n4. Lower the weights to your chest by flexing your elbows. \n\n5. After a brief pause, return the weights to the starting position by extending your elbows.\n\n6. Repeat the dumbbell bench press exercise for as many repetitions as you like",
+                "gif": "https://gymvisual.com/img/p/7/2/3/8/7238.gif"
             },
             {
                 "id": "UvQFUF",
-                "title": "",
+                "title": "Chest Dip",
                 "type": "Chest",
-                "desc": "",
-                "gif": ""
+                "desc": "The chest dip is a bodyweight exercise performed on parallel bars or on a pull-up and dip station. It targets the chest, triceps, and shoulders. Dips with a chest focus are usually performed with the torso leaning forward and the elbows angled out from the torso",
+                "gif": "https://gymvisual.com/img/p/4/9/8/4/4984.gif"
             }
            
         ]
@@ -440,143 +440,143 @@ db.getCollection('exercise').insertMany([
         "ex": [
             {
                 "id": "rkmte3",
-                "title": "Bent-Over",
+                "title": "Dumbbell Bent over Row",
                 "type": "Back",
-                "desc": "Once you have your barbell loaded, stand with your feet shoulder-width apart. Bend your knees and lean forward from the waist. Your knees should be bent, but your back stays straight, with your neck in line with your spine. Grab the bar with your hands (palms-down), just wider than shoulder-width apart and let it hang with your arms straight.",
-                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
+                "desc": "1.Assume a standing position while holding a dumbbell in each hand with a neutral grip.\n\n2.Hinge forward until your torso is roughly parallel with the floor (or slightly above) and then begin the movement by driving the elbows behind the body while retracting the shoulder blades.\n\n3.Pull the dumbbells towards your body until the elbows are at (or just past) the midline and then slowly lower the dumbbells back to the starting position under control.\n\n4.Repeat for the desired number of repetitions",
+                "gif": "https://gymvisual.com/img/p/5/0/2/5/5025.gif"
             },
             {
                 "id": "1t842Q",
-                "title": "",
+                "title": "Barbell Bent Over Row",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Hold a barbell with a pronated grip (palms facing down). Your feet should be shoulder-width apart.\n\n2.Bend your knees and bring your torso forward slightly. Your back should be straight and almost parallel to the floor. This is your starting position.\n\n3.Lift the barbell up towards your sternum, keeping your elbows tucked in and close to the body.\n\n4.Pause and hold at the top of the movement, squeezing your back muscles.\v\v5.Slowly lower the barbell back to the starting position.\n\n6.Repeat for the desired amount of reps",
+                "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
             },
             {
                 "id": "kcQ0vN",
-                "title": "",
+                "title": "Cable Wide Pulldown",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.While slightly leaning back, brace your core, bring your shoulder blades down and back, and pull the bar down until it touches the top of your rib cage. \n\n2.Pause briefly at the bottom, squeeze your lats, and slowly return to the starting position.\n\n3.Maintain tightness in your core and repeat",
+                "gif": "https://gymvisual.com/img/p/2/4/4/7/3/24473.gif"
             },
             {
                 "id": "KypGmy",
-                "title": "",
+                "title": "Dumbbell Straight Arm Pullover",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Extend your arms toward the ceiling, over your chest. Your palms should be facing each other and your elbows slightly bent.\n\n2.Inhale and extend the weights back and over your head, keeping a strong back and core.\n\n3.Exhale slowly and return your arms to the starting position",
+                "gif": "https://gymvisual.com/img/p/1/2/2/5/3/12253.gif"
             },
             {
                 "id": "AD9jui",
-                "title": "",
+                "title": "Pull up",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "In a pull up exercise, you are grabbing the pull up bar above your head and pulling your whole body upward. It’s a compound (multijoint) movement that involves the action of two joints: the elbow and shoulder joint. The shoulder joint is one of the most complex and mobile joints in the body as it requires various muscles working together to create a stable and strong movement, like the one during a pull up.",
+                "gif": "https://gymvisual.com/img/p/5/3/8/6/5386.gif"
             },
             {
                 "id": "GvyqmO",
-                "title": "",
+                "title": "Barbell Shrug",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Stand in a position right in front of the barbell.\n\n2.Tighten your abs and grasp the barbell firmly. \n\n3.Contract the traps and raise the shoulders. With an overhand grip, contract your back slightly along with the move.\n\n4.Now bring the barbell back to the standing position and keep repeating the motion for any number of repetitions until you get exhausted",
+                "gif": "https://gymvisual.com/img/p/4/8/3/1/4831.gif"
             },
             {
                 "id": "q5J29h",
-                "title": "",
+                "title": "Barbell Reverse Grip Bent over Row",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Stand in an erect position while you hold a barbell with a supinated grip (with your palms facing up). \n\n2.Bend your knees slightly and bring your torso forward by bending at the waist.\n\n3.Keep your back straight until it is almost parallel to the floor. \n\n4.Keep your head up. The barbell should hang right in front of you as your arms hang perpendicular to the floor and your torso. This is your starting position. \n\n5.While keeping your torso stationary, lift the barbell as you breathe out.\n\n6.Try to keep your elbows close to the body without any force with the forearm other than holding the weights. \n\n7.At the top (contracted) position, squeeze your back muscles tightly and hold that position for a second or more. \n\n8.Slowly lower the weight again to the starting position as you inhale. \n\n9.Repeat the movement for the desired number of repetitions",
+                "gif": "https://gymvisual.com/img/p/1/0/6/1/9/10619.gif"
             },
             {
                 "id": "1KREtJ",
-                "title": "",
+                "title": "Cable Low Seated Row",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Pull the handle and weight back toward the lower abdomen while trying not to use the momentum of the row too much by moving the torso backward with the arms.\n\n2.Target the middle to upper back by keeping your back straight and squeezing your shoulder blades together as you row, chest out.\n\n3.Return the handle forward under tension to full stretch, remembering to keep that back straight even though flexed at the hips. Repeat the exercise for the desired number of repetitions",
+                "gif": "https://gymvisual.com/img/p/4/9/1/3/4913.gif"
             },
             {
                 "id": "zu8sWl",
-                "title": "",
+                "title": "Barbell Rack Pull",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Approach the bar so your toes are just under it, pointing straight ahead, and your feet are shoulder-width apart. Your chest is up, shoulders back, torso straight, and gaze straight ahead.\n\n2.Bend the knees slightly and lean forward at the hips, grabbing the bar with your hands just outside of the knees. You can grip the bar overhand or mixed.\n\n3.Inhale and begin lifting the bar. As you lift, push through the heels and extend through the hips and knees.\n\n4.Pull the weight up and back, pulling your shoulders back at the same time until you achieve a lockout.\n\n5.Hold the weight at the top.\n\n6.Return the bar to the rack by bending your knees and lowering your upper body. Keep your back straight and continue to look forward, exhaling as you exit the position",
+                "gif": "https://gymvisual.com/img/p/1/3/1/3/4/13134.gif"
             },
             {
                 "id": "sADOE0",
-                "title": "",
+                "title": "Cable Lateral Pulldown with V-bar",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Use a lat pulldown machine\n\n2.Attach a v-bar to the pulley. Adjust the knee pads to the correct height, so that your legs will be held firmly in place. You should be able to brace against the pads as you perform the lift\n\n3.Hold onto the bar with your palms facing one another in a neutral grip. Sit down, bracing your legs against the knee pads\n\n4.Lean back slightly. You don’t want to go too far, otherwise you will be performing more of a regular cable row with your rhomboids, deltoids and arms taking much of the slack. You should find an angle that will allow you to fully engage, and keep the pressure on, your lats\n\n5.Flare your chest and squeeze your shoulder blades together and down. This should be where you begin to pack your lats, flexing them, with a boosted mind-muscle connection\n\n6.Tuck your elbows in and pull the bar down to your chest. Drive the weight down using your elbows rather than your hands as a focal point. This will put the stimuli in your lats rather than your biceps\n\n7.Squeeze at the bottom, taking note of the sensation of contraction, and return the handle to the top under control. Repeat for the desired rep range, usually 4-12.",
+                "gif": "https://gymvisual.com/img/p/1/0/8/0/1/10801.gif"
             },
             {
                 "id": "UyyHos",
-                "title": "",
+                "title": "Lever Neutral Grip Seated Row",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Sit on seat and position chest against pad. Grasp lever handles with overhand grip.\n\n2.Pull lever back until elbows are behind back and shoulders are pulled back.\n\n3.Return until arms are extended and shoulders are stretched forward.\n\n4.Repeat",
+                "gif": "https://gymvisual.com/img/p/2/3/4/4/3/23443.gif"
             },
             {
                 "id": "xytKkw",
-                "title": "",
+                "title": "Lever Bent over Row",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.With lever handles to sides, bend knees slightly and bend over with back straight.\n\n2.Grasp lower handles.\n\n3.Pull lever handles up to sides.\n\n4.Return until arms are extended and shoulders are stretched downward",
+                "gif": "https://gymvisual.com/img/p/5/3/1/1/5311.gif"
             },
             {
                 "id": "2fhiUm",
-                "title": "",
+                "title": "Cable Wide Grip Behind Neck Pulldown",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Start by sitting on a bench that has a pulldown bar or on a lat-pulldown machine.\n\n2.Place each of your hands on the bar so that it is about a foot from your head and then slowly pull down the bar behind your back.\n\n3.Slowly pull down until the bar is at the base of your neck and squeeze your shoulder muscles.\n\n4.Hold this position for a count then return back up to the starting position",
+                "gif": "https://gymvisual.com/img/p/2/4/5/2/1/24521.gif"
             },
             {
                 "id": "XJBn6M",
-                "title": "",
+                "title": "Lever Seated Row",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Sit on seat and position chest against pad.\n\n2.Push foot lever if available. Grasp narrower parallel grip handles.\n\n3.Pull lever back until elbows are behind back and shoulders are pulled back.\n\n4.Return until arms are extended and shoulders are stretched forward.\n\n5.Repeat",
+                "gif": "https://gymvisual.com/img/p/6/6/1/4/6614.gif"
             },
             {
                 "id": "12CDhy",
-                "title": "",
+                "title": "Close Grip Chin Up",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "Depress the shoulder blades and then drive the elbows straight down to the floor while activating the lats. Pull your chin towards the bar until the lats are fully contracted, then slowly lower yourself back to the start position and repeat for the assigned number of repetitions",
+                "gif": "https://gymvisual.com/img/p/6/5/9/3/6593.gif"
             },
             {
                 "id": "TXaohG",
-                "title": "",
+                "title": "Barbell Reverse Grip Incline Bench Row",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "Grip the barbell with a shoulder width underhand grip (with your palms facing up).\n\n2.Keeping your head up, eyes looking forward, slowly raise the bar up towards your chest.\n\n3.Raise the bar as far as possible, pause, and then slowly lower the bar back to the starting position.\n\n4.Repeat for desired reps",
+                "gif": "https://gymvisual.com/img/p/6/5/8/3/6583.gif"
             },
             {
                 "id": "BZTqzL",
-                "title": "",
+                "title": "Twin Handle Parallel Grip Lat Pulldown",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "Starting position\n\n1.Attach a stirrup (handle) to two high cable pulleys.\n\n2.Position a bench or chair midway between the two pulleys.\n\n3.Grasp a stirrup in each hand and sit directly under the pulleys, holding the stirrups using a neutral (aka parallel) grip (palms facing each other). The cables should be pulled taut, your arms should be fully extended, and your shoulders should be stretched upward.\n\nExecution\n\n1.Exhale as you pull the stirrups downward until your elbows are by your sides.\n\n2.Hold for a count of two, stick out your chest, and squeeze your back muscles.\n\n3.Inhale as you return the stirrups to the starting position, with your arms fully extended and shoulders stretched upward.\n\n4.Repeat",
+                "gif": "https://gymvisual.com/img/p/5/5/4/1/5541.gif"
             },
             {
                 "id": "0Y0lFy",
-                "title": "",
+                "title": "Lever Lateral Wide Pulldown",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Sit on seat.\n\n2.Reach up and grasp handles with wide overhand grip.\n\n3.Pull levers down to sides of shoulders.\n\n4.Return until arms and shoulders are fully extended.\n\n5.Repeat",
+                "gif": "https://gymvisual.com/img/p/1/2/5/7/9/12579.gif"
             },
             {
                 "id": "sipQuQ",
-                "title": "",
+                "title": "Cable Wide Neutral Grip PullDown",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "1.Attach a lat bar with handles onto a lat pulldown machine.\n\n2.Grasp the handles on the end of the lat bar so that your palms are facing each other.\n\n3.Sit down on the provided bench and position your thighs under the provided pads so that the weight does not pull your body up.\n\n4.Allow your arms to fully extend upward so that you feel a slight stretch in your lats. This is the starting position.\n\n5.Begin exercise by contracting your lats while pulling the weight down to your upper chest.\n\n6.Your shoulder blades should be pinched together, elbows back, and lat bar against your chest at the end of the movement.\n\n7.Slowly reverse movement back up to the starting position. This completes one rep",
+                "gif": "https://gymvisual.com/img/p/1/8/6/7/6/18676.gif"
             },
             {
                 "id": "u4tdVx",
-                "title": "",
+                "title": "Cable Parallel Grip Lat Pulldown on Floor",
                 "type": "Back",
-                "desc": "",
-                "gif": ""
+                "desc": "Starting position\n\n1.Attach a stirrup (handle) to two high cable pulleys.\n\n2.Position a bench or chair midway between the two pulleys.\n\n3.Grasp a stirrup in each hand and sit directly under the pulleys, holding the stirrups using a neutral (aka parallel) grip (palms facing each other). The cables should be pulled taut, your arms should be fully extended, and your shoulders should be stretched upward.\n\nExecution\n\n1.Exhale as you pull the stirrups downward until your elbows are by your sides.\n\n2.Hold for a count of two, stick out your chest, and squeeze your back muscles.\n\n3.Inhale as you return the stirrups to the starting position, with your arms fully extended and shoulders stretched upward.\n\n4.Repeat",
+                "gif": "https://gymvisual.com/img/p/1/6/8/4/2/16842.gif"
             }
         ]
     },

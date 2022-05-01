@@ -11,7 +11,7 @@ export function Exercises(props) {
     // Get current exercises
     const indexOfLastEx = currentPage * exercisesPerPage;
     const indexOfFirstEx = indexOfLastEx - exercisesPerPage;
-    const exercisesToShow = currExercises.slice(indexOfFirstEx, indexOfLastEx);
+    const exercisesToShow = currExercises.slice(indexOfFirstEx, indexOfLastEx + 1);
 
     // Change page
     const paginate = pageNumber => {
