@@ -57,13 +57,20 @@ function _Homepage(props) {
 
   const responseFacebook = async (res) => {
     if (!isFacebookLogin) return
+    let response
     const fullname = res.name;
     const username = res.email;
     const password = res.id;
     isLogin
-      ? await props.onLogin({ username, password })
-      : await props.onSignup({ username, password, fullname });
-    props.history.push("/menu");
+      ? response = await props.onLogin({ username, password })
+      : response = await props.onSignup({ username, password, fullname })
+    if (response) {
+      props.history.push("/menu")
+    }
+    else {
+      setErrMsg('Incorrect password or username')
+      setErr(true)
+    }
   }
 
   return (

@@ -3,7 +3,7 @@ import { ExercisesPreview } from "./ExercisesPreview"
 import { Pagination } from './Pagination'
 
 export function Exercises(props) {
-    const { currExercises, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails, onHideDetails } = props;
+    const { currExercises, onAddExerciseToWorkout, onShowExerciseDetails, onHideDetails } = props;
 
     const [currentPage, setCurrentPage] = useState(1);
     const [exercisesPerPage] = useState(8);
@@ -41,7 +41,6 @@ export function Exercises(props) {
                         <ExercisesPreview
                             key={idx}
                             exercise={exercise}
-                            exerciseType={exerciseType}
                             onAddExerciseToWorkout={onAddExerciseToWorkout}
                             onShowExerciseDetails={onShowExerciseDetails}
                         />

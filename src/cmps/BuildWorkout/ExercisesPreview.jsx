@@ -4,7 +4,7 @@ import { LoaderSpinner } from '../LoaderSpinner'
 import noImg from '../../assets/img/no-img.svg'
 
 export function _ExercisesPreview(props) {
-  const { exercise, exerciseType, onAddExerciseToWorkout, onShowExerciseDetails, user } = props
+  const { exercise, onAddExerciseToWorkout, onShowExerciseDetails, user } = props
   const [loaded, setLoaded] = useState(false);
 
   if (!exercise) return <LoaderSpinner />
