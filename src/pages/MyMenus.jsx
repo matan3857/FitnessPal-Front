@@ -57,7 +57,7 @@ function _MyMenus(props) {
 
     const onDeleteMsg = () => {
         Swal.fire({
-            title: 'Are you sure you want to delete menu?',
+            title: `Are you sure you want to delete ${user.nutritionMenus[selectedOption.value].menuTitle} menu?`,
             text: "You won't be able to revert this!",
             icon: 'warning',
             showCancelButton: true,

@@ -33,7 +33,7 @@ function _MyWorkouts(props) {
 
     const onDeleteMsg = () => {
         Swal.fire({
-            title: 'Are you sure you want to delete workout?',
+            title: `Are you sure you want to delete ${user.workouts[selectedOption.value].workoutTitle} workout?`,
             text: "You won't be able to revert this!",
             icon: 'warning',
             showCancelButton: true,
