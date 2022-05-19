@@ -125,8 +125,6 @@ function _StartWorkout(props) {
                                     onLoad={() => setLoaded(true)}
                                 >
                                     <img src={`${exercise.gif}`} alt="exercise"/>
-                                    {/* <img src={require(`../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise_1" /> */}
-                                    {/* <img src={require(`../assets/img/${exercise.type}/${exercise.title}/${exercise.img2}.png`).default} alt="exercise_2" /> */}
                                 </div>
                                 {!loaded && <LoaderSpinner />}
                                 <button className='light-btn light-btn-info' onClick={onToggleInfo}>{isInfo ? 'Close Info..' : 'More Info?'}</button>

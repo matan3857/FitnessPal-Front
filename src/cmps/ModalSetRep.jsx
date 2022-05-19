@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export function ModalSetRep({ setOpenModal, addExWithSetsReps }) {
-
     const [sets, setExerciseSets] = useState('');
     const [reps, setExerciseReps] = useState('');
 

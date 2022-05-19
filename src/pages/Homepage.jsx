@@ -73,9 +73,25 @@ function _Homepage(props) {
     }
   }
 
+  const onDemoLogin = async () => {
+    const username = 'user'
+    const password = '123456'
+    const response = await props.onLogin({ username, password })
+    if (response) {
+      props.history.push("/menu")
+    }
+    else {
+      setErrMsg('Something went wrong, please try again later...')
+      setErr(true)
+    }
+  }
+
   return (
     <div className="login-signup flex column align-center margin-top">
       <div className="login-container flex column">
+        <button className="light-btn" onClick={onDemoLogin}>
+          Log in without registration
+        </button>
         {isLogin ? <p>Log in to Fitness Pal</p> : <p>Sign up</p>}
         <form className="flex column" onSubmit={onSubmit}>
           <input

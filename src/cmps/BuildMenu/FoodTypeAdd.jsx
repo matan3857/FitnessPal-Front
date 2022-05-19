@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export function FoodTypeAdd({ onAddFood, setOpenModal }) {
-
     const [gram, setGram] = useState('');
     const [foodName, setFoodName] = useState('');
     const [calories, setCalories] = useState('');

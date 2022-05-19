@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export function ModalSetName({ setOpenModal, onAction, msg }) {
-
     const [title, setTitle] = useState('');
 
     return (

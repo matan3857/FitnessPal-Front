@@ -111,22 +111,3 @@ async function update(user) {
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN) || 'null')
 }
-
-// async function getUsers() {
-//     const users = localStorage.getItem(DB_KEY) 
-//     if(users?.length) return JSON.parse(users);
-//     localStorage.setItem(DB_KEY,JSON.stringify(gUsers))
-//     return gUsers; 
-//     // return httpService.get(`user`)
-// }
-
-// async function getById(userId) {
-//     const user = await storageService.get(DB_KEY, userId)
-//     // const user = await httpService.get(`user/${userId}`)
-//     gWatchedUser = user;
-//     return user;
-// }
-// function remove(userId) {
-//     return storageService.remove(DB_KEY, userId)
-//     // return httpService.delete(`user/${userId}`)
-// }

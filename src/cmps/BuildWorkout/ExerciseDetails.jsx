@@ -5,8 +5,8 @@ import { connect } from "react-redux";
 import Swal from 'sweetalert2';
 
 export function _ExerciseDetails({ exercise, onAddExerciseToWorkout, isEditWorkout, onBackToAll, onHideDetails, saveExercise, exercises }) {
-
     const [desc, setDescription] = useState(exercise.desc);
+    
     const onSubmit = async (ev) => {
         ev.preventDefault();
         exercise.desc = desc

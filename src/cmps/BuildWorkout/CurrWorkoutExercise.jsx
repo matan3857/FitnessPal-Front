@@ -16,7 +16,6 @@ export function CurrWorkoutExercise(props) {
                 >
                     <div className="curr-workout-img">
                         <img src={`${exercise.gif}`} alt="exercise"/>
-                        {/* <img src={require(`../../assets/img/${exercise.type}/${exercise.title}/${exercise.img1}.png`).default} alt="exercise" /> */}
                     </div>
                     <div className="curr-workout-content flex column">
                         <h2>{exercise.title}</h2>
