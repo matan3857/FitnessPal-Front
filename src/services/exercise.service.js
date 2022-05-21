@@ -1,4 +1,4 @@
-// import { httpService } from './http.service'
+import { httpService } from './http.service'
 import Axios from 'axios';
 
 const axios = Axios.create({
@@ -17,8 +17,9 @@ export const exerciseService = {
 
 async function query() {
     try {
-        const res = await axios.get('http://localhost:3030/api/exercise/')
-        const exercises = res.data
+        // const res = await axios.get('http://localhost:3030/api/exercise/')
+        // const exercises = res.data
+        const exercises = await httpService.get('exercise')
         return exercises
     }
     catch (err) {
@@ -31,9 +32,9 @@ async function save(exercises,exercise) {
     try {
         const exerciseType = exercises.find(currTypes => currTypes.type === exercise.type)
 
-        const res = await axios.put(`http://localhost:3030/api/exercise/`, exerciseType)
-        const updatedExerciseType = res.data
-        // const updatedUser = await httpService.put('user', user)
+        // const res = await axios.put(`http://localhost:3030/api/exercise/`, exerciseType)
+        // const updatedExerciseType = res.data
+        const updatedExerciseType = await httpService.put('exercise', exerciseType)
         return updatedExerciseType
     }
     catch (err) {

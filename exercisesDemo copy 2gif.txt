@@ -432,7 +432,7 @@ db.getCollection('exercise').insertMany([
                 "type": "Arm",
                 "desc": "Press your weight into your palms and lift yourself up, sliding your bottom forward so it is off the edge of the chair or bench.\nLower yourself by bending your elbows and lower to 45 to 90 degrees.\nGo slowly with control. Push yourself back up until your arms are straight.",
                 "gif": "https://gymvisual.com/img/p/4/7/5/0/4750.gif"
-            },
+            }
         ]
     },
     {
@@ -449,7 +449,7 @@ db.getCollection('exercise').insertMany([
                 "id": "1t842Q",
                 "title": "Barbell Bent Over Row",
                 "type": "Back",
-                "desc": "1.Hold a barbell with a pronated grip (palms facing down). Your feet should be shoulder-width apart.\n\n2.Bend your knees and bring your torso forward slightly. Your back should be straight and almost parallel to the floor. This is your starting position.\n\n3.Lift the barbell up towards your sternum, keeping your elbows tucked in and close to the body.\n\n4.Pause and hold at the top of the movement, squeezing your back muscles.\v\v5.Slowly lower the barbell back to the starting position.\n\n6.Repeat for the desired amount of reps",
+                "desc": "1.Hold a barbell with a pronated grip (palms facing down). Your feet should be shoulder-width apart.\n\n2.Bend your knees and bring your torso forward slightly. Your back should be straight and almost parallel to the floor. This is your starting position.\n\n3.Lift the barbell up towards your sternum, keeping your elbows tucked in and close to the body.\n\n4.Pause and hold at the top of the movement, squeezing your back muscles.\n\n5.Slowly lower the barbell back to the starting position.\n\n6.Repeat for the desired amount of reps",
                 "gif": "https://gymvisual.com/img/p/1/0/6/1/7/10617.gif"
             },
             {

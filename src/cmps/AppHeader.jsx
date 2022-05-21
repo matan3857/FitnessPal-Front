@@ -8,11 +8,15 @@ import logout from '../assets/img/logout.png';
 function _AppHeader({ user, onLogout, history }) {
   const [isShowTitle, setIsShowTitle] = useState(true);
 
+  const showLogo = () => {
+    window.innerWidth > 500 ? setIsShowTitle(true) : setIsShowTitle(false)
+  }
+
   useEffect(() => {
-    window.addEventListener("resize", function () {
-      window.innerWidth > 500 ? setIsShowTitle(true) : setIsShowTitle(false)
-    });
-  }, []);
+    showLogo()
+  }, [])
+
+  window.addEventListener('resize', showLogo);
 
   return (
     <>

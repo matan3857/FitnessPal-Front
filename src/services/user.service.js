@@ -1,4 +1,4 @@
-// import { httpService } from './http.service'
+import { httpService } from './http.service'
 import Axios from 'axios';
 const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
 
@@ -17,43 +17,12 @@ export const userService = {
     // remove,
 }
 
-// const gUsers = [
-//     {
-//         '_id': 'u101',
-//         'fullname': 'admin',
-//         'username': 'admin',
-//         'password': '123',
-//         'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-//         'workouts': [],
-//         'nutritionMenus': [],
-//         'isAdmin': true
-//     },
-//     {
-//         '_id': 'u102',
-//         'fullname': 'user',
-//         'username': 'user',
-//         'password': '123',
-//         'imgUrl': 'https://media-exp1.licdn.com/dms/image/C5603AQG9slGN5Fgxug/profile-displayphoto-shrink_100_100/0/1516840011642?e=1638403200&v=beta&t=wl9AzbWc9FwsXJ0xGECA_7T4xynvi067vuYs5ABVhfo',
-//         'workouts': [],
-//         'nutritionMenus': [],
-//         'isAdmin': false
-//     },
-// ]
-// localStorage.setItem(DB_KEY, JSON.stringify(gUsers))
-
-// async function login(userCred) {
-//     const user = await httpService.post('auth/login', userCred)
-//     if (user) sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
-//     return user
-// }
-
-async function login(credentials) {
+async function login(userCred) {
     try {
-        const res = await axios.post('http://localhost:3030/api/auth/login', credentials)
-        const user = res.data
-        if (user) {
-            sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
-        }
+        // const res = await axios.post('http://localhost:3030/api/auth/login', userCred)
+        // const user = res.data
+        const user = await httpService.post('auth/login', userCred)
+        if (user) sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
         return user
     }
     catch (err) {
@@ -62,19 +31,11 @@ async function login(credentials) {
     }
 }
 
-//Another Way
-// async function signup(userCred) {
-//     const user = await httpService.post('auth/signup', userCred)
-//     if (user) {
-//         sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
-//     }
-//     return user
-// }
-
 async function signup(userCred) {
     try {
-        const res = await axios.post(`http://localhost:3030/api/auth/signup`, userCred)
-        const user = res.data
+        // const res = await axios.post(`http://localhost:3030/api/auth/signup`, userCred)
+        // const user = res.data
+        const user = await httpService.post('auth/signup', userCred)
         if (user) {
             sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
         }
@@ -87,16 +48,18 @@ async function signup(userCred) {
 }
 
 async function logout() {
-    const res = await axios.post(`http://localhost:3030/api/auth/logout`)
+    // const res = await axios.post(`http://localhost:3030/api/auth/logout`)
+    // return res.data
+    const res = await httpService.post('auth/logout')
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
-    return res.data
+    return res
 }
 
 async function update(user) {
     try {
-        const res = await axios.put(`http://localhost:3030/api/user/`, user)
-        const updatedUser = res.data
-        // const updatedUser = await httpService.put('user', user)
+        // const res = await axios.put(`http://localhost:3030/api/user/`, user)
+        // const updatedUser = res.data
+        const updatedUser = await httpService.put('user', user)
         if (updatedUser) {
             sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(updatedUser))
         }
