@@ -1,9 +1,10 @@
 import Axios from 'axios'
 
 const BASE_URL = process.env.NODE_ENV === 'production'
-    ? '/api/'
-    : 'https://fitnesspal-backend.onrender.com/api/'
-    // : '//localhost:3030/api/'
+    ? 'https://fitnesspal-backend.onrender.com/api/'
+    // ? '/api/'
+    // : 'https://fitnesspal-backend.onrender.com/api/'
+    : '//localhost:3030/api/'
 
 
 var axios = Axios.create({
