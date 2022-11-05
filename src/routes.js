@@ -7,6 +7,7 @@ import { MyMenus } from './pages/MyMenus'
 import { WeightTrack } from './pages/WeightTrack'
 import { StartWorkout } from './pages/StartWorkout'
 import { BuildMenu } from './pages/BuildMenu'
+import { UsersManage } from './pages/UsersManage'
 
 const routes = [
     {
@@ -55,6 +56,12 @@ const routes = [
         path: '/startWorkout/:workoutIdx',
         component: StartWorkout,
         label: 'startWorkout',
+        isExact: true
+    },
+    {
+        path: '/UsersManage',
+        component: UsersManage,
+        label: 'UsersManage',
         isExact: true
     },
     {

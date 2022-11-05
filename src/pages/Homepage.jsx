@@ -125,7 +125,7 @@ function _Homepage(props) {
 
         <FacebookLogin
           appId="1150970532306174"
-          autoLoad={true}
+          // autoLoad={true}
           fields="name,email,picture"
           onClick={onFacebookClicked}
           callback={responseFacebook}

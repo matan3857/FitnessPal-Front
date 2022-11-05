@@ -12,9 +12,8 @@ export const userService = {
     signup,
     update,
     getLoggedinUser,
-    // getUsers,
-    // getById,
-    // remove,
+    getUsers,
+    remove,
 }
 
 async function login(userCred) {
@@ -67,6 +66,28 @@ async function update(user) {
     }
     catch (err) {
         console.log('server replied: cannot login', err)
+        throw err
+    }
+}
+
+async function remove(userId) {
+    try {
+        const res = await httpService.delete(`user/${userId}`, userId)
+        return res
+    }
+    catch (err) {
+        console.log('server replied: cannot login', err)
+        throw err
+    }
+}
+
+async function getUsers() {
+    try {
+        const users = await httpService.get('user')
+        return users
+    }
+    catch (err) {
+        console.log('server replied: cannot get users', err)
         throw err
     }
 }

@@ -10,11 +10,6 @@ export const exerciseService = {
     save,
 }
 
-// async function query() {
-//     const exercises = await httpService.get('exercise')
-//     return exercises
-// }
-
 async function query() {
     try {
         // const res = await axios.get('http://localhost:3030/api/exercise/')

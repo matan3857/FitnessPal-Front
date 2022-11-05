@@ -14,12 +14,13 @@ export function _Menu(props) {
     { title: 'Building a nutrition menu', linkTo: 'buildMenu' },
     { title: 'Weight tracking', linkTo: 'weight' },
     { title: 'How to build workout plan?', linkTo: 'info' }]
+    if (props?.user?.isAdmin) pages.push({ title: 'Users Manage', linkTo: 'UsersManage' })
     setPages(pages)
   }, []);
 
   if (!pages || !pages.length) return <LoaderSpinner />
   if (!props.user) return (<Redirect to={'/'} />)
-  
+
   return (
     <>
       <div className="flex column align-center margin-top menu background-style">
