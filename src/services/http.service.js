@@ -1,9 +1,11 @@
 import Axios from 'axios'
 
 const BASE_URL = process.env.NODE_ENV === 'production'
-    ? 'https://fitnesspal-backend.onrender.com/api/'
+    ? 'https://fitnesspal-backend.onrender.com/'
+    // ? 'https://fitnesspal-backend.onrender.com/api/'
     // ? '/api/'
-    : 'https://fitnesspal-backend.onrender.com/api/'
+    : 'https://fitnesspal-backend.onrender.com/'
+    // : 'https://fitnesspal-backend.onrender.com/api/'
     // : '//localhost:3030/api/'
 
 
