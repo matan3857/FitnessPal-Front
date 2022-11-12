@@ -39,6 +39,7 @@ function _AppHeader({ user, onLogout, history }) {
         {user && user._id && <div onClick={() => { onLogout(); history.push("/"); }} className="logout-container pointer flex align-center">
           <p className="logout">
             Logout
+            חחחחח
           </p>
           <img src={logout} className="logout-icon" alt="logout" />
         </div>}
