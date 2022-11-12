@@ -92,7 +92,7 @@ function _Homepage(props) {
         <button className="light-btn" onClick={onDemoLogin}>
           Log in without registration
         </button>
-        {isLogin ? <p>Log in to Fitness Pal llllll</p> : <p>Sign up</p>}
+        {isLogin ? <p>Log in to Fitness Pal</p> : <p>Sign up</p>}
         <form className="flex column" onSubmit={onSubmit}>
           <input
             type="txt"
